@@ -1,45 +1,83 @@
 import requests
+import time
 import json
-import os
+from pathlib import Path
 
-def fetch_all_items():
-    os.makedirs('data', exist_ok=True)
+BASE = "https://pokeapi.co/api/v2"
+SESSION = requests.Session()
+SESSION.headers.update({"User-Agent": "pokemon-items-filtered-script/1.3"})
+
+def fetch_filtered_items(save_to="data/items.json"):
+    Path("data").mkdir(exist_ok=True)
     print("Fetching the exact number of items...")
     
-    initial_request = requests.get('https://pokeapi.co/api/v2/item').json()
+    initial_request = SESSION.get(f'{BASE}/item').json()
     total_count = initial_request['count']
-    print(f"Found {total_count} items. Starting data collection...")
+    print(f"Found {total_count} total items. Starting data collection and filtering...\n")
     
-    response = requests.get(f'https://pokeapi.co/api/v2/item?limit={total_count}').json()
+    response = SESSION.get(f'{BASE}/item?limit={total_count}').json()
     items_data = []
+    skipped_count = 0
+
+    # Categories that are 100% used for holding items in battle
+    safe_categories = [
+        'species-specific', 'mega-stones', 'z-crystals', 'plates', 'memories', 
+        'held-items', 'choice', 'type-enhancement', 'scarf', 'jewels', 'training', 'healing'
+    ]
 
     for item in response['results']:
+        item_name = item['name']
         item_url = item['url']
-        item_info = requests.get(item_url).json()
         
-        names = {n['language']['name']: n['name'] for n in item_info['names']}
+        try:
+            item_info = SESSION.get(item_url).json()
+            
+            # Extract attributes and category
+            attributes = [a['name'] for a in item_info.get('attributes', [])]
+            category = item_info.get('category', {}).get('name', '')
+            
+            is_holdable_attr = 'holdable' in attributes or 'holdable-active' in attributes
+            is_safe_category = category in safe_categories
+            
+            # --- FILTERING LOGIC WITH PRINT ---
+            if not is_holdable_attr and not is_safe_category:
+                skipped_count += 1
+                print(f"[-] Skipped: {item_name} (Category: {category})")
+                time.sleep(0.05)
+                continue
+            
+            print(f"[+] Kept: {item_name} (Category: {category})")
+            # ----------------------------------
+            
+            names = {n['language']['name']: n['name'] for n in item_info.get('names', [])}
+            
+            descriptions = {}
+            for entry in item_info.get('flavor_text_entries', []):
+                lang = entry['language']['name']
+                if lang not in descriptions:
+                    descriptions[lang] = entry['text'].replace('\n', ' ').replace('\f', ' ')
+
+            sprite = item_info['sprites']['default'] if item_info.get('sprites') else None
+
+            item_dict = {
+                "id": item_info['id'],
+                "sprite": sprite,
+                "names": names,
+                "descriptions": descriptions,
+                "category": category
+            }
+            items_data.append(item_dict)
+            
+        except Exception as e:
+            print(f"[WARN] Error fetching item {item_name}: {e}")
+            
+        time.sleep(0.05)
+
+    with open(save_to, "w", encoding="utf-8") as f:
+        json.dump(items_data, f, indent=4, ensure_ascii=False)
         
-        descriptions = {}
-        for entry in item_info['flavor_text_entries']:
-            lang = entry['language']['name']
-            if lang not in descriptions:
-                descriptions[lang] = entry['text'].replace('\n', ' ').replace('\f', ' ')
-
-        # Some items might not have a default sprite
-        sprite = item_info['sprites']['default'] if item_info['sprites'] else None
-
-        item_dict = {
-            "id": item_info['id'],
-            "sprite": sprite,
-            "names": names,
-            "descriptions": descriptions
-        }
-        items_data.append(item_dict)
-        print(f"Fetched item: {item['name']}")
-
-    with open('data/items.json', 'w', encoding='utf-8') as f:
-        json.dump(items_data, f, ensure_ascii=False, indent=4)
-    print("✅ All items saved in data/items.json")
+    print(f"\n✅ Filtered items saved in {save_to}")
+    print(f"📊 Final Stats: Kept {len(items_data)} usable items, Skipped {skipped_count} useless items.")
 
 if __name__ == "__main__":
-    fetch_all_items()
+    fetch_filtered_items()
