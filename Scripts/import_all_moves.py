@@ -1,6 +1,7 @@
 import requests
 import json
 import os
+import time
 
 def fetch_all_moves():
     os.makedirs('data', exist_ok=True)
@@ -28,17 +29,23 @@ def fetch_all_moves():
             if lang not in descriptions:
                 descriptions[lang] = entry['flavor_text'].replace('\n', ' ').replace('\f', ' ')
 
+        damage_class = move_info.get('damage_class')
+        damage_class_name = damage_class['name'] if damage_class else 'unknown'
+
         move_dict = {
             "id": move_info['id'],
             "power": move_info['power'],
             "accuracy": move_info['accuracy'],
             "pp": move_info['pp'],
             "type": move_info['type']['name'],
+            "damage_class": damage_class_name,
             "names": names,
             "descriptions": descriptions
         }
         moves_data.append(move_dict)
         print(f"Fetched move: {item['name']}")
+        
+        time.sleep(0.05)
 
     with open('data/moves.json', 'w', encoding='utf-8') as f:
         json.dump(moves_data, f, ensure_ascii=False, indent=4)

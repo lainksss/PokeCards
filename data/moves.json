@@ -5,6 +5,7 @@
         "accuracy": 100,
         "pp": 35,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "はたく",
             "ko": "막치기",
@@ -36,6 +37,7 @@
         "accuracy": 100,
         "pp": 25,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "からてチョップ",
             "ko": "태권당수",
@@ -67,6 +69,7 @@
         "accuracy": 85,
         "pp": 10,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "おうふくビンタ",
             "ko": "연속뺨치기",
@@ -98,6 +101,7 @@
         "accuracy": 85,
         "pp": 15,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "れんぞくパンチ",
             "ko": "연속펀치",
@@ -129,6 +133,7 @@
         "accuracy": 85,
         "pp": 20,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "メガトンパンチ",
             "ko": "메가톤펀치",
@@ -160,6 +165,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ネコにこばん",
             "ko": "고양이돈받기",
@@ -191,6 +197,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "fire",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ほのおのパンチ",
             "ko": "불꽃펀치",
@@ -222,6 +229,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "ice",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "れいとうパンチ",
             "ko": "냉동펀치",
@@ -253,6 +261,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "electric",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "かみなりパンチ",
             "ko": "번개펀치",
@@ -284,6 +293,7 @@
         "accuracy": 100,
         "pp": 35,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ひっかく",
             "ko": "할퀴기",
@@ -315,6 +325,7 @@
         "accuracy": 100,
         "pp": 30,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "はさむ",
             "ko": "찝기",
@@ -346,6 +357,7 @@
         "accuracy": 30,
         "pp": 5,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ハサミギロチン",
             "ko": "가위자르기",
@@ -377,6 +389,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "normal",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "かまいたち",
             "ko": "칼바람",
@@ -408,6 +421,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "つるぎのまい",
             "ko": "칼춤",
@@ -439,6 +453,7 @@
         "accuracy": 95,
         "pp": 30,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "いあいぎり",
             "ko": "풀베기",
@@ -470,6 +485,7 @@
         "accuracy": 100,
         "pp": 35,
         "type": "flying",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "かぜおこし",
             "ko": "바람일으키기",
@@ -501,6 +517,7 @@
         "accuracy": 100,
         "pp": 35,
         "type": "flying",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "つばさでうつ",
             "ko": "날개치기",
@@ -532,6 +549,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ふきとばし",
             "ko": "날려버리기",
@@ -563,6 +581,7 @@
         "accuracy": 95,
         "pp": 15,
         "type": "flying",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "そらをとぶ",
             "ko": "공중날기",
@@ -594,6 +613,7 @@
         "accuracy": 85,
         "pp": 20,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "しめつける",
             "ko": "조이기",
@@ -625,6 +645,7 @@
         "accuracy": 75,
         "pp": 20,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "たたきつける",
             "ko": "힘껏치기",
@@ -656,6 +677,7 @@
         "accuracy": 100,
         "pp": 25,
         "type": "grass",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "つるのムチ",
             "ko": "덩굴채찍",
@@ -687,6 +709,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ふみつけ",
             "ko": "짓밟기",
@@ -718,6 +741,7 @@
         "accuracy": 100,
         "pp": 30,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "にどげり",
             "ko": "두번치기",
@@ -749,6 +773,7 @@
         "accuracy": 75,
         "pp": 5,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "メガトンキック",
             "ko": "메가톤킥",
@@ -780,6 +805,7 @@
         "accuracy": 95,
         "pp": 10,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "とびげり",
             "ko": "점프킥",
@@ -811,6 +837,7 @@
         "accuracy": 85,
         "pp": 15,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "まわしげり",
             "ko": "돌려차기",
@@ -842,6 +869,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "ground",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "すなかけ",
             "ko": "모래뿌리기",
@@ -873,6 +901,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ずつき",
             "ko": "박치기",
@@ -904,6 +933,7 @@
         "accuracy": 100,
         "pp": 25,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "つのでつく",
             "ko": "뿔찌르기",
@@ -935,6 +965,7 @@
         "accuracy": 85,
         "pp": 20,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "みだれづき",
             "ko": "마구찌르기",
@@ -966,6 +997,7 @@
         "accuracy": 30,
         "pp": 5,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "つのドリル",
             "ko": "뿔드릴",
@@ -997,6 +1029,7 @@
         "accuracy": 100,
         "pp": 35,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "たいあたり",
             "ko": "몸통박치기",
@@ -1028,6 +1061,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "のしかかり",
             "ko": "누르기",
@@ -1059,6 +1093,7 @@
         "accuracy": 90,
         "pp": 20,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "まきつく",
             "ko": "김밥말이",
@@ -1090,6 +1125,7 @@
         "accuracy": 85,
         "pp": 20,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "とっしん",
             "ko": "돌진",
@@ -1121,6 +1157,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "あばれる",
             "ko": "난동부리기",
@@ -1152,6 +1189,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "すてみタックル",
             "ko": "이판사판태클",
@@ -1183,6 +1221,7 @@
         "accuracy": 100,
         "pp": 30,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "しっぽをふる",
             "ko": "꼬리흔들기",
@@ -1214,6 +1253,7 @@
         "accuracy": 100,
         "pp": 35,
         "type": "poison",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "どくばり",
             "ko": "독침",
@@ -1245,6 +1285,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "bug",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダブルニードル",
             "ko": "더블니들",
@@ -1276,6 +1317,7 @@
         "accuracy": 95,
         "pp": 20,
         "type": "bug",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ミサイルばり",
             "ko": "바늘미사일",
@@ -1307,6 +1349,7 @@
         "accuracy": 100,
         "pp": 30,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "にらみつける",
             "ko": "째려보기",
@@ -1338,6 +1381,7 @@
         "accuracy": 100,
         "pp": 25,
         "type": "dark",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "かみつく",
             "ko": "물기",
@@ -1369,6 +1413,7 @@
         "accuracy": 100,
         "pp": 40,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "なきごえ",
             "ko": "울음소리",
@@ -1400,6 +1445,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ほえる",
             "ko": "울부짖기",
@@ -1431,6 +1477,7 @@
         "accuracy": 55,
         "pp": 15,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "うたう",
             "ko": "노래하기",
@@ -1462,6 +1509,7 @@
         "accuracy": 55,
         "pp": 20,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ちょうおんぱ",
             "ko": "초음파",
@@ -1493,6 +1541,7 @@
         "accuracy": 90,
         "pp": 20,
         "type": "normal",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ソニックブーム",
             "ko": "소닉붐",
@@ -1524,6 +1573,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "かなしばり",
             "ko": "사슬묶기",
@@ -1555,6 +1605,7 @@
         "accuracy": 100,
         "pp": 30,
         "type": "poison",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ようかいえき",
             "ko": "용해액",
@@ -1586,6 +1637,7 @@
         "accuracy": 100,
         "pp": 25,
         "type": "fire",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ひのこ",
             "ko": "불꽃세례",
@@ -1617,6 +1669,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "fire",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "かえんほうしゃ",
             "ko": "화염방사",
@@ -1648,6 +1701,7 @@
         "accuracy": null,
         "pp": 30,
         "type": "ice",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "しろいきり",
             "ko": "흰안개",
@@ -1679,6 +1733,7 @@
         "accuracy": 100,
         "pp": 25,
         "type": "water",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "みずでっぽう",
             "ko": "물대포",
@@ -1710,6 +1765,7 @@
         "accuracy": 80,
         "pp": 5,
         "type": "water",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ハイドロポンプ",
             "ko": "하이드로펌프",
@@ -1741,6 +1797,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "water",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "なみのり",
             "ko": "파도타기",
@@ -1772,6 +1829,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "ice",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "れいとうビーム",
             "ko": "냉동빔",
@@ -1803,6 +1861,7 @@
         "accuracy": 70,
         "pp": 5,
         "type": "ice",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ふぶき",
             "ko": "눈보라",
@@ -1834,6 +1893,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "psychic",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "サイケこうせん",
             "ko": "환상빔",
@@ -1865,6 +1925,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "water",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "バブルこうせん",
             "ko": "거품광선",
@@ -1896,6 +1957,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "ice",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "オーロラビーム",
             "ko": "오로라빔",
@@ -1927,6 +1989,7 @@
         "accuracy": 90,
         "pp": 5,
         "type": "normal",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "はかいこうせん",
             "ko": "파괴광선",
@@ -1958,6 +2021,7 @@
         "accuracy": 100,
         "pp": 35,
         "type": "flying",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "つつく",
             "ko": "쪼기",
@@ -1989,6 +2053,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "flying",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ドリルくちばし",
             "ko": "회전부리",
@@ -2020,6 +2085,7 @@
         "accuracy": 80,
         "pp": 20,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "じごくぐるま",
             "ko": "지옥의바퀴",
@@ -2051,6 +2117,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "けたぐり",
             "ko": "안다리걸기",
@@ -2082,6 +2149,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "カウンター",
             "ko": "카운터",
@@ -2113,6 +2181,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ちきゅうなげ",
             "ko": "지구던지기",
@@ -2144,6 +2213,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "かいりき",
             "ko": "괴력",
@@ -2175,6 +2245,7 @@
         "accuracy": 100,
         "pp": 25,
         "type": "grass",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "すいとる",
             "ko": "흡수",
@@ -2206,6 +2277,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "grass",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "メガドレイン",
             "ko": "메가드레인",
@@ -2237,6 +2309,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "grass",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "やどりぎのタネ",
             "ko": "씨뿌리기",
@@ -2268,6 +2341,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "せいちょう",
             "ko": "성장",
@@ -2299,6 +2373,7 @@
         "accuracy": 95,
         "pp": 25,
         "type": "grass",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "はっぱカッター",
             "ko": "잎날가르기",
@@ -2330,6 +2405,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "grass",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ソーラービーム",
             "ko": "솔라빔",
@@ -2361,6 +2437,7 @@
         "accuracy": 75,
         "pp": 35,
         "type": "poison",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "どくのこな",
             "ko": "독가루",
@@ -2392,6 +2469,7 @@
         "accuracy": 75,
         "pp": 30,
         "type": "grass",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "しびれごな",
             "ko": "저리가루",
@@ -2423,6 +2501,7 @@
         "accuracy": 75,
         "pp": 15,
         "type": "grass",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ねむりごな",
             "ko": "수면가루",
@@ -2454,6 +2533,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "grass",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "はなびらのまい",
             "ko": "꽃잎댄스",
@@ -2485,6 +2565,7 @@
         "accuracy": 95,
         "pp": 40,
         "type": "bug",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "いとをはく",
             "ko": "실뿜기",
@@ -2516,6 +2597,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "dragon",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "りゅうのいかり",
             "ko": "용의분노",
@@ -2547,6 +2629,7 @@
         "accuracy": 85,
         "pp": 15,
         "type": "fire",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ほのおのうず",
             "ko": "회오리불꽃",
@@ -2578,6 +2661,7 @@
         "accuracy": 100,
         "pp": 30,
         "type": "electric",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "でんきショック",
             "ko": "전기쇼크",
@@ -2609,6 +2693,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "electric",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "１０まんボルト",
             "ko": "10만볼트",
@@ -2640,6 +2725,7 @@
         "accuracy": 90,
         "pp": 20,
         "type": "electric",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "でんじは",
             "ko": "전기자석파",
@@ -2671,6 +2757,7 @@
         "accuracy": 70,
         "pp": 10,
         "type": "electric",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "かみなり",
             "ko": "번개",
@@ -2702,6 +2789,7 @@
         "accuracy": 90,
         "pp": 15,
         "type": "rock",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "いわおとし",
             "ko": "돌떨구기",
@@ -2733,6 +2821,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "ground",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "じしん",
             "ko": "지진",
@@ -2764,6 +2853,7 @@
         "accuracy": 30,
         "pp": 5,
         "type": "ground",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "じわれ",
             "ko": "땅가르기",
@@ -2795,6 +2885,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "ground",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "あなをほる",
             "ko": "구멍파기",
@@ -2826,6 +2917,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "poison",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "どくどく",
             "ko": "맹독",
@@ -2857,6 +2949,7 @@
         "accuracy": 100,
         "pp": 25,
         "type": "psychic",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ねんりき",
             "ko": "염동력",
@@ -2888,6 +2981,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "サイコキネシス",
             "ko": "사이코키네시스",
@@ -2919,6 +3013,7 @@
         "accuracy": 60,
         "pp": 20,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "さいみんじゅつ",
             "ko": "최면술",
@@ -2950,6 +3045,7 @@
         "accuracy": null,
         "pp": 40,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ヨガのポーズ",
             "ko": "요가포즈",
@@ -2981,6 +3077,7 @@
         "accuracy": null,
         "pp": 30,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "こうそくいどう",
             "ko": "고속이동",
@@ -3012,6 +3109,7 @@
         "accuracy": 100,
         "pp": 30,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "でんこうせっか",
             "ko": "전광석화",
@@ -3043,6 +3141,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "いかり",
             "ko": "분노",
@@ -3074,6 +3173,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "テレポート",
             "ko": "순간이동",
@@ -3105,6 +3205,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "ghost",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ナイトヘッド",
             "ko": "나이트헤드",
@@ -3136,6 +3237,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ものまね",
             "ko": "흉내내기",
@@ -3167,6 +3269,7 @@
         "accuracy": 85,
         "pp": 40,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "いやなおと",
             "ko": "싫은소리",
@@ -3198,6 +3301,7 @@
         "accuracy": null,
         "pp": 15,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "かげぶんしん",
             "ko": "그림자분신",
@@ -3229,6 +3333,7 @@
         "accuracy": null,
         "pp": 5,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "じこさいせい",
             "ko": "HP회복",
@@ -3260,6 +3365,7 @@
         "accuracy": null,
         "pp": 30,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "かたくなる",
             "ko": "단단해지기",
@@ -3291,6 +3397,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ちいさくなる",
             "ko": "작아지기",
@@ -3322,6 +3429,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "えんまく",
             "ko": "연막",
@@ -3353,6 +3461,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "ghost",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "あやしいひかり",
             "ko": "이상한빛",
@@ -3384,6 +3493,7 @@
         "accuracy": null,
         "pp": 40,
         "type": "water",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "からにこもる",
             "ko": "껍질에숨기",
@@ -3415,6 +3525,7 @@
         "accuracy": null,
         "pp": 40,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "まるくなる",
             "ko": "웅크리기",
@@ -3446,6 +3557,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "バリアー",
             "ko": "배리어",
@@ -3477,6 +3589,7 @@
         "accuracy": null,
         "pp": 30,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ひかりのかべ",
             "ko": "빛의장막",
@@ -3508,6 +3621,7 @@
         "accuracy": null,
         "pp": 30,
         "type": "ice",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "くろいきり",
             "ko": "흑안개",
@@ -3539,6 +3653,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "リフレクター",
             "ko": "리플렉터",
@@ -3570,6 +3685,7 @@
         "accuracy": null,
         "pp": 30,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "きあいだめ",
             "ko": "기충전",
@@ -3601,6 +3717,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "がまん",
             "ko": "참기",
@@ -3632,6 +3749,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ゆびをふる",
             "ko": "손가락흔들기",
@@ -3663,6 +3781,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "flying",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "オウムがえし",
             "ko": "따라하기",
@@ -3694,6 +3813,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "じばく",
             "ko": "자폭",
@@ -3725,6 +3845,7 @@
         "accuracy": 75,
         "pp": 10,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "タマゴばくだん",
             "ko": "알폭탄",
@@ -3756,6 +3877,7 @@
         "accuracy": 100,
         "pp": 30,
         "type": "ghost",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "したでなめる",
             "ko": "핥기",
@@ -3787,6 +3909,7 @@
         "accuracy": 70,
         "pp": 20,
         "type": "poison",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "スモッグ",
             "ko": "스모그",
@@ -3818,6 +3941,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "poison",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ヘドロこうげき",
             "ko": "오물공격",
@@ -3849,6 +3973,7 @@
         "accuracy": 85,
         "pp": 20,
         "type": "ground",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ホネこんぼう",
             "ko": "뼈다귀치기",
@@ -3880,6 +4005,7 @@
         "accuracy": 85,
         "pp": 5,
         "type": "fire",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "だいもんじ",
             "ko": "불대문자",
@@ -3911,6 +4037,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "water",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "たきのぼり",
             "ko": "폭포오르기",
@@ -3942,6 +4069,7 @@
         "accuracy": 85,
         "pp": 15,
         "type": "water",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "からではさむ",
             "ko": "껍질끼우기",
@@ -3973,6 +4101,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "normal",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "スピードスター",
             "ko": "스피드스타",
@@ -4004,6 +4133,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ロケットずつき",
             "ko": "로케트박치기",
@@ -4035,6 +4165,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "とげキャノン",
             "ko": "가시대포",
@@ -4066,6 +4197,7 @@
         "accuracy": 100,
         "pp": 35,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "からみつく",
             "ko": "휘감기",
@@ -4097,6 +4229,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ドわすれ",
             "ko": "망각술",
@@ -4128,6 +4261,7 @@
         "accuracy": 80,
         "pp": 15,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "スプーンまげ",
             "ko": "숟가락휘기",
@@ -4159,6 +4293,7 @@
         "accuracy": null,
         "pp": 5,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "タマゴうみ",
             "ko": "알낳기",
@@ -4190,6 +4325,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "とびひざげり",
             "ko": "무릎차기",
@@ -4221,6 +4357,7 @@
         "accuracy": 100,
         "pp": 30,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "へびにらみ",
             "ko": "뱀눈초리",
@@ -4252,6 +4389,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "psychic",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ゆめくい",
             "ko": "꿈먹기",
@@ -4283,6 +4421,7 @@
         "accuracy": 90,
         "pp": 40,
         "type": "poison",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "どくガス",
             "ko": "독가스",
@@ -4314,6 +4453,7 @@
         "accuracy": 85,
         "pp": 20,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "たまなげ",
             "ko": "구슬던지기",
@@ -4345,6 +4485,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "bug",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "きゅうけつ",
             "ko": "흡혈",
@@ -4376,6 +4517,7 @@
         "accuracy": 75,
         "pp": 10,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "あくまのキッス",
             "ko": "악마의키스",
@@ -4407,6 +4549,7 @@
         "accuracy": 90,
         "pp": 5,
         "type": "flying",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ゴッドバード",
             "ko": "불새",
@@ -4438,6 +4581,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "へんしん",
             "ko": "변신",
@@ -4469,6 +4613,7 @@
         "accuracy": 100,
         "pp": 30,
         "type": "water",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "あわ",
             "ko": "거품",
@@ -4500,6 +4645,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ピヨピヨパンチ",
             "ko": "잼잼펀치",
@@ -4531,6 +4677,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "grass",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "キノコのほうし",
             "ko": "버섯포자",
@@ -4562,6 +4709,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "フラッシュ",
             "ko": "플래시",
@@ -4593,6 +4741,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "psychic",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "サイコウェーブ",
             "ko": "사이코웨이브",
@@ -4624,6 +4773,7 @@
         "accuracy": null,
         "pp": 40,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "はねる",
             "ko": "튀어오르기",
@@ -4655,6 +4805,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "poison",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "とける",
             "ko": "녹기",
@@ -4686,6 +4837,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "water",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "クラブハンマー",
             "ko": "찝게햄머",
@@ -4717,6 +4869,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "だいばくはつ",
             "ko": "대폭발",
@@ -4748,6 +4901,7 @@
         "accuracy": 80,
         "pp": 15,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "みだれひっかき",
             "ko": "마구할퀴기",
@@ -4779,6 +4933,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "ground",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ホネブーメラン",
             "ko": "뼈다귀부메랑",
@@ -4810,6 +4965,7 @@
         "accuracy": null,
         "pp": 5,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ねむる",
             "ko": "잠자기",
@@ -4841,6 +4997,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "rock",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "いわなだれ",
             "ko": "스톤샤워",
@@ -4872,6 +5029,7 @@
         "accuracy": 90,
         "pp": 15,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ひっさつまえば",
             "ko": "필살앞니",
@@ -4903,6 +5061,7 @@
         "accuracy": null,
         "pp": 30,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "かくばる",
             "ko": "각지기",
@@ -4934,6 +5093,7 @@
         "accuracy": null,
         "pp": 30,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "テクスチャー",
             "ko": "텍스처",
@@ -4965,6 +5125,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "normal",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "トライアタック",
             "ko": "트라이어택",
@@ -4996,6 +5157,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "いかりのまえば",
             "ko": "분노의앞니",
@@ -5027,6 +5189,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "きりさく",
             "ko": "베어가르기",
@@ -5058,6 +5221,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "みがわり",
             "ko": "대타출동",
@@ -5089,6 +5253,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "わるあがき",
             "ko": "발버둥",
@@ -5120,6 +5285,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "スケッチ",
             "ko": "스케치",
@@ -5151,6 +5317,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "トリプルキック",
             "ko": "트리플킥",
@@ -5182,6 +5349,7 @@
         "accuracy": 100,
         "pp": 25,
         "type": "dark",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "どろぼう",
             "ko": "도둑질",
@@ -5213,6 +5381,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "bug",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "クモのす",
             "ko": "거미집",
@@ -5244,6 +5413,7 @@
         "accuracy": null,
         "pp": 5,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "こころのめ",
             "ko": "마음의눈",
@@ -5275,6 +5445,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "ghost",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "あくむ",
             "ko": "악몽",
@@ -5306,6 +5477,7 @@
         "accuracy": 100,
         "pp": 25,
         "type": "fire",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "かえんぐるま",
             "ko": "화염자동차",
@@ -5337,6 +5509,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "normal",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "いびき",
             "ko": "코골기",
@@ -5368,6 +5541,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "ghost",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "のろい",
             "ko": "저주",
@@ -5399,6 +5573,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "じたばた",
             "ko": "바둥바둥",
@@ -5430,6 +5605,7 @@
         "accuracy": null,
         "pp": 30,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "テクスチャー２",
             "ko": "텍스처2",
@@ -5461,6 +5637,7 @@
         "accuracy": 95,
         "pp": 5,
         "type": "flying",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "エアロブラスト",
             "ko": "에어로블라스트",
@@ -5492,6 +5669,7 @@
         "accuracy": 100,
         "pp": 40,
         "type": "grass",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "わたほうし",
             "ko": "목화포자",
@@ -5523,6 +5701,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "きしかいせい",
             "ko": "기사회생",
@@ -5554,6 +5733,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "ghost",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "うらみ",
             "ko": "원한",
@@ -5585,6 +5765,7 @@
         "accuracy": 100,
         "pp": 25,
         "type": "ice",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "こなゆき",
             "ko": "눈싸라기",
@@ -5616,6 +5797,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "まもる",
             "ko": "방어",
@@ -5647,6 +5829,7 @@
         "accuracy": 100,
         "pp": 30,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "マッハパンチ",
             "ko": "마하펀치",
@@ -5678,6 +5861,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "こわいかお",
             "ko": "겁나는얼굴",
@@ -5709,6 +5893,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "dark",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "だましうち",
             "ko": "속여때리기",
@@ -5740,6 +5925,7 @@
         "accuracy": 75,
         "pp": 10,
         "type": "fairy",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "てんしのキッス",
             "ko": "천사의키스",
@@ -5771,6 +5957,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "はらだいこ",
             "ko": "배북",
@@ -5802,6 +5989,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "poison",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ヘドロばくだん",
             "ko": "오물폭탄",
@@ -5833,6 +6021,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "ground",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "どろかけ",
             "ko": "진흙뿌리기",
@@ -5864,6 +6053,7 @@
         "accuracy": 85,
         "pp": 10,
         "type": "water",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "オクタンほう",
             "ko": "대포무노포",
@@ -5895,6 +6085,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "ground",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "まきびし",
             "ko": "압정뿌리기",
@@ -5926,6 +6117,7 @@
         "accuracy": 50,
         "pp": 5,
         "type": "electric",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "でんじほう",
             "ko": "전자포",
@@ -5957,6 +6149,7 @@
         "accuracy": null,
         "pp": 40,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "みやぶる",
             "ko": "꿰뚫어보기",
@@ -5988,6 +6181,7 @@
         "accuracy": null,
         "pp": 5,
         "type": "ghost",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "みちづれ",
             "ko": "길동무",
@@ -6019,6 +6213,7 @@
         "accuracy": null,
         "pp": 5,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ほろびのうた",
             "ko": "멸망의노래",
@@ -6050,6 +6245,7 @@
         "accuracy": 95,
         "pp": 15,
         "type": "ice",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "こごえるかぜ",
             "ko": "얼다바람",
@@ -6081,6 +6277,7 @@
         "accuracy": null,
         "pp": 5,
         "type": "fighting",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "みきり",
             "ko": "판별",
@@ -6112,6 +6309,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "ground",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ボーンラッシュ",
             "ko": "본러쉬",
@@ -6143,6 +6341,7 @@
         "accuracy": null,
         "pp": 5,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ロックオン",
             "ko": "록온",
@@ -6174,6 +6373,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "dragon",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "げきりん",
             "ko": "역린",
@@ -6205,6 +6405,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "rock",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "すなあらし",
             "ko": "모래바람",
@@ -6236,6 +6437,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "grass",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ギガドレイン",
             "ko": "기가드레인",
@@ -6267,6 +6469,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "こらえる",
             "ko": "버티기",
@@ -6298,6 +6501,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "fairy",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "あまえる",
             "ko": "애교부리기",
@@ -6329,6 +6533,7 @@
         "accuracy": 90,
         "pp": 20,
         "type": "rock",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ころがる",
             "ko": "구르기",
@@ -6360,6 +6565,7 @@
         "accuracy": 100,
         "pp": 40,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "みねうち",
             "ko": "칼등치기",
@@ -6391,6 +6597,7 @@
         "accuracy": 85,
         "pp": 15,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "いばる",
             "ko": "뽐내기",
@@ -6422,6 +6629,7 @@
         "accuracy": null,
         "pp": 5,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ミルクのみ",
             "ko": "우유마시기",
@@ -6453,6 +6661,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "electric",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "スパーク",
             "ko": "스파크",
@@ -6484,6 +6693,7 @@
         "accuracy": 95,
         "pp": 20,
         "type": "bug",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "れんぞくぎり",
             "ko": "연속자르기",
@@ -6515,6 +6725,7 @@
         "accuracy": 90,
         "pp": 25,
         "type": "steel",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "はがねのつばさ",
             "ko": "강철날개",
@@ -6546,6 +6757,7 @@
         "accuracy": null,
         "pp": 5,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "くろいまなざし",
             "ko": "검은눈빛",
@@ -6577,6 +6789,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "メロメロ",
             "ko": "헤롱헤롱",
@@ -6608,6 +6821,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ねごと",
             "ko": "잠꼬대",
@@ -6639,6 +6853,7 @@
         "accuracy": null,
         "pp": 5,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "いやしのすず",
             "ko": "치료방울",
@@ -6670,6 +6885,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "おんがえし",
             "ko": "은혜갚기",
@@ -6701,6 +6917,7 @@
         "accuracy": 90,
         "pp": 15,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "プレゼント",
             "ko": "프레젠트",
@@ -6732,6 +6949,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "やつあたり",
             "ko": "화풀이",
@@ -6763,6 +6981,7 @@
         "accuracy": null,
         "pp": 25,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "しんぴのまもり",
             "ko": "신비의부적",
@@ -6794,6 +7013,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "いたみわけ",
             "ko": "아픔나누기",
@@ -6825,6 +7045,7 @@
         "accuracy": 95,
         "pp": 5,
         "type": "fire",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "せいなるほのお",
             "ko": "성스러운불꽃",
@@ -6856,6 +7077,7 @@
         "accuracy": 100,
         "pp": 30,
         "type": "ground",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "マグニチュード",
             "ko": "매그니튜드",
@@ -6887,6 +7109,7 @@
         "accuracy": 50,
         "pp": 5,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ばくれつパンチ",
             "ko": "폭발펀치",
@@ -6918,6 +7141,7 @@
         "accuracy": 85,
         "pp": 10,
         "type": "bug",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "メガホーン",
             "ko": "메가폰",
@@ -6949,6 +7173,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "dragon",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "りゅうのいぶき",
             "ko": "용의숨결",
@@ -6980,6 +7205,7 @@
         "accuracy": null,
         "pp": 40,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "バトンタッチ",
             "ko": "바톤터치",
@@ -7011,6 +7237,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "アンコール",
             "ko": "앵콜",
@@ -7042,6 +7269,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "dark",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "おいうち",
             "ko": "따라가때리기",
@@ -7073,6 +7301,7 @@
         "accuracy": 100,
         "pp": 40,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "こうそくスピン",
             "ko": "고속스핀",
@@ -7104,6 +7333,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "あまいかおり",
             "ko": "달콤한향기",
@@ -7135,6 +7365,7 @@
         "accuracy": 75,
         "pp": 15,
         "type": "steel",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "アイアンテール",
             "ko": "아이언테일",
@@ -7166,6 +7397,7 @@
         "accuracy": 95,
         "pp": 35,
         "type": "steel",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "メタルクロー",
             "ko": "메탈크로우",
@@ -7197,6 +7429,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "あてみなげ",
             "ko": "받아던지기",
@@ -7228,6 +7461,7 @@
         "accuracy": null,
         "pp": 5,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "あさのひざし",
             "ko": "아침햇살",
@@ -7259,6 +7493,7 @@
         "accuracy": null,
         "pp": 5,
         "type": "grass",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "こうごうせい",
             "ko": "광합성",
@@ -7290,6 +7525,7 @@
         "accuracy": null,
         "pp": 5,
         "type": "fairy",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "つきのひかり",
             "ko": "달의불빛",
@@ -7321,6 +7557,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "normal",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "めざめるパワー",
             "ko": "잠재파워",
@@ -7352,6 +7589,7 @@
         "accuracy": 80,
         "pp": 5,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "クロスチョップ",
             "ko": "크로스촙",
@@ -7383,6 +7621,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "dragon",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "たつまき",
             "ko": "회오리",
@@ -7414,6 +7653,7 @@
         "accuracy": null,
         "pp": 5,
         "type": "water",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "あまごい",
             "ko": "비바라기",
@@ -7445,6 +7685,7 @@
         "accuracy": null,
         "pp": 5,
         "type": "fire",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "にほんばれ",
             "ko": "쾌청",
@@ -7476,6 +7717,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "dark",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "かみくだく",
             "ko": "깨물어부수기",
@@ -7507,6 +7749,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "psychic",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ミラーコート",
             "ko": "미러코트",
@@ -7538,6 +7781,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "じこあんじ",
             "ko": "자기암시",
@@ -7569,6 +7813,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "しんそく",
             "ko": "신속",
@@ -7600,6 +7845,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "rock",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "げんしのちから",
             "ko": "원시의힘",
@@ -7631,6 +7877,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "ghost",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "シャドーボール",
             "ko": "섀도볼",
@@ -7662,6 +7909,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "みらいよち",
             "ko": "미래예지",
@@ -7693,6 +7941,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "いわくだき",
             "ko": "바위깨기",
@@ -7724,6 +7973,7 @@
         "accuracy": 85,
         "pp": 15,
         "type": "water",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "うずしお",
             "ko": "바다회오리",
@@ -7755,6 +8005,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "dark",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ふくろだたき",
             "ko": "집단구타",
@@ -7786,6 +8037,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ねこだまし",
             "ko": "속이다",
@@ -7817,6 +8069,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "normal",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "さわぐ",
             "ko": "소란피기",
@@ -7848,6 +8101,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "たくわえる",
             "ko": "비축하기",
@@ -7879,6 +8133,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "normal",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "はきだす",
             "ko": "토해내기",
@@ -7910,6 +8165,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "のみこむ",
             "ko": "꿀꺽",
@@ -7941,6 +8197,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "fire",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ねっぷう",
             "ko": "열풍",
@@ -7972,6 +8229,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "ice",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "あられ",
             "ko": "싸라기눈",
@@ -8003,6 +8261,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "dark",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "いちゃもん",
             "ko": "트집",
@@ -8034,6 +8293,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "dark",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "おだてる",
             "ko": "부추기기",
@@ -8065,6 +8325,7 @@
         "accuracy": 85,
         "pp": 15,
         "type": "fire",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "おにび",
             "ko": "도깨비불",
@@ -8096,6 +8357,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "dark",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "おきみやげ",
             "ko": "추억의선물",
@@ -8127,6 +8389,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "からげんき",
             "ko": "객기",
@@ -8158,6 +8421,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "きあいパンチ",
             "ko": "힘껏펀치",
@@ -8189,6 +8453,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "きつけ",
             "ko": "정신차리기",
@@ -8220,6 +8485,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "このゆびとまれ",
             "ko": "날따름",
@@ -8251,6 +8517,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "しぜんのちから",
             "ko": "자연의힘",
@@ -8282,6 +8549,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "electric",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "じゅうでん",
             "ko": "충전",
@@ -8313,6 +8581,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "dark",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ちょうはつ",
             "ko": "도발",
@@ -8344,6 +8613,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "てだすけ",
             "ko": "도우미",
@@ -8375,6 +8645,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "トリック",
             "ko": "트릭",
@@ -8406,6 +8677,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "なりきり",
             "ko": "역할",
@@ -8437,6 +8709,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ねがいごと",
             "ko": "희망사항",
@@ -8468,6 +8741,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ねこのて",
             "ko": "조수",
@@ -8499,6 +8773,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "grass",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ねをはる",
             "ko": "뿌리박기",
@@ -8530,6 +8805,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ばかぢから",
             "ko": "엄청난힘",
@@ -8561,6 +8837,7 @@
         "accuracy": null,
         "pp": 15,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "マジックコート",
             "ko": "매직코트",
@@ -8592,6 +8869,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "リサイクル",
             "ko": "리사이클",
@@ -8623,6 +8901,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "リベンジ",
             "ko": "리벤지",
@@ -8654,6 +8933,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "かわらわり",
             "ko": "깨트리다",
@@ -8685,6 +8965,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "あくび",
             "ko": "하품",
@@ -8716,6 +8997,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "dark",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "はたきおとす",
             "ko": "탁쳐서떨구기",
@@ -8747,6 +9029,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "がむしゃら",
             "ko": "죽기살기",
@@ -8778,6 +9061,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "fire",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ふんか",
             "ko": "분화",
@@ -8809,6 +9093,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "スキルスワップ",
             "ko": "스킬스웹",
@@ -8840,6 +9125,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ふういん",
             "ko": "봉인",
@@ -8871,6 +9157,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "リフレッシュ",
             "ko": "리프레쉬",
@@ -8902,6 +9189,7 @@
         "accuracy": null,
         "pp": 5,
         "type": "ghost",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "おんねん",
             "ko": "원념",
@@ -8933,6 +9221,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "dark",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "よこどり",
             "ko": "가로챔",
@@ -8964,6 +9253,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ひみつのちから",
             "ko": "비밀의힘",
@@ -8995,6 +9285,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "water",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダイビング",
             "ko": "다이빙",
@@ -9026,6 +9317,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "つっぱり",
             "ko": "손바닥치기",
@@ -9057,6 +9349,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ほごしょく",
             "ko": "보호색",
@@ -9088,6 +9381,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "bug",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ほたるび",
             "ko": "반딧불",
@@ -9119,6 +9413,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "psychic",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ラスターパージ",
             "ko": "라스트버지",
@@ -9150,6 +9445,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "psychic",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ミストボール",
             "ko": "미스트볼",
@@ -9181,6 +9477,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "flying",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "フェザーダンス",
             "ko": "깃털댄스",
@@ -9212,6 +9509,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "フラフラダンス",
             "ko": "흔들흔들댄스",
@@ -9243,6 +9541,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "fire",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ブレイズキック",
             "ko": "브레이즈킥",
@@ -9274,6 +9573,7 @@
         "accuracy": null,
         "pp": 15,
         "type": "ground",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "どろあそび",
             "ko": "흙놀이",
@@ -9305,6 +9605,7 @@
         "accuracy": 90,
         "pp": 20,
         "type": "ice",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "アイスボール",
             "ko": "아이스볼",
@@ -9336,6 +9637,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "grass",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ニードルアーム",
             "ko": "바늘팔",
@@ -9367,6 +9669,7 @@
         "accuracy": null,
         "pp": 5,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "なまける",
             "ko": "태만함",
@@ -9398,6 +9701,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "normal",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ハイパーボイス",
             "ko": "하이퍼보이스",
@@ -9429,6 +9733,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "poison",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "どくどくのキバ",
             "ko": "독엄니",
@@ -9460,6 +9765,7 @@
         "accuracy": 95,
         "pp": 10,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ブレイククロー",
             "ko": "브레이크크루",
@@ -9491,6 +9797,7 @@
         "accuracy": 90,
         "pp": 5,
         "type": "fire",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ブラストバーン",
             "ko": "블러스트번",
@@ -9522,6 +9829,7 @@
         "accuracy": 90,
         "pp": 5,
         "type": "water",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ハイドロカノン",
             "ko": "하이드로캐논",
@@ -9553,6 +9861,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "steel",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "コメットパンチ",
             "ko": "코멧펀치",
@@ -9584,6 +9893,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "ghost",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "おどろかす",
             "ko": "놀래키기",
@@ -9615,6 +9925,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "normal",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ウェザーボール",
             "ko": "웨더볼",
@@ -9646,6 +9957,7 @@
         "accuracy": null,
         "pp": 5,
         "type": "grass",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "アロマセラピー",
             "ko": "아로마테라피",
@@ -9677,6 +9989,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "dark",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "うそなき",
             "ko": "거짓울음",
@@ -9708,6 +10021,7 @@
         "accuracy": 95,
         "pp": 25,
         "type": "flying",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "エアカッター",
             "ko": "에어컷터",
@@ -9739,6 +10053,7 @@
         "accuracy": 90,
         "pp": 5,
         "type": "fire",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "オーバーヒート",
             "ko": "오버히트",
@@ -9770,6 +10085,7 @@
         "accuracy": null,
         "pp": 40,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "かぎわける",
             "ko": "냄새구별",
@@ -9801,6 +10117,7 @@
         "accuracy": 95,
         "pp": 15,
         "type": "rock",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "がんせきふうじ",
             "ko": "암석봉인",
@@ -9832,6 +10149,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "bug",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ぎんいろのかぜ",
             "ko": "은빛바람",
@@ -9863,6 +10181,7 @@
         "accuracy": 85,
         "pp": 40,
         "type": "steel",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "きんぞくおん",
             "ko": "금속음",
@@ -9894,6 +10213,7 @@
         "accuracy": 55,
         "pp": 15,
         "type": "grass",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "くさぶえ",
             "ko": "풀피리",
@@ -9925,6 +10245,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "くすぐる",
             "ko": "간지르기",
@@ -9956,6 +10277,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "コスモパワー",
             "ko": "코스믹파워",
@@ -9987,6 +10309,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "water",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "しおふき",
             "ko": "해수스파우팅",
@@ -10018,6 +10341,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "bug",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "シグナルビーム",
             "ko": "시그널빔",
@@ -10049,6 +10373,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "ghost",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "シャドーパンチ",
             "ko": "섀도펀치",
@@ -10080,6 +10405,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "psychic",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "じんつうりき",
             "ko": "신통력",
@@ -10111,6 +10437,7 @@
         "accuracy": 90,
         "pp": 15,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "スカイアッパー",
             "ko": "스카이업퍼",
@@ -10142,6 +10469,7 @@
         "accuracy": 85,
         "pp": 15,
         "type": "ground",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "すなじごく",
             "ko": "모래지옥",
@@ -10173,6 +10501,7 @@
         "accuracy": 30,
         "pp": 5,
         "type": "ice",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ぜったいれいど",
             "ko": "절대영도",
@@ -10204,6 +10533,7 @@
         "accuracy": 85,
         "pp": 10,
         "type": "water",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "だくりゅう",
             "ko": "탁류",
@@ -10235,6 +10565,7 @@
         "accuracy": 100,
         "pp": 30,
         "type": "grass",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "タネマシンガン",
             "ko": "기관총",
@@ -10266,6 +10597,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "flying",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "つばめがえし",
             "ko": "제비반환",
@@ -10297,6 +10629,7 @@
         "accuracy": 100,
         "pp": 30,
         "type": "ice",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "つららばり",
             "ko": "고드름침",
@@ -10328,6 +10661,7 @@
         "accuracy": null,
         "pp": 15,
         "type": "steel",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "てっぺき",
             "ko": "철벽",
@@ -10359,6 +10693,7 @@
         "accuracy": null,
         "pp": 5,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "とおせんぼう",
             "ko": "블록",
@@ -10390,6 +10725,7 @@
         "accuracy": null,
         "pp": 40,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "とおぼえ",
             "ko": "멀리짖음",
@@ -10421,6 +10757,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "dragon",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ドラゴンクロー",
             "ko": "드래곤크루",
@@ -10452,6 +10789,7 @@
         "accuracy": 90,
         "pp": 5,
         "type": "grass",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ハードプラント",
             "ko": "하드플랜트",
@@ -10483,6 +10821,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "fighting",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ビルドアップ",
             "ko": "벌크업",
@@ -10514,6 +10853,7 @@
         "accuracy": 85,
         "pp": 5,
         "type": "flying",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "とびはねる",
             "ko": "뛰어오르다",
@@ -10545,6 +10885,7 @@
         "accuracy": 95,
         "pp": 15,
         "type": "ground",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "マッドショット",
             "ko": "머드숏",
@@ -10576,6 +10917,7 @@
         "accuracy": 100,
         "pp": 25,
         "type": "poison",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ポイズンテール",
             "ko": "포이즌테일",
@@ -10607,6 +10949,7 @@
         "accuracy": 100,
         "pp": 25,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ほしがる",
             "ko": "탐내다",
@@ -10638,6 +10981,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "electric",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ボルテッカー",
             "ko": "볼트태클",
@@ -10669,6 +11013,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "grass",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "マジカルリーフ",
             "ko": "메지컬리프",
@@ -10700,6 +11045,7 @@
         "accuracy": null,
         "pp": 15,
         "type": "water",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "みずあそび",
             "ko": "물놀이",
@@ -10731,6 +11077,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "めいそう",
             "ko": "명상",
@@ -10762,6 +11109,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "grass",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "リーフブレード",
             "ko": "리프블레이드",
@@ -10793,6 +11141,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "dragon",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "りゅうのまい",
             "ko": "용의춤",
@@ -10824,6 +11173,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "rock",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ロックブラスト",
             "ko": "락블레스트",
@@ -10855,6 +11205,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "electric",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "でんげきは",
             "ko": "전격파",
@@ -10886,6 +11237,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "water",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "みずのはどう",
             "ko": "물의파동",
@@ -10917,6 +11269,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "steel",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "はめつのねがい",
             "ko": "파멸의소원",
@@ -10948,6 +11301,7 @@
         "accuracy": 90,
         "pp": 5,
         "type": "psychic",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "サイコブースト",
             "ko": "사이코부스트",
@@ -10979,6 +11333,7 @@
         "accuracy": null,
         "pp": 5,
         "type": "flying",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "はねやすめ",
             "ko": "날개쉬기",
@@ -11010,6 +11365,7 @@
         "accuracy": null,
         "pp": 5,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "じゅうりょく",
             "ko": "중력",
@@ -11041,6 +11397,7 @@
         "accuracy": null,
         "pp": 40,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ミラクルアイ",
             "ko": "미라클아이",
@@ -11072,6 +11429,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "めざましビンタ",
             "ko": "잠깨움뺨치기",
@@ -11103,6 +11461,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "アームハンマー",
             "ko": "암해머",
@@ -11134,6 +11493,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "steel",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ジャイロボール",
             "ko": "자이로볼",
@@ -11165,6 +11525,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "いやしのねがい",
             "ko": "치유소원",
@@ -11196,6 +11557,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "water",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "しおみず",
             "ko": "소금물",
@@ -11227,6 +11589,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "しぜんのめぐみ",
             "ko": "자연의은혜",
@@ -11258,6 +11621,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "フェイント",
             "ko": "페인트",
@@ -11289,6 +11653,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "flying",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ついばむ",
             "ko": "쪼아대기",
@@ -11320,6 +11685,7 @@
         "accuracy": null,
         "pp": 15,
         "type": "flying",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "おいかぜ",
             "ko": "순풍",
@@ -11351,6 +11717,7 @@
         "accuracy": null,
         "pp": 30,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "つぼをつく",
             "ko": "경혈찌르기",
@@ -11382,6 +11749,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "steel",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "メタルバースト",
             "ko": "메탈버스트",
@@ -11413,6 +11781,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "bug",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "とんぼがえり",
             "ko": "유턴",
@@ -11444,6 +11813,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "インファイト",
             "ko": "인파이트",
@@ -11475,6 +11845,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "dark",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "しっぺがえし",
             "ko": "보복",
@@ -11506,6 +11877,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "dark",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダメおし",
             "ko": "승부굳히기",
@@ -11537,6 +11909,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "dark",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "さしおさえ",
             "ko": "금제",
@@ -11568,6 +11941,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "dark",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "なげつける",
             "ko": "내던지기",
@@ -11599,6 +11973,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "サイコシフト",
             "ko": "사이코시프트",
@@ -11630,6 +12005,7 @@
         "accuracy": null,
         "pp": 5,
         "type": "normal",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "きりふだ",
             "ko": "마지막수단",
@@ -11661,6 +12037,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "かいふくふうじ",
             "ko": "회복봉인",
@@ -11692,6 +12069,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "normal",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "しぼりとる",
             "ko": "쥐어짜기",
@@ -11723,6 +12101,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "パワートリック",
             "ko": "파워트릭",
@@ -11754,6 +12133,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "poison",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "いえき",
             "ko": "위액",
@@ -11785,6 +12165,7 @@
         "accuracy": null,
         "pp": 30,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "おまじない",
             "ko": "주술",
@@ -11816,6 +12197,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "さきどり",
             "ko": "선취",
@@ -11847,6 +12229,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "まねっこ",
             "ko": "흉내쟁이",
@@ -11878,6 +12261,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "パワースワップ",
             "ko": "파워스웹",
@@ -11909,6 +12293,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ガードスワップ",
             "ko": "가드스웹",
@@ -11940,6 +12325,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "dark",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "おしおき",
             "ko": "혼내기",
@@ -11971,6 +12357,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "とっておき",
             "ko": "뒀다쓰기",
@@ -12002,6 +12389,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "grass",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "なやみのタネ",
             "ko": "고민씨",
@@ -12033,6 +12421,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "dark",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ふいうち",
             "ko": "기습",
@@ -12064,6 +12453,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "poison",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "どくびし",
             "ko": "독압정",
@@ -12095,6 +12485,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ハートスワップ",
             "ko": "하트스웹",
@@ -12126,6 +12517,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "water",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "アクアリング",
             "ko": "아쿠아링",
@@ -12157,6 +12549,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "electric",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "でんじふゆう",
             "ko": "전자부유",
@@ -12188,6 +12581,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "fire",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "フレアドライブ",
             "ko": "플레어드라이브",
@@ -12219,6 +12613,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "はっけい",
             "ko": "발경",
@@ -12250,6 +12645,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "fighting",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "はどうだん",
             "ko": "파동탄",
@@ -12281,6 +12677,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "rock",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ロックカット",
             "ko": "록커트",
@@ -12312,6 +12709,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "poison",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "どくづき",
             "ko": "독찌르기",
@@ -12343,6 +12741,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "dark",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "あくのはどう",
             "ko": "악의파동",
@@ -12374,6 +12773,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "dark",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "つじぎり",
             "ko": "깜짝베기",
@@ -12405,6 +12805,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "water",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "アクアテール",
             "ko": "아쿠아테일",
@@ -12436,6 +12837,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "grass",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "タネばくだん",
             "ko": "씨폭탄",
@@ -12467,6 +12869,7 @@
         "accuracy": 95,
         "pp": 15,
         "type": "flying",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "エアスラッシュ",
             "ko": "에어슬래시",
@@ -12498,6 +12901,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "bug",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "シザークロス",
             "ko": "시저크로스",
@@ -12529,6 +12933,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "bug",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "むしのさざめき",
             "ko": "벌레의야단법석",
@@ -12560,6 +12965,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "dragon",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "りゅうのはどう",
             "ko": "용의파동",
@@ -12591,6 +12997,7 @@
         "accuracy": 75,
         "pp": 10,
         "type": "dragon",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ドラゴンダイブ",
             "ko": "드래곤다이브",
@@ -12622,6 +13029,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "rock",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "パワージェム",
             "ko": "파워젬",
@@ -12653,6 +13061,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ドレインパンチ",
             "ko": "드레인펀치",
@@ -12684,6 +13093,7 @@
         "accuracy": 100,
         "pp": 30,
         "type": "fighting",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "しんくうは",
             "ko": "진공파",
@@ -12715,6 +13125,7 @@
         "accuracy": 70,
         "pp": 5,
         "type": "fighting",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "きあいだま",
             "ko": "기합구슬",
@@ -12746,6 +13157,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "grass",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "エナジーボール",
             "ko": "에너지볼",
@@ -12777,6 +13189,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "flying",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ブレイブバード",
             "ko": "브레이브버드",
@@ -12808,6 +13221,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "ground",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "だいちのちから",
             "ko": "대지의힘",
@@ -12839,6 +13253,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "dark",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "すりかえ",
             "ko": "바꿔치기",
@@ -12870,6 +13285,7 @@
         "accuracy": 90,
         "pp": 5,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ギガインパクト",
             "ko": "기가임팩트",
@@ -12901,6 +13317,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "dark",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "わるだくみ",
             "ko": "나쁜음모",
@@ -12932,6 +13349,7 @@
         "accuracy": 100,
         "pp": 30,
         "type": "steel",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "バレットパンチ",
             "ko": "불릿펀치",
@@ -12963,6 +13381,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "ice",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ゆきなだれ",
             "ko": "눈사태",
@@ -12994,6 +13413,7 @@
         "accuracy": 100,
         "pp": 30,
         "type": "ice",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "こおりのつぶて",
             "ko": "얼음뭉치",
@@ -13025,6 +13445,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "ghost",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "シャドークロー",
             "ko": "섀도크루",
@@ -13056,6 +13477,7 @@
         "accuracy": 95,
         "pp": 15,
         "type": "electric",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "かみなりのキバ",
             "ko": "번개엄니",
@@ -13087,6 +13509,7 @@
         "accuracy": 95,
         "pp": 15,
         "type": "ice",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "こおりのキバ",
             "ko": "얼음엄니",
@@ -13118,6 +13541,7 @@
         "accuracy": 95,
         "pp": 15,
         "type": "fire",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ほのおのキバ",
             "ko": "불꽃엄니",
@@ -13149,6 +13573,7 @@
         "accuracy": 100,
         "pp": 30,
         "type": "ghost",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "かげうち",
             "ko": "야습",
@@ -13180,6 +13605,7 @@
         "accuracy": 85,
         "pp": 10,
         "type": "ground",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "どろばくだん",
             "ko": "진흙폭탄",
@@ -13211,6 +13637,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "psychic",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "サイコカッター",
             "ko": "사이코커터",
@@ -13242,6 +13669,7 @@
         "accuracy": 90,
         "pp": 15,
         "type": "psychic",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "しねんのずつき",
             "ko": "사념의박치기",
@@ -13273,6 +13701,7 @@
         "accuracy": 85,
         "pp": 10,
         "type": "steel",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ミラーショット",
             "ko": "미러숏",
@@ -13304,6 +13733,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "steel",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ラスターカノン",
             "ko": "러스터캐논",
@@ -13335,6 +13765,7 @@
         "accuracy": 85,
         "pp": 20,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ロッククライム",
             "ko": "락클라임",
@@ -13366,6 +13797,7 @@
         "accuracy": null,
         "pp": 15,
         "type": "flying",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "きりばらい",
             "ko": "안개제거",
@@ -13397,6 +13829,7 @@
         "accuracy": null,
         "pp": 5,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "トリックルーム",
             "ko": "트릭룸",
@@ -13428,6 +13861,7 @@
         "accuracy": 90,
         "pp": 5,
         "type": "dragon",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "りゅうせいぐん",
             "ko": "용성군",
@@ -13459,6 +13893,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "electric",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ほうでん",
             "ko": "방전",
@@ -13490,6 +13925,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "fire",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ふんえん",
             "ko": "분연",
@@ -13521,6 +13957,7 @@
         "accuracy": 90,
         "pp": 5,
         "type": "grass",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "リーフストーム",
             "ko": "리프스톰",
@@ -13552,6 +13989,7 @@
         "accuracy": 85,
         "pp": 10,
         "type": "grass",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "パワーウィップ",
             "ko": "파워휩",
@@ -13583,6 +14021,7 @@
         "accuracy": 90,
         "pp": 5,
         "type": "rock",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "がんせきほう",
             "ko": "암석포",
@@ -13614,6 +14053,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "poison",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "クロスポイズン",
             "ko": "크로스포이즌",
@@ -13645,6 +14085,7 @@
         "accuracy": 80,
         "pp": 5,
         "type": "poison",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダストシュート",
             "ko": "더스트슈트",
@@ -13676,6 +14117,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "steel",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "アイアンヘッド",
             "ko": "아이언헤드",
@@ -13707,6 +14149,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "steel",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "マグネットボム",
             "ko": "마그넷봄",
@@ -13738,6 +14181,7 @@
         "accuracy": 80,
         "pp": 5,
         "type": "rock",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ストーンエッジ",
             "ko": "스톤에지",
@@ -13769,6 +14213,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ゆうわく",
             "ko": "유혹",
@@ -13800,6 +14245,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "rock",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ステルスロック",
             "ko": "스텔스록",
@@ -13831,6 +14277,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "grass",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "くさむすび",
             "ko": "풀묶기",
@@ -13862,6 +14309,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "flying",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "おしゃべり",
             "ko": "수다",
@@ -13893,6 +14341,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "normal",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "さばきのつぶて",
             "ko": "심판의뭉치",
@@ -13924,6 +14373,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "bug",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "むしくい",
             "ko": "벌레먹음",
@@ -13955,6 +14405,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "electric",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "チャージビーム",
             "ko": "차지빔",
@@ -13986,6 +14437,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "grass",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ウッドハンマー",
             "ko": "우드해머",
@@ -14017,6 +14469,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "water",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "アクアジェット",
             "ko": "아쿠아제트",
@@ -14048,6 +14501,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "bug",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "こうげきしれい",
             "ko": "공격지령",
@@ -14079,6 +14533,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "bug",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ぼうぎょしれい",
             "ko": "방어지령",
@@ -14110,6 +14565,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "bug",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "かいふくしれい",
             "ko": "회복지령",
@@ -14141,6 +14597,7 @@
         "accuracy": 80,
         "pp": 5,
         "type": "rock",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "もろはのずつき",
             "ko": "양날박치기",
@@ -14172,6 +14629,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダブルアタック",
             "ko": "더블어택",
@@ -14203,6 +14661,7 @@
         "accuracy": 90,
         "pp": 5,
         "type": "dragon",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ときのほうこう",
             "ko": "시간의포효",
@@ -14234,6 +14693,7 @@
         "accuracy": 95,
         "pp": 5,
         "type": "dragon",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "あくうせつだん",
             "ko": "공간절단",
@@ -14265,6 +14725,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "みかづきのまい",
             "ko": "초승달춤",
@@ -14296,6 +14757,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "にぎりつぶす",
             "ko": "묵사발",
@@ -14327,6 +14789,7 @@
         "accuracy": 75,
         "pp": 5,
         "type": "fire",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "マグマストーム",
             "ko": "마그마스톰",
@@ -14358,6 +14821,7 @@
         "accuracy": 50,
         "pp": 10,
         "type": "dark",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ダークホール",
             "ko": "다크홀",
@@ -14389,6 +14853,7 @@
         "accuracy": 85,
         "pp": 5,
         "type": "grass",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "シードフレア",
             "ko": "시드플레어",
@@ -14420,6 +14885,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "ghost",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "あやしいかぜ",
             "ko": "괴상한바람",
@@ -14451,6 +14917,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "ghost",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "シャドーダイブ",
             "ko": "섀도다이브",
@@ -14482,6 +14949,7 @@
         "accuracy": null,
         "pp": 15,
         "type": "dark",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "つめとぎ",
             "ko": "손톱갈기",
@@ -14513,6 +14981,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "rock",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ワイドガード",
             "ko": "와이드가드",
@@ -14544,6 +15013,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ガードシェア",
             "ko": "가드셰어",
@@ -14575,6 +15045,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "パワーシェア",
             "ko": "파워셰어",
@@ -14606,6 +15077,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ワンダールーム",
             "ko": "원더룸",
@@ -14637,6 +15109,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "サイコショック",
             "ko": "사이코쇼크",
@@ -14668,6 +15141,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "poison",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ベノムショック",
             "ko": "베놈쇼크",
@@ -14699,6 +15173,7 @@
         "accuracy": null,
         "pp": 15,
         "type": "steel",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ボディパージ",
             "ko": "바디퍼지",
@@ -14730,6 +15205,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "bug",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "いかりのこな",
             "ko": "분노가루",
@@ -14761,6 +15237,7 @@
         "accuracy": null,
         "pp": 15,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "テレキネシス",
             "ko": "텔레키네시스",
@@ -14792,6 +15269,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "マジックルーム",
             "ko": "매직룸",
@@ -14823,6 +15301,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "rock",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "うちおとす",
             "ko": "떨어뜨리기",
@@ -14854,6 +15333,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "やまあらし",
             "ko": "업어후리기",
@@ -14885,6 +15365,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "fire",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "はじけるほのお",
             "ko": "불꽃튀기기",
@@ -14916,6 +15397,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "poison",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ヘドロウェーブ",
             "ko": "오물웨이브",
@@ -14947,6 +15429,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "bug",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ちょうのまい",
             "ko": "나비춤",
@@ -14978,6 +15461,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "steel",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ヘビーボンバー",
             "ko": "헤비봄버",
@@ -15009,6 +15493,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "シンクロノイズ",
             "ko": "싱크로노이즈",
@@ -15040,6 +15525,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "electric",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "エレキボール",
             "ko": "일렉트릭볼",
@@ -15071,6 +15557,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "water",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "みずびたし",
             "ko": "물붓기",
@@ -15102,6 +15589,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "fire",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ニトロチャージ",
             "ko": "니트로차지",
@@ -15133,6 +15621,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "poison",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "とぐろをまく",
             "ko": "똬리틀기",
@@ -15164,6 +15653,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ローキック",
             "ko": "로킥",
@@ -15195,6 +15685,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "poison",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "アシッドボム",
             "ko": "애시드봄",
@@ -15226,6 +15717,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "dark",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "イカサマ",
             "ko": "속임수",
@@ -15257,6 +15749,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "シンプルビーム",
             "ko": "심플빔",
@@ -15288,6 +15781,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "なかまづくり",
             "ko": "동료만들기",
@@ -15319,6 +15813,7 @@
         "accuracy": null,
         "pp": 15,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "おさきにどうぞ",
             "ko": "당신먼저",
@@ -15350,6 +15845,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "normal",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "りんしょう",
             "ko": "돌림노래",
@@ -15381,6 +15877,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "normal",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "エコーボイス",
             "ko": "에코보이스",
@@ -15412,6 +15909,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "なしくずし",
             "ko": "야금야금",
@@ -15443,6 +15941,7 @@
         "accuracy": null,
         "pp": 15,
         "type": "poison",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "クリアスモッグ",
             "ko": "클리어스모그",
@@ -15474,6 +15973,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "アシストパワー",
             "ko": "어시스트파워",
@@ -15505,6 +16005,7 @@
         "accuracy": null,
         "pp": 15,
         "type": "fighting",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ファストガード",
             "ko": "퍼스트가드",
@@ -15536,6 +16037,7 @@
         "accuracy": null,
         "pp": 15,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "サイドチェンジ",
             "ko": "사이드체인지",
@@ -15567,6 +16069,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "water",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ねっとう",
             "ko": "열탕",
@@ -15598,6 +16101,7 @@
         "accuracy": null,
         "pp": 15,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "からをやぶる",
             "ko": "껍질깨기",
@@ -15629,6 +16133,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "いやしのはどう",
             "ko": "치유파동",
@@ -15660,6 +16165,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "ghost",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "たたりめ",
             "ko": "병상첨병",
@@ -15691,6 +16197,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "flying",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "フリーフォール",
             "ko": "프리폴",
@@ -15722,6 +16229,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "steel",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ギアチェンジ",
             "ko": "기어체인지",
@@ -15753,6 +16261,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ともえなげ",
             "ko": "배대뒤치기",
@@ -15784,6 +16293,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "fire",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "やきつくす",
             "ko": "불태우기",
@@ -15815,6 +16325,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "dark",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "さきおくり",
             "ko": "순서미루기",
@@ -15846,6 +16357,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "flying",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "アクロバット",
             "ko": "애크러뱃",
@@ -15877,6 +16389,7 @@
         "accuracy": null,
         "pp": 15,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ミラータイプ",
             "ko": "미러타입",
@@ -15908,6 +16421,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "かたきうち",
             "ko": "원수갚기",
@@ -15939,6 +16453,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "fighting",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "いのちがけ",
             "ko": "목숨걸기",
@@ -15970,6 +16485,7 @@
         "accuracy": null,
         "pp": 15,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ギフトパス",
             "ko": "기프트패스",
@@ -16001,6 +16517,7 @@
         "accuracy": 50,
         "pp": 5,
         "type": "fire",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "れんごく",
             "ko": "연옥",
@@ -16032,6 +16549,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "water",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "みずのちかい",
             "ko": "물의맹세",
@@ -16063,6 +16581,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "fire",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ほのおのちかい",
             "ko": "불꽃의맹세",
@@ -16094,6 +16613,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "grass",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "くさのちかい",
             "ko": "풀의맹세",
@@ -16125,6 +16645,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "electric",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ボルトチェンジ",
             "ko": "볼트체인지",
@@ -16156,6 +16677,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "bug",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "むしのていこう",
             "ko": "벌레의저항",
@@ -16187,6 +16709,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "ground",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "じならし",
             "ko": "땅고르기",
@@ -16218,6 +16741,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "ice",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "こおりのいぶき",
             "ko": "얼음숨결",
@@ -16249,6 +16773,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "dragon",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ドラゴンテール",
             "ko": "드래곤테일",
@@ -16280,6 +16805,7 @@
         "accuracy": null,
         "pp": 30,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ふるいたてる",
             "ko": "분발",
@@ -16311,6 +16837,7 @@
         "accuracy": 95,
         "pp": 15,
         "type": "electric",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "エレキネット",
             "ko": "일렉트릭네트",
@@ -16342,6 +16869,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "electric",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ワイルドボルト",
             "ko": "와일드볼트",
@@ -16373,6 +16901,7 @@
         "accuracy": 95,
         "pp": 10,
         "type": "ground",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ドリルライナー",
             "ko": "드릴라이너",
@@ -16404,6 +16933,7 @@
         "accuracy": 90,
         "pp": 15,
         "type": "dragon",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダブルチョップ",
             "ko": "더블촙",
@@ -16435,6 +16965,7 @@
         "accuracy": 100,
         "pp": 25,
         "type": "psychic",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ハートスタンプ",
             "ko": "하트스탬프",
@@ -16466,6 +16997,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "grass",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ウッドホーン",
             "ko": "우드호른",
@@ -16497,6 +17029,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "せいなるつるぎ",
             "ko": "성스러운칼",
@@ -16528,6 +17061,7 @@
         "accuracy": 95,
         "pp": 10,
         "type": "water",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "シェルブレード",
             "ko": "셸블레이드",
@@ -16559,6 +17093,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "fire",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ヒートスタンプ",
             "ko": "히트스탬프",
@@ -16590,6 +17125,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "grass",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "グラスミキサー",
             "ko": "그래스믹서",
@@ -16621,6 +17157,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "bug",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ハードローラー",
             "ko": "하드롤러",
@@ -16652,6 +17189,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "grass",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "コットンガード",
             "ko": "코튼가드",
@@ -16683,6 +17221,7 @@
         "accuracy": 95,
         "pp": 10,
         "type": "dark",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ナイトバースト",
             "ko": "나이트버스트",
@@ -16714,6 +17253,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "サイコブレイク",
             "ko": "사이코브레이크",
@@ -16745,6 +17285,7 @@
         "accuracy": 85,
         "pp": 10,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "スイープビンタ",
             "ko": "스위프뺨치기",
@@ -16776,6 +17317,7 @@
         "accuracy": 70,
         "pp": 10,
         "type": "flying",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ぼうふう",
             "ko": "폭풍",
@@ -16807,6 +17349,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "アフロブレイク",
             "ko": "아프로브레이크",
@@ -16838,6 +17381,7 @@
         "accuracy": 85,
         "pp": 15,
         "type": "steel",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ギアソーサー",
             "ko": "기어소서",
@@ -16869,6 +17413,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "fire",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "かえんだん",
             "ko": "화염탄",
@@ -16900,6 +17445,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "normal",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "テクノバスター",
             "ko": "테크노버스터",
@@ -16931,6 +17477,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "normal",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "いにしえのうた",
             "ko": "옛노래",
@@ -16962,6 +17509,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "fighting",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "しんぴのつるぎ",
             "ko": "신비의칼",
@@ -16993,6 +17541,7 @@
         "accuracy": 95,
         "pp": 10,
         "type": "ice",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "こごえるせかい",
             "ko": "얼다세계",
@@ -17024,6 +17573,7 @@
         "accuracy": 85,
         "pp": 5,
         "type": "electric",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "らいげき",
             "ko": "뇌격",
@@ -17055,6 +17605,7 @@
         "accuracy": 85,
         "pp": 5,
         "type": "fire",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "あおいほのお",
             "ko": "푸른불꽃",
@@ -17086,6 +17637,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "fire",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ほのおのまい",
             "ko": "불꽃춤",
@@ -17117,6 +17669,7 @@
         "accuracy": 90,
         "pp": 5,
         "type": "ice",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "フリーズボルト",
             "ko": "프리즈볼트",
@@ -17148,6 +17701,7 @@
         "accuracy": 90,
         "pp": 5,
         "type": "ice",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "コールドフレア",
             "ko": "콜드플레어",
@@ -17179,6 +17733,7 @@
         "accuracy": 95,
         "pp": 15,
         "type": "dark",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "バークアウト",
             "ko": "바크아웃",
@@ -17210,6 +17765,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "ice",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "つららおとし",
             "ko": "고드름떨구기",
@@ -17241,6 +17797,7 @@
         "accuracy": 95,
         "pp": 5,
         "type": "fire",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "Ｖジェネレート",
             "ko": "V제너레이트",
@@ -17272,6 +17829,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "fire",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "クロスフレイム",
             "ko": "크로스플레임",
@@ -17303,6 +17861,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "electric",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "クロスサンダー",
             "ko": "크로스썬더",
@@ -17334,6 +17893,7 @@
         "accuracy": 95,
         "pp": 10,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "フライングプレス",
             "ko": "플라잉프레스",
@@ -17365,6 +17925,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "fighting",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "たたみがえし",
             "ko": "마룻바닥세워막기",
@@ -17396,6 +17957,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "poison",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ゲップ",
             "ko": "트림",
@@ -17427,6 +17989,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "ground",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "たがやす",
             "ko": "일구기",
@@ -17458,6 +18021,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "bug",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ねばねばネット",
             "ko": "끈적끈적네트",
@@ -17489,6 +18053,7 @@
         "accuracy": 100,
         "pp": 25,
         "type": "bug",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "とどめばり",
             "ko": "마지막일침",
@@ -17520,6 +18085,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "ghost",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ゴーストダイブ",
             "ko": "고스트다이브",
@@ -17551,6 +18117,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "ghost",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ハロウィン",
             "ko": "핼러윈",
@@ -17582,6 +18149,7 @@
         "accuracy": 100,
         "pp": 30,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "おたけび",
             "ko": "부르짖기",
@@ -17613,6 +18181,7 @@
         "accuracy": null,
         "pp": 25,
         "type": "electric",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "プラズマシャワー",
             "ko": "플라스마샤워",
@@ -17644,6 +18213,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "electric",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "パラボラチャージ",
             "ko": "파라볼라차지",
@@ -17675,6 +18245,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "grass",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "もりののろい",
             "ko": "숲의저주",
@@ -17706,6 +18277,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "grass",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "はなふぶき",
             "ko": "꽃보라",
@@ -17737,6 +18309,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "ice",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "フリーズドライ",
             "ko": "프리즈드라이",
@@ -17768,6 +18341,7 @@
         "accuracy": null,
         "pp": 15,
         "type": "fairy",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "チャームボイス",
             "ko": "차밍보이스",
@@ -17799,6 +18373,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "dark",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "すてゼリフ",
             "ko": "막말내뱉기",
@@ -17830,6 +18405,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "dark",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ひっくりかえす",
             "ko": "뒤집어엎기",
@@ -17861,6 +18437,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "fairy",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ドレインキッス",
             "ko": "드레인키스",
@@ -17892,6 +18469,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "fairy",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "トリックガード",
             "ko": "트릭가드",
@@ -17923,6 +18501,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "fairy",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "フラワーガード",
             "ko": "플라워가드",
@@ -17954,6 +18533,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "grass",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "グラスフィールド",
             "ko": "그래스필드",
@@ -17985,6 +18565,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "fairy",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ミストフィールド",
             "ko": "미스트필드",
@@ -18016,6 +18597,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "electric",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "そうでん",
             "ko": "송전",
@@ -18047,6 +18629,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "fairy",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "じゃれつく",
             "ko": "치근거리기",
@@ -18078,6 +18661,7 @@
         "accuracy": 100,
         "pp": 30,
         "type": "fairy",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ようせいのかぜ",
             "ko": "요정의바람",
@@ -18109,6 +18693,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "fairy",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ムーンフォース",
             "ko": "문포스",
@@ -18140,6 +18725,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "normal",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ばくおんぱ",
             "ko": "폭음파",
@@ -18171,6 +18757,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "fairy",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "フェアリーロック",
             "ko": "페어리록",
@@ -18202,6 +18789,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "steel",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "キングシールド",
             "ko": "킹실드",
@@ -18233,6 +18821,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "なかよくする",
             "ko": "친해지기",
@@ -18264,6 +18853,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ないしょばなし",
             "ko": "비밀이야기",
@@ -18295,6 +18885,7 @@
         "accuracy": 95,
         "pp": 5,
         "type": "rock",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダイヤストーム",
             "ko": "다이아스톰",
@@ -18326,6 +18917,7 @@
         "accuracy": 95,
         "pp": 5,
         "type": "water",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "スチームバースト",
             "ko": "스팀버스트",
@@ -18357,6 +18949,7 @@
         "accuracy": null,
         "pp": 5,
         "type": "psychic",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "いじげんホール",
             "ko": "다른차원홀",
@@ -18388,6 +18981,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "water",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "みずしゅりけん",
             "ko": "물수리검",
@@ -18419,6 +19013,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "fire",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "マジカルフレイム",
             "ko": "매지컬플레임",
@@ -18450,6 +19045,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "grass",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ニードルガード",
             "ko": "니들가드",
@@ -18481,6 +19077,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "fairy",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "アロマミスト",
             "ko": "아로마미스트",
@@ -18512,6 +19109,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "electric",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "かいでんぱ",
             "ko": "괴전파",
@@ -18543,6 +19141,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "poison",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ベノムトラップ",
             "ko": "베놈트랩",
@@ -18574,6 +19173,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "bug",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ふんじん",
             "ko": "분진",
@@ -18605,6 +19205,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "fairy",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ジオコントロール",
             "ko": "지오컨트롤",
@@ -18636,6 +19237,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "electric",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "じばそうさ",
             "ko": "자기장조작",
@@ -18667,6 +19269,7 @@
         "accuracy": null,
         "pp": 30,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ハッピータイム",
             "ko": "해피타임",
@@ -18698,6 +19301,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "electric",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "エレキフィールド",
             "ko": "일렉트릭필드",
@@ -18729,6 +19333,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "fairy",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "マジカルシャイン",
             "ko": "매지컬샤인",
@@ -18760,6 +19365,7 @@
         "accuracy": null,
         "pp": 40,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "おいわい",
             "ko": "축하",
@@ -18791,6 +19397,7 @@
         "accuracy": null,
         "pp": 40,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "てをつなぐ",
             "ko": "손에손잡기",
@@ -18822,6 +19429,7 @@
         "accuracy": 100,
         "pp": 30,
         "type": "fairy",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "つぶらなひとみ",
             "ko": "초롱초롱눈동자",
@@ -18853,6 +19461,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "electric",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ほっぺすりすり",
             "ko": "볼부비부비",
@@ -18884,6 +19493,7 @@
         "accuracy": 100,
         "pp": 40,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "てかげん",
             "ko": "적당히손봐주기",
@@ -18915,6 +19525,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "bug",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "まとわりつく",
             "ko": "엉겨붙기",
@@ -18946,6 +19557,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "グロウパンチ",
             "ko": "그로우펀치",
@@ -18977,6 +19589,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "flying",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "デスウイング",
             "ko": "데스윙",
@@ -19008,6 +19621,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "ground",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "サウザンアロー",
             "ko": "사우전드애로",
@@ -19039,6 +19653,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "ground",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "サウザンウェーブ",
             "ko": "사우전드웨이브",
@@ -19070,6 +19685,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "ground",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "グランドフォース",
             "ko": "그라운드포스",
@@ -19101,6 +19717,7 @@
         "accuracy": 90,
         "pp": 5,
         "type": "fairy",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "はめつのひかり",
             "ko": "파멸의빛",
@@ -19132,6 +19749,7 @@
         "accuracy": 85,
         "pp": 10,
         "type": "water",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "こんげんのはどう",
             "ko": "근원의파동",
@@ -19163,6 +19781,7 @@
         "accuracy": 85,
         "pp": 10,
         "type": "ground",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "だんがいのつるぎ",
             "ko": "단애의칼",
@@ -19194,6 +19813,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "flying",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ガリョウテンセイ",
             "ko": "화룡점정",
@@ -19225,6 +19845,7 @@
         "accuracy": null,
         "pp": 5,
         "type": "dark",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "いじげんラッシュ",
             "ko": "다른차원러시",
@@ -19256,6 +19877,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ウルトラダッシュアタック",
             "ko": "울트라대시어택",
@@ -19287,6 +19909,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "normal",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ウルトラダッシュアタック",
             "ko": "울트라대시어택",
@@ -19318,6 +19941,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ぜんりょくむそうげきれつけん",
             "ko": "전력무쌍격렬권",
@@ -19349,6 +19973,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "fighting",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ぜんりょくむそうげきれつけん",
             "ko": "전력무쌍격렬권",
@@ -19380,6 +20005,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "flying",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ファイナルダイブクラッシュ",
             "ko": "파이널다이브클래시",
@@ -19411,6 +20037,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "flying",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ファイナルダイブクラッシュ",
             "ko": "파이널다이브클래시",
@@ -19442,6 +20069,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "poison",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "アシッドポイズンデリート",
             "ko": "애시드포이즌딜리트",
@@ -19473,6 +20101,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "poison",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "アシッドポイズンデリート",
             "ko": "애시드포이즌딜리트",
@@ -19504,6 +20133,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "ground",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ライジングランドオーバー",
             "ko": "라이징랜드오버",
@@ -19535,6 +20165,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "ground",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ライジングランドオーバー",
             "ko": "라이징랜드오버",
@@ -19566,6 +20197,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "rock",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ワールズエンドフォール",
             "ko": "월즈엔드폴",
@@ -19597,6 +20229,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "rock",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ワールズエンドフォール",
             "ko": "월즈엔드폴",
@@ -19628,6 +20261,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "bug",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ぜったいほしょくかいてんざん",
             "ko": "절대포식회전참",
@@ -19659,6 +20293,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "bug",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ぜったいほしょくかいてんざん",
             "ko": "절대포식회전참",
@@ -19690,6 +20325,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "ghost",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "むげんあんやへのいざない",
             "ko": "무한암야로의유인",
@@ -19721,6 +20357,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "ghost",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "むげんあんやへのいざない",
             "ko": "무한암야로의유인",
@@ -19752,6 +20389,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "steel",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ちょうぜつらせんれんげき",
             "ko": "초월나선연격",
@@ -19783,6 +20421,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "steel",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ちょうぜつらせんれんげき",
             "ko": "초월나선연격",
@@ -19814,6 +20453,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "fire",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダイナミックフルフレイム",
             "ko": "다이내믹풀플레임",
@@ -19845,6 +20485,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "fire",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ダイナミックフルフレイム",
             "ko": "다이내믹풀플레임",
@@ -19876,6 +20517,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "water",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "スーパーアクアトルネード",
             "ko": "슈퍼아쿠아토네이도",
@@ -19907,6 +20549,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "water",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "スーパーアクアトルネード",
             "ko": "슈퍼아쿠아토네이도",
@@ -19938,6 +20581,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "grass",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ブルームシャインエクストラ",
             "ko": "블룸샤인엑스트라",
@@ -19969,6 +20613,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "grass",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ブルームシャインエクストラ",
             "ko": "블룸샤인엑스트라",
@@ -20000,6 +20645,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "electric",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "スパーキングギガボルト",
             "ko": "스파킹기가볼트",
@@ -20031,6 +20677,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "electric",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "スパーキングギガボルト",
             "ko": "스파킹기가볼트",
@@ -20062,6 +20709,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "psychic",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "マキシマムサイブレイカー",
             "ko": "맥시멈사이브레이커",
@@ -20093,6 +20741,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "psychic",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "マキシマムサイブレイカー",
             "ko": "맥시멈사이브레이커",
@@ -20124,6 +20773,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "ice",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "レイジングジオフリーズ",
             "ko": "레이징지오프리즈",
@@ -20155,6 +20805,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "ice",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "レイジングジオフリーズ",
             "ko": "레이징지오프리즈",
@@ -20186,6 +20837,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "dragon",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "アルティメットドラゴンバーン",
             "ko": "얼티메이트드래곤번",
@@ -20217,6 +20869,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "dragon",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "アルティメットドラゴンバーン",
             "ko": "얼티메이트드래곤번",
@@ -20248,6 +20901,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "dark",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ブラックホールイクリプス",
             "ko": "블랙홀이클립스",
@@ -20279,6 +20933,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "dark",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ブラックホールイクリプス",
             "ko": "블랙홀이클립스",
@@ -20310,6 +20965,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "fairy",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ラブリースターインパクト",
             "ko": "러블리스타임팩트",
@@ -20341,6 +20997,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "fairy",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ラブリースターインパクト",
             "ko": "러블리스타임팩트",
@@ -20372,6 +21029,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "electric",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ひっさつのピカチュート",
             "ko": "필살피카슛",
@@ -20403,6 +21061,7 @@
         "accuracy": null,
         "pp": 5,
         "type": "ground",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "すなあつめ",
             "ko": "모래모으기",
@@ -20434,6 +21093,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "bug",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "であいがしら",
             "ko": "만나자마자",
@@ -20465,6 +21125,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "poison",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "トーチカ",
             "ko": "토치카",
@@ -20496,6 +21157,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "ghost",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "かげぬい",
             "ko": "그림자꿰매기",
@@ -20527,6 +21189,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "dark",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ＤＤラリアット",
             "ko": "DD래리어트",
@@ -20558,6 +21221,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "water",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "うたかたのアリア",
             "ko": "물거품아리아",
@@ -20589,6 +21253,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "ice",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "アイスハンマー",
             "ko": "아이스해머",
@@ -20620,6 +21285,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "fairy",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "フラワーヒール",
             "ko": "플라워힐",
@@ -20651,6 +21317,7 @@
         "accuracy": 95,
         "pp": 10,
         "type": "ground",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "１０まんばりき",
             "ko": "10만마력",
@@ -20682,6 +21349,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "grass",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ちからをすいとる",
             "ko": "힘흡수",
@@ -20713,6 +21381,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "grass",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ソーラーブレード",
             "ko": "솔라블레이드",
@@ -20744,6 +21413,7 @@
         "accuracy": 100,
         "pp": 40,
         "type": "grass",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "このは",
             "ko": "나뭇잎",
@@ -20775,6 +21445,7 @@
         "accuracy": null,
         "pp": 15,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "スポットライト",
             "ko": "스포트라이트",
@@ -20806,6 +21477,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "poison",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "どくのいと",
             "ko": "독실",
@@ -20837,6 +21509,7 @@
         "accuracy": null,
         "pp": 30,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "とぎすます",
             "ko": "예민해지기",
@@ -20868,6 +21541,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "steel",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "アシストギア",
             "ko": "어시스트기어",
@@ -20899,6 +21573,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "dark",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "じごくづき",
             "ko": "지옥찌르기",
@@ -20930,6 +21605,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "bug",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "かふんだんご",
             "ko": "꽃가루경단",
@@ -20961,6 +21637,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "steel",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "アンカーショット",
             "ko": "앵커숏",
@@ -20992,6 +21669,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "サイコフィールド",
             "ko": "사이코필드",
@@ -21023,6 +21701,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "bug",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "とびかかる",
             "ko": "덤벼들기",
@@ -21054,6 +21733,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "fire",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ほのおのムチ",
             "ko": "불꽃채찍",
@@ -21085,6 +21765,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "dark",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "つけあがる",
             "ko": "기어오르기",
@@ -21116,6 +21797,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "fire",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "もえつきる",
             "ko": "불사르기",
@@ -21147,6 +21829,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "スピードスワップ",
             "ko": "스피드스웹",
@@ -21178,6 +21861,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "steel",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "スマートホーン",
             "ko": "스마트호른",
@@ -21209,6 +21893,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "poison",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "じょうか",
             "ko": "정화",
@@ -21240,6 +21925,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "normal",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "めざめるダンス",
             "ko": "잠재댄스",
@@ -21271,6 +21957,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "dragon",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "コアパニッシャー",
             "ko": "코어퍼니셔",
@@ -21302,6 +21989,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "grass",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "トロピカルキック",
             "ko": "트로피컬킥",
@@ -21333,6 +22021,7 @@
         "accuracy": null,
         "pp": 15,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "さいはい",
             "ko": "지휘",
@@ -21364,6 +22053,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "flying",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "くちばしキャノン",
             "ko": "부리캐논",
@@ -21395,6 +22085,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "dragon",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "スケイルノイズ",
             "ko": "스케일노이즈",
@@ -21426,6 +22117,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "dragon",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ドラゴンハンマー",
             "ko": "드래곤해머",
@@ -21457,6 +22149,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "dark",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ぶんまわす",
             "ko": "세차게휘두르기",
@@ -21488,6 +22181,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "ice",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "オーロラベール",
             "ko": "오로라베일",
@@ -21519,6 +22213,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "ghost",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "シャドーアローズストライク",
             "ko": "섀도애로우즈스트라이크",
@@ -21550,6 +22245,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "dark",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ハイパーダーククラッシャー",
             "ko": "하이퍼다크크러셔",
@@ -21581,6 +22277,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "water",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "わだつみのシンフォニア",
             "ko": "바다의심포니",
@@ -21612,6 +22309,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "fairy",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ガーディアン・デ・アローラ",
             "ko": "알로라의수호자",
@@ -21643,6 +22341,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "ghost",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "しちせいだっこんたい",
             "ko": "칠성탈혼퇴",
@@ -21674,6 +22373,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "electric",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ライトニングサーフライド",
             "ko": "라이트닝서프라이드",
@@ -21705,6 +22405,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ほんきをだす　こうげき",
             "ko": "진심의공격",
@@ -21736,6 +22437,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ナインエボルブースト",
             "ko": "나인이볼부스트",
@@ -21767,6 +22469,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "psychic",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "オリジンズスーパーノヴァ",
             "ko": "오리진즈슈퍼노바",
@@ -21798,6 +22501,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "fire",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "トラップシェル",
             "ko": "트랩셸",
@@ -21829,6 +22533,7 @@
         "accuracy": 90,
         "pp": 5,
         "type": "fairy",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "フルールカノン",
             "ko": "플뢰르캐논",
@@ -21860,6 +22565,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "サイコファング",
             "ko": "사이코팽",
@@ -21891,6 +22597,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "ground",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "じだんだ",
             "ko": "분함의발구르기",
@@ -21922,6 +22629,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "ghost",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "シャドーボーン",
             "ko": "섀도본",
@@ -21953,6 +22661,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "rock",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "アクセルロック",
             "ko": "액셀록",
@@ -21984,6 +22693,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "water",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "アクアブレイク",
             "ko": "아쿠아브레이크",
@@ -22015,6 +22725,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "プリズムレーザー",
             "ko": "프리즘레이저",
@@ -22046,6 +22757,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "ghost",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "シャドースチール",
             "ko": "섀도스틸",
@@ -22077,6 +22789,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "steel",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "メテオドライブ",
             "ko": "메테오드라이브",
@@ -22108,6 +22821,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "ghost",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "シャドーレイ",
             "ko": "섀도레이",
@@ -22139,6 +22853,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "なみだめ",
             "ko": "눈물그렁그렁",
@@ -22170,6 +22885,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "electric",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "びりびりちくちく",
             "ko": "찌리리따끔따끔",
@@ -22201,6 +22917,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "fairy",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "しぜんのいかり",
             "ko": "자연의분노",
@@ -22232,6 +22949,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "マルチアタック",
             "ko": "멀티어택",
@@ -22263,6 +22981,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "electric",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "１０００まんボルト",
             "ko": "1000만볼트",
@@ -22294,6 +23013,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "fire",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ビックリヘッド",
             "ko": "깜짝헤드",
@@ -22325,6 +23045,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "electric",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "プラズマフィスト",
             "ko": "플라스마피스트",
@@ -22356,6 +23077,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "psychic",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "フォトンゲイザー",
             "ko": "포톤가이저",
@@ -22387,6 +23109,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "psychic",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "てんこがすめつぼうのひかり",
             "ko": "하늘을태우는멸망의빛",
@@ -22418,6 +23141,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "steel",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "サンシャインスマッシャー",
             "ko": "선샤인스매셔",
@@ -22449,6 +23173,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "ghost",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ムーンライトブラスター",
             "ko": "문라이트블래스터",
@@ -22480,6 +23205,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "fairy",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ぽかぼかフレンドタイム",
             "ko": "투닥투닥프렌드타임",
@@ -22511,6 +23237,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "rock",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ラジアルエッジストーム",
             "ko": "레이디얼에지스톰",
@@ -22542,6 +23269,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "dragon",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ブレイジングソウルビート",
             "ko": "브레이징소울비트",
@@ -22573,6 +23301,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "electric",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ばちばちアクセル",
             "ko": "파찌파찌액셀",
@@ -22604,6 +23333,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "water",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ざぶざぶサーフ",
             "ko": "참방참방서핑",
@@ -22635,6 +23365,7 @@
         "accuracy": 95,
         "pp": 15,
         "type": "flying",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ふわふわフォール",
             "ko": "둥실둥실폴",
@@ -22666,6 +23397,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "electric",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ピカピカサンダー",
             "ko": "피카피카썬더",
@@ -22697,6 +23429,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "water",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "いきいきバブル",
             "ko": "생생버블",
@@ -22728,6 +23461,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "electric",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "びりびりエレキ",
             "ko": "찌릿찌릿일렉",
@@ -22759,6 +23493,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "fire",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "めらめらバーン",
             "ko": "이글이글번",
@@ -22790,6 +23525,7 @@
         "accuracy": 95,
         "pp": 15,
         "type": "psychic",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "どばどばオーラ",
             "ko": "콸콸오라",
@@ -22821,6 +23557,7 @@
         "accuracy": 95,
         "pp": 15,
         "type": "dark",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "わるわるゾーン",
             "ko": "아그아그존",
@@ -22852,6 +23589,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "grass",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "すくすくボンバー",
             "ko": "쑥쑥봄버",
@@ -22883,6 +23621,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "ice",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "こちこちフロスト",
             "ko": "꽁꽁프로스트",
@@ -22914,6 +23653,7 @@
         "accuracy": 85,
         "pp": 5,
         "type": "fairy",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "きらきらストーム",
             "ko": "반짝반짝스톰",
@@ -22945,6 +23685,7 @@
         "accuracy": null,
         "pp": 20,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ブイブイブレイク",
             "ko": "브이브이브레이크",
@@ -22976,6 +23717,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "steel",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダブルパンツァー",
             "ko": "더블펀처",
@@ -23007,6 +23749,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ダイウォール",
             "ko": "다이월",
@@ -23038,6 +23781,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "dragon",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ダイマックスほう",
             "ko": "다이맥스포",
@@ -23069,6 +23813,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "water",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ねらいうち",
             "ko": "노려맞히기",
@@ -23100,6 +23845,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "dark",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "くらいつく",
             "ko": "물고버티기",
@@ -23131,6 +23877,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ほおばる",
             "ko": "볼가득넣기",
@@ -23162,6 +23909,7 @@
         "accuracy": null,
         "pp": 5,
         "type": "fighting",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "はいすいのじん",
             "ko": "배수의진",
@@ -23193,6 +23941,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "rock",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "タールショット",
             "ko": "타르숏",
@@ -23224,6 +23973,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "まほうのこな",
             "ko": "마법가루",
@@ -23255,6 +24005,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "dragon",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ドラゴンアロー",
             "ko": "드래곤애로",
@@ -23286,6 +24037,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "おちゃかい",
             "ko": "다과회",
@@ -23317,6 +24069,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "fighting",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "たこがため",
             "ko": "문어굳히기",
@@ -23348,6 +24101,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "electric",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "でんげきくちばし",
             "ko": "전격부리",
@@ -23379,6 +24133,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "water",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "エラがみ",
             "ko": "아가미물기",
@@ -23410,6 +24165,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "コートチェンジ",
             "ko": "코트체인지",
@@ -23441,6 +24197,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "fire",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダイバーン",
             "ko": "다이번",
@@ -23472,6 +24229,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "bug",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダイワーム",
             "ko": "다이웜",
@@ -23503,6 +24261,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "electric",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダイサンダー",
             "ko": "다이썬더",
@@ -23534,6 +24293,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダイアタック",
             "ko": "다이어택",
@@ -23565,6 +24325,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダイナックル",
             "ko": "다이너클",
@@ -23596,6 +24357,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "ghost",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダイホロウ",
             "ko": "다이할로우",
@@ -23627,6 +24389,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "ice",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダイアイス",
             "ko": "다이아이스",
@@ -23658,6 +24421,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "poison",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダイアシッド",
             "ko": "다이애시드",
@@ -23689,6 +24453,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "water",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダイストリーム",
             "ko": "다이스트림",
@@ -23720,6 +24485,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "flying",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダイジェット",
             "ko": "다이제트",
@@ -23751,6 +24517,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "fairy",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダイフェアリー",
             "ko": "다이페어리",
@@ -23782,6 +24549,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "dragon",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダイドラグーン",
             "ko": "다이드라군",
@@ -23813,6 +24581,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダイサイコ",
             "ko": "다이사이코",
@@ -23844,6 +24613,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "rock",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダイロック",
             "ko": "다이록",
@@ -23875,6 +24645,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "ground",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダイアース",
             "ko": "다이어스",
@@ -23906,6 +24677,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "dark",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダイアーク",
             "ko": "다이아크",
@@ -23937,6 +24709,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "grass",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダイソウゲン",
             "ko": "다이그래스",
@@ -23968,6 +24741,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "steel",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダイスチル",
             "ko": "다이스틸",
@@ -23999,6 +24773,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "dragon",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ソウルビート",
             "ko": "소울비트",
@@ -24030,6 +24805,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ボディプレス",
             "ko": "바디프레스",
@@ -24061,6 +24837,7 @@
         "accuracy": null,
         "pp": 15,
         "type": "fairy",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "デコレーション",
             "ko": "데코레이션",
@@ -24092,6 +24869,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "grass",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ドラムアタック",
             "ko": "드럼어택",
@@ -24123,6 +24901,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "grass",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "トラバサミ",
             "ko": "집게덫",
@@ -24154,6 +24933,7 @@
         "accuracy": 90,
         "pp": 5,
         "type": "fire",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "かえんボール",
             "ko": "화염볼",
@@ -24185,6 +24965,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "steel",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "きょじゅうざん",
             "ko": "거수참",
@@ -24216,6 +24997,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "steel",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "きょじゅうだん",
             "ko": "거수탄",
@@ -24247,6 +25029,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "electric",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "オーラぐるま",
             "ko": "오라휠",
@@ -24278,6 +25061,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "dragon",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ワイドブレイカー",
             "ko": "와이드브레이커",
@@ -24309,6 +25093,7 @@
         "accuracy": 100,
         "pp": 40,
         "type": "grass",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "えだづき",
             "ko": "가지찌르기",
@@ -24340,6 +25125,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "electric",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "オーバードライブ",
             "ko": "오버드라이브",
@@ -24371,6 +25157,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "grass",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "りんごさん",
             "ko": "사과산",
@@ -24402,6 +25189,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "grass",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "Ｇのちから",
             "ko": "G의힘",
@@ -24433,6 +25221,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "fairy",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ソウルクラッシュ",
             "ko": "소울크래시",
@@ -24464,6 +25253,7 @@
         "accuracy": 95,
         "pp": 10,
         "type": "fairy",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ワンダースチーム",
             "ko": "원더스팀",
@@ -24495,6 +25285,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "water",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "いのちのしずく",
             "ko": "생명의물방울",
@@ -24526,6 +25317,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "dark",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ブロッキング",
             "ko": "블로킹",
@@ -24557,6 +25349,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "dark",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "どげざつき",
             "ko": "사죄의찌르기",
@@ -24588,6 +25381,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "スターアサルト",
             "ko": "스타어설트",
@@ -24619,6 +25413,7 @@
         "accuracy": 90,
         "pp": 5,
         "type": "dragon",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ムゲンダイビーム",
             "ko": "무한다이빔",
@@ -24650,6 +25445,7 @@
         "accuracy": 95,
         "pp": 5,
         "type": "steel",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "てっていこうせん",
             "ko": "철제광선",
@@ -24681,6 +25477,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ワイドフォース",
             "ko": "와이드포스",
@@ -24712,6 +25509,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "steel",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "アイアンローラー",
             "ko": "아이언롤러",
@@ -24743,6 +25541,7 @@
         "accuracy": 90,
         "pp": 20,
         "type": "dragon",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "スケイルショット",
             "ko": "스케일샷",
@@ -24774,6 +25573,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "rock",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "メテオビーム",
             "ko": "메테오빔",
@@ -24805,6 +25605,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "poison",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "シェルアームズ",
             "ko": "셸암즈",
@@ -24836,6 +25637,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "fairy",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ミストバースト",
             "ko": "미스트버스트",
@@ -24867,6 +25669,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "grass",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "グラススライダー",
             "ko": "그래스슬라이더",
@@ -24898,6 +25701,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "electric",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ライジングボルト",
             "ko": "라이징볼트",
@@ -24929,6 +25733,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "normal",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "だいちのはどう",
             "ko": "대지의파동",
@@ -24960,6 +25765,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "bug",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "はいよるいちげき",
             "ko": "엄습하는일격",
@@ -24991,6 +25797,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "fire",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "しっとのほのお",
             "ko": "질투의불꽃",
@@ -25022,6 +25829,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "dark",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "うっぷんばらし",
             "ko": "분풀이",
@@ -25053,6 +25861,7 @@
         "accuracy": 90,
         "pp": 5,
         "type": "ghost",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ポルターガイスト",
             "ko": "폴터가이스트",
@@ -25084,6 +25893,7 @@
         "accuracy": 100,
         "pp": 40,
         "type": "poison",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ふしょくガス",
             "ko": "부식가스",
@@ -25115,6 +25925,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "fighting",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "コーチング",
             "ko": "코칭",
@@ -25146,6 +25957,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "water",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "クイックターン",
             "ko": "퀵턴",
@@ -25177,6 +25989,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "ice",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "トリプルアクセル",
             "ko": "트리플악셀",
@@ -25208,6 +26021,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "flying",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダブルウイング",
             "ko": "더블윙",
@@ -25239,6 +26053,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "ground",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ねっさのだいち",
             "ko": "열사의대지",
@@ -25270,6 +26085,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "grass",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ジャングルヒール",
             "ko": "정글힐",
@@ -25301,6 +26117,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "dark",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "あんこくきょうだ",
             "ko": "암흑강타",
@@ -25332,6 +26149,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "water",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "すいりゅうれんだ",
             "ko": "수류연타",
@@ -25363,6 +26181,7 @@
         "accuracy": 90,
         "pp": 15,
         "type": "electric",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "サンダープリズン",
             "ko": "썬더프리즌",
@@ -25394,6 +26213,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "dragon",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ドラゴンエナジー",
             "ko": "드래곤에너지",
@@ -25425,6 +26245,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "いてつくしせん",
             "ko": "얼어붙는시선",
@@ -25456,6 +26277,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "dark",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "もえあがるいかり",
             "ko": "타오르는분노",
@@ -25487,6 +26309,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "らいめいげり",
             "ko": "천둥차기",
@@ -25518,6 +26341,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "ice",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ブリザードランス",
             "ko": "블리자드랜스",
@@ -25549,6 +26373,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "ghost",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "アストラルビット",
             "ko": "아스트랄비트",
@@ -25580,6 +26405,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "psychic",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ぶきみなじゅもん",
             "ko": "섬뜩한주문",
@@ -25611,6 +26437,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "poison",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "フェイタルクロー",
             "zh-hant": "克命爪",
@@ -25630,6 +26457,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "バリアーラッシュ",
             "zh-hant": "屏障猛攻",
@@ -25649,6 +26477,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "パワーシフト",
             "zh-hant": "力量转换",
@@ -25668,6 +26497,7 @@
         "accuracy": 90,
         "pp": 15,
         "type": "rock",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "がんせきアックス",
             "zh-hant": "岩斧",
@@ -25687,6 +26517,7 @@
         "accuracy": 80,
         "pp": 5,
         "type": "fairy",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "はるのあらし",
             "zh-hant": "阳春风暴",
@@ -25706,6 +26537,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "しんぴのちから",
             "zh-hant": "神秘之力",
@@ -25725,6 +26557,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "fire",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "だいふんげき",
             "zh-hant": "大愤慨",
@@ -25744,6 +26577,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "water",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ウェーブタックル",
             "zh-hant": "波动冲",
@@ -25763,6 +26597,7 @@
         "accuracy": 95,
         "pp": 5,
         "type": "grass",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "クロロブラスト",
             "zh-hant": "叶绿爆震",
@@ -25782,6 +26617,7 @@
         "accuracy": 85,
         "pp": 10,
         "type": "ice",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ひょうざんおろし",
             "zh-hant": "冰山风",
@@ -25801,6 +26637,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "fighting",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "しょうりのまい",
             "zh-hant": "胜利之舞",
@@ -25820,6 +26657,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "ground",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ぶちかまし",
             "zh-hant": "突飞猛扑",
@@ -25839,6 +26677,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "poison",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "どくばりセンボン",
             "zh-hant": "毒千针",
@@ -25858,6 +26697,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "オーラウイング",
             "zh-hant": "气场之翼",
@@ -25877,6 +26717,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "ghost",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "うらみつらみ",
             "zh-hant": "冤冤相报",
@@ -25896,6 +26737,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "steel",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "たてこもる",
             "zh-hant": "闭关",
@@ -25915,6 +26757,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "３ぼんのや",
             "zh-hant": "三连箭",
@@ -25934,6 +26777,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "ghost",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ひゃっきやこう",
             "zh-hant": "群魔乱舞",
@@ -25953,6 +26797,7 @@
         "accuracy": 90,
         "pp": 15,
         "type": "dark",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ひけん・ちえなみ",
             "zh-hant": "秘剑・千重涛",
@@ -25972,6 +26817,7 @@
         "accuracy": 80,
         "pp": 10,
         "type": "flying",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "こがらしあらし",
             "zh-hant": "枯叶风暴",
@@ -25991,6 +26837,7 @@
         "accuracy": 80,
         "pp": 10,
         "type": "electric",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "かみなりあらし",
             "zh-hant": "鸣雷风暴",
@@ -26010,6 +26857,7 @@
         "accuracy": 80,
         "pp": 10,
         "type": "ground",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ねっさのあらし",
             "zh-hant": "热沙风暴",
@@ -26029,6 +26877,7 @@
         "accuracy": null,
         "pp": 5,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "みかづきのいのり",
             "zh-hant": "新月祈祷",
@@ -26048,6 +26897,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ブレイブチャージ",
             "zh-hant": "勇气填充",
@@ -26067,6 +26917,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "normal",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "テラバースト",
             "zh-hant": "太晶爆发",
@@ -26086,6 +26937,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "bug",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "スレッドトラップ",
             "zh-hant": "线阱",
@@ -26105,6 +26957,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "かかとおとし",
             "zh-hant": "下压踢",
@@ -26124,6 +26977,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "ghost",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "おはかまいり",
             "zh-hant": "扫墓",
@@ -26143,6 +26997,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ルミナコリジョン",
             "zh-hant": "琉光冲激",
@@ -26162,6 +27017,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "dragon",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "いっちょうあがり",
             "zh-hant": "上菜",
@@ -26181,6 +27037,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "water",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ジェットパンチ",
             "zh-hant": "喷射拳",
@@ -26200,6 +27057,7 @@
         "accuracy": null,
         "pp": 15,
         "type": "grass",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ハバネロエキス",
             "zh-hant": "辣椒精华",
@@ -26219,6 +27077,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "steel",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ホイールスピン",
             "zh-hant": "疾速转轮",
@@ -26238,6 +27097,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ネズミざん",
             "zh-hant": "鼠数儿",
@@ -26257,6 +27117,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "ice",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "アイススピナー",
             "zh-hant": "冰旋",
@@ -26276,6 +27137,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "dragon",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "きょけんとつげき",
             "zh-hant": "巨剑突击",
@@ -26295,6 +27157,7 @@
         "accuracy": null,
         "pp": 1,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "さいきのいのり",
             "zh-hant": "复生祈祷",
@@ -26314,6 +27177,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "rock",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "しおづけ",
             "zh-hant": "盐腌",
@@ -26333,6 +27197,7 @@
         "accuracy": 95,
         "pp": 10,
         "type": "water",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "トリプルダイブ",
             "zh-hant": "三连钻",
@@ -26352,6 +27217,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "poison",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "キラースピン",
             "zh-hant": "晶光转转",
@@ -26371,6 +27237,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "うつしえ",
             "zh-hant": "描绘",
@@ -26390,6 +27257,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "みをけずる",
             "zh-hant": "甩肉",
@@ -26409,6 +27277,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "dark",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ドゲザン",
             "zh-hant": "仆刀",
@@ -26428,6 +27297,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "grass",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "トリックフラワー",
             "zh-hant": "千变万花",
@@ -26447,6 +27317,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "fire",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "フレアソング",
             "zh-hant": "闪焰高歌",
@@ -26466,6 +27337,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "water",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "アクアステップ",
             "zh-hant": "流水旋舞",
@@ -26485,6 +27357,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "レイジングブル",
             "zh-hant": "怒牛",
@@ -26504,6 +27377,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "steel",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ゴールドラッシュ",
             "zh-hant": "淘金潮",
@@ -26523,6 +27397,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "psychic",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "サイコブレイド ",
             "ko": "사이코블레이드",
@@ -26546,6 +27421,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "water",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ハイドロスチーム",
             "ko": "하이드로스팀",
@@ -26569,6 +27445,7 @@
         "accuracy": 90,
         "pp": 10,
         "type": "dark",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "カタストロフィ",
             "zh-hant": "大灾难",
@@ -26588,6 +27465,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "アクセルブレイク",
             "zh-hant": "全开猛撞",
@@ -26607,6 +27485,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "electric",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "イナズマドライブ",
             "zh-hant": "闪电猛冲",
@@ -26626,6 +27505,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "しっぽきり",
             "zh-hant": "断尾",
@@ -26645,6 +27525,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "ice",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "さむいギャグ",
             "zh-hant": "冷笑话",
@@ -26664,6 +27545,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "normal",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "おかたづけ",
             "zh-hant": "大扫除",
@@ -26683,6 +27565,7 @@
         "accuracy": null,
         "pp": 10,
         "type": "ice",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ゆきげしき",
             "zh-hant": "雪景",
@@ -26702,6 +27585,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "bug",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "とびつく",
             "zh-hant": "虫扑",
@@ -26721,6 +27605,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "grass",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "くさわけ",
             "zh-hant": "起草",
@@ -26740,6 +27625,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "water",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ひやみず",
             "zh-hant": "泼冷水",
@@ -26759,6 +27645,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "normal",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ハイパードリル",
             "zh-hant": "强力钻",
@@ -26778,6 +27665,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ツインビーム",
             "zh-hant": "双光束",
@@ -26797,6 +27685,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "ghost",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ふんどのこぶし",
             "zh-hant": "愤怒之拳",
@@ -26816,6 +27705,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "fire",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "アーマーキャノン",
             "zh-hant": "铠农炮",
@@ -26835,6 +27725,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "fire",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "むねんのつるぎ",
             "zh-hant": "悔念剑",
@@ -26854,6 +27745,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "electric",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "でんこうそうげき",
             "zh-hant": "电光双击",
@@ -26873,6 +27765,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "steel",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "デカハンマー",
             "zh-hant": "巨力锤",
@@ -26892,6 +27785,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "dark",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ほうふく",
             "zh-hant": "复仇",
@@ -26911,6 +27805,7 @@
         "accuracy": 100,
         "pp": 20,
         "type": "water",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "アクアカッター",
             "zh-hant": "水波刀",
@@ -26930,6 +27825,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "fire",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "バーンアクセル",
             "zh-hant": "灼热暴冲",
@@ -26946,6 +27842,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "dark",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダークアクセル",
             "zh-hant": "黑暗暴冲",
@@ -26962,6 +27859,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "poison",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ポイズンアクセル",
             "zh-hant": "剧毒暴冲",
@@ -26978,6 +27876,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ファイトアクセル",
             "zh-hant": "格斗暴冲",
@@ -26994,6 +27893,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "fairy",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "マジカルアクセル",
             "zh-hant": "魔法暴冲",
@@ -27010,6 +27910,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "normal",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ブラッドムーン",
             "fr": "Lune Rouge",
@@ -27027,6 +27928,7 @@
         "accuracy": 90,
         "pp": 15,
         "type": "grass",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "シャカシャカほう",
             "fr": "Mortier Matcha",
@@ -27044,6 +27946,7 @@
         "accuracy": 85,
         "pp": 10,
         "type": "grass",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "みずあめボム",
             "fr": "Bombe au Sirop",
@@ -27061,6 +27964,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "grass",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ツタこんぼう",
             "fr": "Massue Liane",
@@ -27078,6 +27982,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "electric",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "エレクトロビーム",
             "ko": "일렉트로빔",
@@ -27101,6 +28006,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "normal",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "テラクラスター",
             "ko": "테라클러스터",
@@ -27124,6 +28030,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "dragon",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "きまぐレーザー",
             "ko": "변덕레이저",
@@ -27147,6 +28054,7 @@
         "accuracy": 0,
         "pp": 10,
         "type": "fire",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "かえんのまもり",
             "ko": "화염의수호",
@@ -27170,6 +28078,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "electric",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "じんらい",
             "ko": "질풍신뢰",
@@ -27193,6 +28102,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "rock",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "パワフルエッジ",
             "ko": "파워풀에지",
@@ -27216,6 +28126,7 @@
         "accuracy": 0,
         "pp": 10,
         "type": "steel",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "タキオンカッター",
             "ko": "타키온커터",
@@ -27239,6 +28150,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "steel",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ハードプレス",
             "ko": "하드프레스",
@@ -27262,6 +28174,7 @@
         "accuracy": 0,
         "pp": 15,
         "type": "dragon",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ドラゴンエール",
             "ko": "드래곤옐",
@@ -27285,6 +28198,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "fairy",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "みわくのボイス",
             "ko": "매혹의보이스",
@@ -27308,6 +28222,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "fire",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "やけっぱち",
             "ko": "열불내기",
@@ -27331,6 +28246,7 @@
         "accuracy": 95,
         "pp": 15,
         "type": "electric",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "サンダーダイブ",
             "ko": "썬더다이브",
@@ -27354,6 +28270,7 @@
         "accuracy": 100,
         "pp": 10,
         "type": "psychic",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "サイコノイズ",
             "ko": "사이코노이즈",
@@ -27377,6 +28294,7 @@
         "accuracy": 100,
         "pp": 15,
         "type": "fighting",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "はやてがえし",
             "ko": "기선제압",
@@ -27400,6 +28318,7 @@
         "accuracy": 100,
         "pp": 5,
         "type": "poison",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "じゃどくのくさり",
             "ko": "악독사슬",
@@ -27423,6 +28342,7 @@
         "accuracy": 100,
         "pp": null,
         "type": "shadow",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダークラッシュ",
             "fr": "Charge Noire",
@@ -27439,6 +28359,7 @@
         "accuracy": 100,
         "pp": null,
         "type": "shadow",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダークブラスト",
             "fr": "Aéro Noir",
@@ -27455,6 +28376,7 @@
         "accuracy": 100,
         "pp": null,
         "type": "shadow",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダークアタック",
             "fr": "Assaut Noir",
@@ -27471,6 +28393,7 @@
         "accuracy": 100,
         "pp": null,
         "type": "shadow",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ダークサンダー",
             "fr": "Éclair Noir",
@@ -27487,6 +28410,7 @@
         "accuracy": 100,
         "pp": null,
         "type": "shadow",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダークブレイク",
             "fr": "Bélier Noir",
@@ -27503,6 +28427,7 @@
         "accuracy": 100,
         "pp": null,
         "type": "shadow",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ダークフリーズ",
             "fr": "Froid Noir",
@@ -27519,6 +28444,7 @@
         "accuracy": 60,
         "pp": null,
         "type": "shadow",
+        "damage_class": "physical",
         "names": {
             "ja-hrkt": "ダークエンド",
             "fr": "Retour Noir",
@@ -27535,6 +28461,7 @@
         "accuracy": 100,
         "pp": null,
         "type": "shadow",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ダークファイア",
             "fr": "Ardeur Noir",
@@ -27551,6 +28478,7 @@
         "accuracy": 100,
         "pp": null,
         "type": "shadow",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ダークレイブ",
             "fr": "Rage Noire",
@@ -27567,6 +28495,7 @@
         "accuracy": 100,
         "pp": null,
         "type": "shadow",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ダークストーム",
             "fr": "Typhon Noir",
@@ -27583,6 +28512,7 @@
         "accuracy": 100,
         "pp": null,
         "type": "shadow",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ダークウェーブ",
             "fr": "Ondo Noire",
@@ -27599,6 +28529,7 @@
         "accuracy": 100,
         "pp": null,
         "type": "shadow",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ダークダウン",
             "fr": "Souffle Noir",
@@ -27615,6 +28546,7 @@
         "accuracy": 100,
         "pp": null,
         "type": "shadow",
+        "damage_class": "special",
         "names": {
             "ja-hrkt": "ダークハーフ",
             "fr": "Chute Noire",
@@ -27631,6 +28563,7 @@
         "accuracy": null,
         "pp": null,
         "type": "shadow",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ダークホールド",
             "fr": "Blocage Noir",
@@ -27647,6 +28580,7 @@
         "accuracy": 100,
         "pp": null,
         "type": "shadow",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ダークミスト",
             "fr": "Brume Noire",
@@ -27663,6 +28597,7 @@
         "accuracy": 90,
         "pp": null,
         "type": "shadow",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ダークパニック",
             "fr": "Folie Noire",
@@ -27679,6 +28614,7 @@
         "accuracy": null,
         "pp": null,
         "type": "shadow",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ダークリムーブ",
             "fr": "Percée Noire",
@@ -27695,6 +28631,7 @@
         "accuracy": null,
         "pp": null,
         "type": "shadow",
+        "damage_class": "status",
         "names": {
             "ja-hrkt": "ダークウェザー",
             "fr": "Ciel Noir",
