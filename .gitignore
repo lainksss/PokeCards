@@ -1,3 +1,6 @@
+# Python importations
+.venv/
+
 # Logs
 logs
 *.log
