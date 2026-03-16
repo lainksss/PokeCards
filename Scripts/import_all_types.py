@@ -6,7 +6,7 @@ from pathlib import Path
 
 BASE = "https://pokeapi.co/api/v2"
 SESSION = requests.Session()
-SESSION.headers.update({"User-Agent": "pokemon-types-script/1.0"})
+SESSION.headers.update({"User-Agent": "pokemon-types-script/1.2"})
 
 def fetch_all_types(save_to="data/types.json"):
     Path("data").mkdir(exist_ok=True)
@@ -26,13 +26,29 @@ def fetch_all_types(save_to="data/types.json"):
             type_info = SESSION.get(type_url).json()
             
             # Extracting multilingual names
-            # Some special types (like 'unknown' or 'stellar') might miss some languages, so we use a safe dict comprehension
             names = {n['language']['name']: n['name'] for n in type_info.get('names', [])}
             
+            type_id = type_info['id']
+            
+            if type_id < 10000:
+                base_url = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types"
+                sprites = {
+                    "gen3_emerald": f"{base_url}/generation-iii/emerald/{type_id}.png",
+                    "gen4_platinum": f"{base_url}/generation-iv/platinum/{type_id}.png",
+                    "gen5_black_white": f"{base_url}/generation-v/black-white/{type_id}.png",
+                    "gen6_xy": f"{base_url}/generation-vi/x-y/{type_id}.png",
+                    "gen7_sun_moon": f"{base_url}/generation-vii/sun-moon/{type_id}.png",
+                    "gen8_sword_shield": f"{base_url}/generation-viii/sword-shield/{type_id}.png",
+                    "gen9_scarlet_violet": f"{base_url}/generation-ix/scarlet-violet/{type_id}.png"
+                }
+            else:
+                sprites = None
+
             type_dict = {
-                "id": type_info['id'],
-                "name_en": item['name'], # Keeping the internal english name as reference
-                "names": names
+                "id": type_id,
+                "name_en": item['name'],
+                "names": names,
+                "sprites": sprites
             }
             types_data.append(type_dict)
             print(f"Fetched type: {item['name']}")
@@ -40,7 +56,7 @@ def fetch_all_types(save_to="data/types.json"):
         except Exception as e:
             print(f"Error fetching type {item['name']}: {e}")
             
-        time.sleep(0.05) # Small sleep to respect the API
+        time.sleep(0.05)
 
     with open(save_to, "w", encoding="utf-8") as f:
         json.dump(types_data, f, indent=4, ensure_ascii=False)
