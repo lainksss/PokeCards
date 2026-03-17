@@ -111,3 +111,8 @@
 .selector-selected strong {
   color: var(--color-primary);
 }
+
+/* Dark mode uses gold accent like the rest of the UI */
+[data-theme='dark'] .selector-selected strong {
+  color: var(--color-accent);
+}
