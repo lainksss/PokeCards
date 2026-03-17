@@ -15,7 +15,12 @@ const BaseFlashcard = ({
   selectedFont = 'default',
   fontColor = '#000000',
   borderColor = '#1a237e',
-  cardLanguage = 'fr'
+  cardLanguage = 'fr',
+  isAttack = false,
+  moveType = null,
+  typeIcon = null,
+  damageClass = null,
+  damageClassIcon = null
 }) => {
   const { t } = useLanguage();
   const cardRef = useRef(null);
@@ -83,6 +88,15 @@ const BaseFlashcard = ({
     if (key === 'Nom' || key === 'Name') {
       return 'field-title';
     }
+    if (isAttack && (key === 'Type' || key.toLowerCase().includes('type'))) {
+      return 'attack-type-badge';
+    }
+    if (isAttack && (key === 'Description' || key.toLowerCase().includes('description'))) {
+      return 'attack-description';
+    }
+    if (isAttack && (key === 'Puissance' || key === 'Power' || key === 'Précision' || key === 'Accuracy' || key === 'PP')) {
+      return 'attack-stat';
+    }
     return 'field-regular';
   };
 
@@ -92,7 +106,12 @@ const BaseFlashcard = ({
       const frTranslations = {
         'Nom': 'Nom',
         'Stat améliorée': 'Stat améliorée',
-        'Stat réduite': 'Stat réduite'
+        'Stat réduite': 'Stat réduite',
+        'Type': 'Type',
+        'Puissance': 'Puissance',
+        'Précision': 'Précision',
+        'PP': 'PP',
+        'Description': 'Description'
       };
       return frTranslations[key] || key;
     }
@@ -101,13 +120,115 @@ const BaseFlashcard = ({
     const enTranslations = {
       'Nom': 'Name',
       'Stat améliorée': 'Increased Stat',
-      'Stat réduite': 'Decreased Stat'
+      'Stat réduite': 'Decreased Stat',
+      'Type': 'Type',
+      'Puissance': 'Power',
+      'Précision': 'Accuracy',
+      'PP': 'PP',
+      'Description': 'Description'
     };
     return enTranslations[key] || key;
   };
 
   const entries = data ? Object.entries(data) : [];
   const titleEntry = entries.find(([key]) => key === 'Nom' || key === 'Name');
+  
+  if (isAttack) {
+    // Layout spécial pour les attaques
+    const typeEntry = entries.find(([key]) => key === 'Type');
+    const powerEntry = entries.find(([key]) => key === 'Puissance' || key === 'Power');
+    const accuracyEntry = entries.find(([key]) => key === 'Précision' || key === 'Accuracy');
+    const ppEntry = entries.find(([key]) => key === 'PP');
+    const descriptionEntry = entries.find(([key]) => key === 'Description');
+    
+    return (
+      <div className="flashcard-container">
+        <div 
+          ref={cardRef}
+          className={`flashcard flashcard-attack ${borderRadius ? 'rounded' : 'square'} font-${selectedFont}`}
+          style={{
+            ...getBackgroundStyle(),
+            color: fontColor,
+            borderColor: borderColor
+          }}
+        >
+          {/* Title avec Type badge et Damage Class */}
+          <div className="attack-header" style={{ borderBottomColor: borderColor }}>
+            {titleEntry && (
+              <div className="attack-title-section">
+                <span className="field-value title-value" style={{ color: fontColor }}>
+                  {titleEntry[1]}
+                </span>
+              </div>
+            )}
+            {damageClassIcon && (
+              <div className="attack-damage-class-icon">
+                <img src={damageClassIcon} alt={damageClass} title={damageClass} />
+              </div>
+            )}
+            {typeEntry && typeIcon && (
+              <div className="type-badge">
+                <img src={typeIcon} alt={typeEntry[1]} title={typeEntry[1]} />
+              </div>
+            )}
+          </div>
+
+          {/* Stats row: Power, Accuracy, PP */}
+          <div className="attack-stats-row">
+            {powerEntry && (
+              <div className="attack-stat-box" style={{ borderColor: borderColor }}>
+                <span className="stat-label" style={{ color: fontColor }}>
+                  {getTranslatedLabel(powerEntry[0])}
+                </span>
+                <span className="stat-value" style={{ color: fontColor }}>
+                  {powerEntry[1]}
+                </span>
+              </div>
+            )}
+            {accuracyEntry && (
+              <div className="attack-stat-box" style={{ borderColor: borderColor }}>
+                <span className="stat-label" style={{ color: fontColor }}>
+                  {getTranslatedLabel(accuracyEntry[0])}
+                </span>
+                <span className="stat-value" style={{ color: fontColor }}>
+                  {accuracyEntry[1]}
+                </span>
+              </div>
+            )}
+            {ppEntry && (
+              <div className="attack-stat-box" style={{ borderColor: borderColor }}>
+                <span className="stat-label" style={{ color: fontColor }}>
+                  {getTranslatedLabel(ppEntry[0])}
+                </span>
+                <span className="stat-value" style={{ color: fontColor }}>
+                  {ppEntry[1]}
+                </span>
+              </div>
+            )}
+          </div>
+
+          {/* Description */}
+          {descriptionEntry && (
+            <div className="attack-description-box" style={{ borderColor: borderColor }}>
+              <span className="description-text" style={{ color: fontColor }}>
+                {descriptionEntry[1]}
+              </span>
+            </div>
+          )}
+        </div>
+
+        <button 
+          onClick={handleExportPNG} 
+          disabled={isExporting}
+          className="export-btn"
+        >
+          {isExporting ? 'Exporting...' : t('export_png')}
+        </button>
+      </div>
+    );
+  }
+
+  // Layout normal pour les Natures
   const otherEntries = entries.filter(([key]) => key !== 'Nom' && key !== 'Name');
 
   return (

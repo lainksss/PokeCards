@@ -14,7 +14,10 @@ const CardCustomizer = ({
   fontColor,
   onFontColorChange,
   borderColor,
-  onBorderColorChange
+  onBorderColorChange,
+  selectedGeneration,
+  onGenerationChange,
+  isAttack = false
 }) => {
   const { t } = useLanguage();
   const [background, setBackground] = useState('transparent');
@@ -24,6 +27,7 @@ const CardCustomizer = ({
   const [font, setFont] = useState('default');
   const [fontColorState, setFontColorState] = useState(fontColor || '#000000');
   const [borderColorState, setBorderColorState] = useState(borderColor || '#1a237e');
+  const [generationState, setGenerationState] = useState(selectedGeneration || 'gen9_scarlet_violet');
 
   const handleBackgroundChange = (type) => {
     setBackground(type);
@@ -77,6 +81,11 @@ const CardCustomizer = ({
   const handleBorderColorChange = (e) => {
     setBorderColorState(e.target.value);
     onBorderColorChange?.(e.target.value);
+  };
+
+  const handleGenerationChange = (e) => {
+    setGenerationState(e.target.value);
+    onGenerationChange?.(e.target.value);
   };
 
   return (
@@ -192,6 +201,12 @@ const CardCustomizer = ({
           >
             {t('font_pokemon_hollow')}
           </button>
+          <button 
+            className={font === 'emerald' ? 'active' : ''}
+            onClick={() => handleFontChange('emerald')}
+          >
+            {t('font_pokemon_emerald_pro')}
+          </button>
         </div>
       </div>
 
@@ -218,6 +233,25 @@ const CardCustomizer = ({
           />
         </div>
       </div>
+
+      {isAttack && (
+        <div className="customizer-section">
+          <label>{t('customizer_sprite_generation') || 'Sprite Generation'}</label>
+          <select 
+            value={generationState} 
+            onChange={handleGenerationChange}
+            className="generation-select"
+          >
+            <option value="gen3_emerald">{t('gen3_emerald')}</option>
+            <option value="gen4_platinum">{t('gen4_platinum')}</option>
+            <option value="gen5_black_white">{t('gen5_black_white')}</option>
+            <option value="gen6_xy">{t('gen6_xy')}</option>
+            <option value="gen7_sun_moon">{t('gen7_sun_moon')}</option>
+            <option value="gen8_sword_shield">{t('gen8_sword_shield')}</option>
+            <option value="gen9_scarlet_violet">{t('gen9_scarlet_violet')}</option>
+          </select>
+        </div>
+      )}
     </div>
   );
 };

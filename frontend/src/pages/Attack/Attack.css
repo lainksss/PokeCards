@@ -1,0 +1,120 @@
+.attack-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.attack-container h1 {
+  color: var(--color-primary);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+[data-theme='dark'] .attack-container h1 {
+  color: var(--color-accent);
+}
+
+.attack-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.flashcard-panel {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.customizer-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: var(--bg-secondary);
+  border-radius: 12px;
+  border: 2px solid var(--border-color);
+}
+
+.customizer-panel h3 {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+[data-theme='dark'] .customizer-panel h3 {
+  color: var(--color-accent);
+}
+
+.language-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.language-selector label {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.lang-buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 0.5rem;
+}
+
+.lang-buttons-grid button {
+  padding: 0.6rem 0.5rem;
+  background-color: var(--bg-primary);
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
+  color: var(--text-primary);
+}
+
+.lang-buttons-grid button:hover {
+  border-color: var(--color-primary);
+  background-color: rgba(26, 35, 126, 0.05);
+}
+
+.lang-buttons-grid button.active {
+  background-color: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 8px rgba(26, 35, 126, 0.2);
+}
+
+[data-theme='dark'] .lang-buttons-grid button.active {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+}
+
+@media (max-width: 1024px) {
+  .attack-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .attack-container {
+    padding: 1rem;
+  }
+
+  .attack-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .flashcard-panel {
+    order: 2;
+  }
+
+  .customizer-panel {
+    order: 1;
+  }
+}
