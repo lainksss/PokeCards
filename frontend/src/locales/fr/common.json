@@ -1,0 +1,23 @@
+{
+  "nav_home": "Accueil",
+  "nav_nature": "Nature",
+  "nav_attack": "Attaque",
+  "nav_item": "Objet",
+  "nav_ability": "Talent",
+  "nav_pokemon": "Pokémon",
+  "nav_team": "Équipe",
+  "switch_lang": "Switch to English",
+  "export_png": "Exporter en PNG",
+  "export_gif": "Exporter en GIF",
+  "background": "Fond",
+  "border_radius": "Bordures",
+  "border_radius_rounded": "Arrondies",
+  "border_radius_square": "Carrées",
+  "font": "Police",
+  "rounded": "Arrondis",
+  "square": "Carrés",
+  "transparent": "Transparent",
+  "solid_color": "Couleur unie",
+  "gradient": "Dégradé",
+  "upload_image": "Importer une image"
+}

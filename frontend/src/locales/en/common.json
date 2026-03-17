@@ -1,0 +1,23 @@
+{
+  "nav_home": "Home",
+  "nav_nature": "Nature",
+  "nav_attack": "Attack",
+  "nav_item": "Item",
+  "nav_ability": "Ability",
+  "nav_pokemon": "Pokémon",
+  "nav_team": "Team",
+  "switch_lang": "Passer en Français",
+  "export_png": "Export as PNG",
+  "export_gif": "Export as GIF",
+  "background": "Background",
+  "border_radius": "Borders",
+  "border_radius_rounded": "Rounded",
+  "border_radius_square": "Square",
+  "font": "Font",
+  "rounded": "Rounded",
+  "square": "Square",
+  "transparent": "Transparent",
+  "solid_color": "Solid Color",
+  "gradient": "Gradient",
+  "upload_image": "Upload Image"
+}

@@ -1,0 +1,12 @@
+{
+  "home_title": "Welcome to PokeCards",
+  "home_subtitle": "Generate Your Own Pokémon Flashcards",
+  "home_description": "PokeCards is an interactive web app that lets you create personalized, exportable flashcards (PNG/GIF) for your Pokémon, attacks, items, and more!",
+  "home_features_title": "What you can create:",
+  "feature_nature": "🌿 Natures: Flashcards detailing nature effects.",
+  "feature_attack": "⚔️ Attacks: Power, accuracy, PP, and descriptions.",
+  "feature_item": "🎒 Items: Sprites, names, and descriptions.",
+  "feature_ability": "🌟 Abilities: Names and effects of Pokémon abilities.",
+  "feature_pokemon": "🐾 Pokémon: Full cards featuring models, moves, abilities, and items.",
+  "feature_team": "🛡️ Team: Assemble up to 6 Pokémon in customizable layouts."
+}
