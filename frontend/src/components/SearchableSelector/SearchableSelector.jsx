@@ -6,15 +6,19 @@ const SearchableSelector = ({
   onSelect, 
   selectedId,
   getDisplayName,
+  getSearchStrings,
   placeholder = 'Search...'
 }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef(null);
 
-  const filteredItems = items.filter(item =>
-    getDisplayName(item).toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredItems = items.filter(item => {
+    const searchStrings = getSearchStrings ? getSearchStrings(item) : [getDisplayName(item)];
+    return searchStrings.some(str => 
+      str.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  });
 
   const selectedItem = items.find(item => item.id === selectedId);
 
