@@ -201,6 +201,18 @@ const CardCustomizer = ({
           >
             {t('font_pokemon_hollow')}
           </button>
+          <button 
+            className={font === 'mario64' ? 'active' : ''}
+            onClick={() => handleFontChange('mario64')}
+          >
+            {t('font_mario64')}
+          </button>
+          <button 
+            className={font === 'dp-pro' ? 'active' : ''}
+            onClick={() => handleFontChange('dp-pro')}
+          >
+            {t('font_pokemon_dp_pro')}
+          </button>
         </div>
       </div>
 
