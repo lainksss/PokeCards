@@ -14,13 +14,6 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Pokemon Emerald Pro';
-  src: url('/PokeCards/fonts/pokemon-emerald-pro.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 :root {
   --color-primary: #1a237e;
   --color-primary-light: #283593;

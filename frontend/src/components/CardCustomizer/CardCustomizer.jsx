@@ -201,12 +201,6 @@ const CardCustomizer = ({
           >
             {t('font_pokemon_hollow')}
           </button>
-          <button 
-            className={font === 'emerald' ? 'active' : ''}
-            onClick={() => handleFontChange('emerald')}
-          >
-            {t('font_pokemon_emerald_pro')}
-          </button>
         </div>
       </div>
 
