@@ -1,7 +1,24 @@
 {
   "select_nature": "Select a Nature",
   "customize_card": "Customize your card",
+  "customizer_font_color": "Font color",
+  "customizer_border_color": "Border color",
   "nature_name": "Pokémon Natures",
   "loading": "Loading...",
-  "export_png": "Export as PNG"
+  "export_png": "Export as PNG",
+  "flashcard_language": "Flashcard language",
+  "gradient_color_1": "Color 1",
+  "gradient_color_2": "Color 2",
+  "background_custom_image": "Custom image",
+  "background_image": "Image",
+  "search_nature": "🔍 Search...",
+  "lang_french": "🇫🇷 French",
+  "lang_english": "🇬🇧 English",
+  "lang_german": "🇩🇪 German",
+  "lang_spanish": "🇪🇸 Spanish",
+  "lang_italian": "🇮🇹 Italian",
+  "lang_japanese": "🇯🇵 Japanese",
+  "lang_korean": "🇰🇷 Korean",
+  "lang_chinese_simp": "🇨🇳 Chinese (Simp.)",
+  "lang_chinese_trad": "🇹🇼 Chinese (Trad.)"
 }

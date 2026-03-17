@@ -56,6 +56,28 @@
   --shadow-lg: 0 8px 24px rgba(212, 175, 55, 0.2);
 }
 
+/* Dark mode: make blue text white/light */
+[data-theme='dark'] h1,
+[data-theme='dark'] h2,
+[data-theme='dark'] h3,
+[data-theme='dark'] h4,
+[data-theme='dark'] h5,
+[data-theme='dark'] h6 {
+  color: var(--color-accent) !important;
+}
+
+[data-theme='dark'] label {
+  color: var(--text-primary) !important;
+}
+
+[data-theme='dark'] a {
+  color: var(--color-accent);
+}
+
+[data-theme='dark'] a:hover {
+  color: var(--color-accent-light);
+}
+
 * {
   margin: 0;
   padding: 0;

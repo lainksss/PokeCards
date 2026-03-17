@@ -7,15 +7,17 @@
 }
 
 .flashcard {
-  width: 400px;
-  min-height: 500px;
+  width: 600px;
+  height: 350px;
   padding: 2rem;
   background-color: var(--bg-primary);
+  background-size: cover;
+  background-position: center;
   box-shadow: var(--shadow-lg);
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  justify-content: center;
+  gap: 2rem;
+  justify-content: flex-start;
   border: 3px solid var(--color-primary);
 }
 
@@ -27,6 +29,154 @@
   border-radius: 0;
 }
 
+/* Title field - en haut */
+.flashcard-field.field-title {
+  padding: 1.2rem;
+  text-align: center;
+  border-top: 4px solid var(--color-primary);
+  border-bottom: 4px solid var(--color-primary);
+  margin-bottom: 1.5rem;
+  flex-shrink: 0;
+}
+
+.flashcard-field.field-title .title-content {
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.flashcard-field.field-title .title-content:hover {
+  background-color: rgba(212, 175, 55, 0.1);
+  transform: scale(1.02);
+}
+
+.flashcard-field.field-title .title-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  line-height: 1.2;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+/* Container for stats (Buff/Nerf aligned horizontally) */
+.flashcard-stats-container {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: stretch;
+  flex: 1;
+}
+
+/* Regular field */
+.flashcard-field.field-regular {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex: 1;
+}
+
+.flashcard-field.field-regular:hover {
+  background-color: var(--bg-secondary);
+  transform: translateY(-2px);
+}
+
+/* Stat buff (vert) */
+.flashcard-field.stat-buff {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1.2rem;
+  background-color: rgba(76, 175, 80, 0.15);
+  border: 3px solid #4CAF50;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.2);
+  min-height: 80px;
+  overflow: hidden;
+}
+
+.flashcard-field.stat-buff:hover {
+  background-color: rgba(76, 175, 80, 0.25);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(76, 175, 80, 0.3);
+}
+
+.flashcard-field.stat-buff .field-label {
+  color: #4CAF50;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.flashcard-field.stat-buff .field-value {
+  color: #2E7D32;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.2;
+  max-height: 45px;
+}
+
+/* Stat nerf (rouge) */
+.flashcard-field.stat-nerf {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1.2rem;
+  background-color: rgba(244, 67, 54, 0.15);
+  border: 3px solid #F44336;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(244, 67, 54, 0.2);
+  min-height: 80px;
+  overflow: hidden;
+}
+
+.flashcard-field.stat-nerf:hover {
+  background-color: rgba(244, 67, 54, 0.25);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(244, 67, 54, 0.3);
+}
+
+.flashcard-field.stat-nerf .field-label {
+  color: #F44336;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.flashcard-field.stat-nerf .field-value {
+  color: #C62828;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.2;
+  max-height: 45px;
+}
+
+/* Common field styles */
 .flashcard-field {
   display: flex;
   flex-direction: column;
@@ -52,7 +202,7 @@
 }
 
 .field-label {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-weight: bold;
   color: var(--text-secondary);
   text-transform: uppercase;
@@ -63,7 +213,12 @@
   font-size: 1.1rem;
   color: var(--text-primary);
   word-wrap: break-word;
+  overflow-wrap: break-word;
   font-weight: 500;
+  line-height: 1.3;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .field-edit {
@@ -111,10 +266,36 @@
 
 .font-solid {
   font-family: 'Pokemon Solid', sans-serif;
+  letter-spacing: -1px;
+}
+
+.font-solid .field-label {
+  font-size: 0.7rem;
+}
+
+.font-solid .field-value {
+  font-size: 0.9rem;
+}
+
+.font-solid .title-value {
+  font-size: 1.4rem;
 }
 
 .font-hollow {
   font-family: 'Pokemon Hollow', sans-serif;
+  letter-spacing: -1px;
+}
+
+.font-hollow .field-label {
+  font-size: 0.7rem;
+}
+
+.font-hollow .field-value {
+  font-size: 0.9rem;
+}
+
+.font-hollow .title-value {
+  font-size: 1.4rem;
 }
 
 .export-btn {

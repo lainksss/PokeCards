@@ -7,13 +7,23 @@ const CardCustomizer = ({
   onBorderRadiusChange,
   onFontChange,
   backgroundColor,
-  onBackgroundColorChange
+  onBackgroundColorChange,
+  gradientColor2,
+  onGradientColor2Change,
+  onBackgroundImageChange,
+  fontColor,
+  onFontColorChange,
+  borderColor,
+  onBorderColorChange
 }) => {
   const { t } = useLanguage();
   const [background, setBackground] = useState('transparent');
   const [bgColor, setBgColor] = useState('#ffffff');
+  const [gradColor2, setGradColor2] = useState('#3b4cca');
   const [borderRadius, setBorderRadius] = useState(true);
   const [font, setFont] = useState('default');
+  const [fontColorState, setFontColorState] = useState(fontColor || '#000000');
+  const [borderColorState, setBorderColorState] = useState(borderColor || '#1a237e');
 
   const handleBackgroundChange = (type) => {
     setBackground(type);
@@ -23,8 +33,30 @@ const CardCustomizer = ({
   const handleColorChange = (e) => {
     setBgColor(e.target.value);
     onBackgroundColorChange?.(e.target.value);
-    onBackgroundChange('solid');
-    setBackground('solid');
+    
+    // Seulement forcer le solid si on n'est pas déjà en gradient
+    if (background !== 'gradient') {
+      onBackgroundChange('solid');
+      setBackground('solid');
+    }
+  };
+
+  const handleGradientColor2Change = (e) => {
+    setGradColor2(e.target.value);
+    onGradientColor2Change?.(e.target.value);
+  };
+
+  const handleImageUpload = (e) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        onBackgroundImageChange?.(event.target?.result);
+        onBackgroundChange?.('image');
+        setBackground('image');
+      };
+      reader.readAsDataURL(file);
+    }
   };
 
   const handleBorderRadiusChange = (value) => {
@@ -35,6 +67,16 @@ const CardCustomizer = ({
   const handleFontChange = (selectedFont) => {
     setFont(selectedFont);
     onFontChange(selectedFont);
+  };
+
+  const handleFontColorChange = (e) => {
+    setFontColorState(e.target.value);
+    onFontColorChange?.(e.target.value);
+  };
+
+  const handleBorderColorChange = (e) => {
+    setBorderColorState(e.target.value);
+    onBorderColorChange?.(e.target.value);
   };
 
   return (
@@ -62,6 +104,12 @@ const CardCustomizer = ({
           >
             {t('background_gradient')}
           </button>
+          <button 
+            className={background === 'image' ? 'active' : ''}
+            onClick={() => handleBackgroundChange('image')}
+          >
+            {t('background_image') || 'Image'}
+          </button>
         </div>
         {background === 'solid' && (
           <input 
@@ -70,6 +118,38 @@ const CardCustomizer = ({
             onChange={handleColorChange}
             className="color-picker"
           />
+        )}
+        {background === 'gradient' && (
+          <div className="gradient-controls">
+            <div className="color-control">
+              <label>{t('gradient_color_1') || 'Couleur 1'}</label>
+              <input 
+                type="color" 
+                value={bgColor} 
+                onChange={handleColorChange}
+                className="color-picker"
+              />
+            </div>
+            <div className="color-control">
+              <label>{t('gradient_color_2') || 'Couleur 2'}</label>
+              <input 
+                type="color" 
+                value={gradColor2} 
+                onChange={handleGradientColor2Change}
+                className="color-picker"
+              />
+            </div>
+          </div>
+        )}
+        {background === 'image' && (
+          <div className="image-upload-section">
+            <input 
+              type="file" 
+              accept="image/*"
+              onChange={handleImageUpload}
+              className="image-upload"
+            />
+          </div>
         )}
       </div>
 
@@ -112,6 +192,30 @@ const CardCustomizer = ({
           >
             {t('font_pokemon_hollow')}
           </button>
+        </div>
+      </div>
+
+      <div className="customizer-section">
+        <label>{t('customizer_font_color') || 'Police'}</label>
+        <div className="color-control">
+          <input 
+            type="color" 
+            value={fontColorState} 
+            onChange={handleFontColorChange}
+            className="color-picker"
+          />
+        </div>
+      </div>
+
+      <div className="customizer-section">
+        <label>{t('customizer_border_color') || 'Bordures'}</label>
+        <div className="color-control">
+          <input 
+            type="color" 
+            value={borderColorState} 
+            onChange={handleBorderColorChange}
+            className="color-picker"
+          />
         </div>
       </div>
     </div>
