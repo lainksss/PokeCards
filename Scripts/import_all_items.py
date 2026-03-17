@@ -7,7 +7,7 @@ BASE = "https://pokeapi.co/api/v2"
 SESSION = requests.Session()
 SESSION.headers.update({"User-Agent": "pokemon-items-filtered-script/1.3"})
 
-def fetch_filtered_items(save_to="data/items.json"):
+def fetch_filtered_items(save_to="frontend/public/data/items.json"):
     Path("data").mkdir(exist_ok=True)
     print("Fetching the exact number of items...")
     

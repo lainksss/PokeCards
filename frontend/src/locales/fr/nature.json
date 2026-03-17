@@ -1,1 +1,7 @@
-{}
+{
+  "select_nature": "Sélectionnez une Nature",
+  "customize_card": "Personnalisez votre carte",
+  "nature_name": "Natures Pokémon",
+  "loading": "Chargement...",
+  "export_png": "Exporter en PNG"
+}

@@ -32,9 +32,9 @@ def fetch_all_natures():
         natures_data.append(nature_dict)
         print(f"Fetched nature: {item['name']}")
 
-    with open('data/natures.json', 'w', encoding='utf-8') as f:
+    with open('frontend/public/data/natures.json', 'w', encoding='utf-8') as f:
         json.dump(natures_data, f, ensure_ascii=False, indent=4)
-    print("✅ All natures saved in data/natures.json")
+    print("✅ All natures saved in frontend/public/data/natures.json")
 
 if __name__ == "__main__":
     fetch_all_natures()

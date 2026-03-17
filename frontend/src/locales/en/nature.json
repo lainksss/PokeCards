@@ -1,1 +1,7 @@
-{}
+{
+  "select_nature": "Select a Nature",
+  "customize_card": "Customize your card",
+  "nature_name": "Pokémon Natures",
+  "loading": "Loading...",
+  "export_png": "Export as PNG"
+}

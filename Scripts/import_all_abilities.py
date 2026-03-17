@@ -33,9 +33,9 @@ def fetch_all_abilities():
         abilities_data.append(ability_dict)
         print(f"Fetched ability: {item['name']}")
 
-    with open('data/abilities.json', 'w', encoding='utf-8') as f:
+    with open('frontend/public/data/abilities.json', 'w', encoding='utf-8') as f:
         json.dump(abilities_data, f, ensure_ascii=False, indent=4)
-    print("✅ All abilities saved in data/abilities.json")
+    print("✅ All abilities saved in frontend/public/data/abilities.json")
 
 if __name__ == "__main__":
     fetch_all_abilities()

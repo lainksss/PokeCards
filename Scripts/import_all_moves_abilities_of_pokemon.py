@@ -52,7 +52,7 @@ def fetch_pokemon_data(pokemon_url):
     }
 
 
-def build_pokemon_mapping(save_to="data/pokemon_mapping.json"):
+def build_pokemon_mapping(save_to="frontend/public/data/pokemon_mapping.json"):
     """Build and save the combined moves/abilities mapping to disk."""
     Path("data").mkdir(exist_ok=True)
     urls = fetch_all_pokemon_urls()

@@ -1,17 +1,20 @@
 import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { LanguageProvider, useLanguage } from './context/LanguageContext';
+import { ThemeProvider, useTheme } from './context/ThemeContext';
 import Home from './pages/Home/Home';
+import Nature from './pages/Nature/Nature';
 import './App.css';
 
-const Pokemon = () => <div><h2>🐾 Flashcard Pokémon</h2></div>;
-const Nature = () => <div><h2>🌿 Flashcard Nature</h2></div>;
-const Attack = () => <div><h2>⚔️ Flashcard Attaque</h2></div>;
-const Item = () => <div><h2>🎒 Flashcard Objet</h2></div>;
-const Ability = () => <div><h2>🌟 Flashcard Talent</h2></div>;
-const Team = () => <div><h2>🛡️ Flashcard Équipe</h2></div>;
+const Attack = () => <div className="placeholder-page"><h2>Flashcard Attaque</h2></div>;
+const Item = () => <div className="placeholder-page"><h2>Flashcard Objet</h2></div>;
+const Ability = () => <div className="placeholder-page"><h2>Flashcard Talent</h2></div>;
+const Pokemon = () => <div className="placeholder-page"><h2>Flashcard Pokémon</h2></div>;
+const Team = () => <div className="placeholder-page"><h2>Flashcard Équipe</h2></div>;
 
 const Sidebar = () => {
-  const { t, language, toggleLanguage } = useLanguage();
+  const { t, toggleLanguage } = useLanguage();
+  const { theme, toggleTheme } = useTheme();
+  
   return (
     <nav className="sidebar">
       <h1>PokeCards</h1>
@@ -24,39 +27,46 @@ const Sidebar = () => {
         <li><Link to="/pokemon">{t('nav_pokemon')}</Link></li>
         <li><Link to="/team">{t('nav_team')}</Link></li>
       </ul>
-      <button className="lang-toggle" onClick={toggleLanguage}>
-        {t('switch_lang')}
-      </button>
+      <div className="sidebar-controls">
+        <button className="lang-toggle" onClick={toggleLanguage}>
+          {t('switch_lang')}
+        </button>
+        <button className="theme-toggle" onClick={toggleTheme} title="Toggle dark mode">
+          {theme === 'light' ? '🌙' : '☀️'}
+        </button>
+      </div>
     </nav>
   );
 };
 
 function AppContent() {
   return (
-    <Router>
-      <div className="app-container">
-        <Sidebar />
-        <main className="main-content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/nature" element={<Nature />} />
-            <Route path="/attack" element={<Attack />} />
-            <Route path="/item" element={<Item />} />
-            <Route path="/ability" element={<Ability />} />
-            <Route path="/pokemon" element={<Pokemon />} />
-            <Route path="/team" element={<Team />} />
-          </Routes>
-        </main>
-      </div>
-    </Router>
+    <div className="app-container">
+      <Sidebar />
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/nature" element={<Nature />} />
+          <Route path="/attack" element={<Attack />} />
+          <Route path="/item" element={<Item />} />
+          <Route path="/ability" element={<Ability />} />
+          <Route path="/pokemon" element={<Pokemon />} />
+          <Route path="/team" element={<Team />} />
+        </Routes>
+      </main>
+    </div>
   );
 }
 
 function App() {
   return (
-    <LanguageProvider>
-      <AppContent />
-    </LanguageProvider>
+    <ThemeProvider>
+      <LanguageProvider>
+        <Router>
+          <AppContent />
+        </Router>
+      </LanguageProvider>
+    </ThemeProvider>
   );
 }
 

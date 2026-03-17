@@ -1,0 +1,113 @@
+.searchable-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.selector-input-wrapper {
+  position: relative;
+  z-index: 11;
+}
+
+.selector-input {
+  width: 100%;
+  padding: 0.75rem 0.8rem;
+  font-size: 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.selector-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background-color: var(--bg-secondary);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.selector-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--bg-primary);
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+  z-index: 12;
+  margin-top: 0.5rem;
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.selector-item {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--border-light);
+  color: var(--text-primary);
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.selector-item:hover {
+  background-color: rgba(212, 175, 55, 0.08);
+  color: var(--color-primary);
+  padding-left: 1.2rem;
+}
+
+.selector-item.active {
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%);
+  color: var(--color-primary);
+  font-weight: 600;
+  border-left: 3px solid var(--color-primary);
+  padding-left: calc(1rem - 3px);
+}
+
+.selector-item:last-child {
+  border-bottom: none;
+}
+
+.selector-empty {
+  padding: 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.selector-selected {
+  padding: 0.75rem 0.8rem;
+  background-color: rgba(212, 175, 55, 0.08);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  border-left: 3px solid var(--color-primary);
+  margin-top: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.selector-selected strong {
+  color: var(--color-primary);
+}

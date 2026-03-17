@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../../context/LanguageContext';
 import './Home.css';
 
@@ -19,14 +20,32 @@ const Home = () => {
       
       <section className="home-features">
         <h3>{t('home_features_title')}</h3>
-        <ul className="features-list">
-          <li>{t('feature_nature')}</li>
-          <li>{t('feature_attack')}</li>
-          <li>{t('feature_item')}</li>
-          <li>{t('feature_ability')}</li>
-          <li>{t('feature_pokemon')}</li>
-          <li>{t('feature_team')}</li>
-        </ul>
+        <div className="features-list">
+          <Link to="/nature" className="feature-card">
+            <div className="feature-name">Nature</div>
+            <p>Flashcards détaillant les effets des natures.</p>
+          </Link>
+          <Link to="/attack" className="feature-card">
+            <div className="feature-name">Attaque</div>
+            <p>Puissance, précision, PP et description.</p>
+          </Link>
+          <Link to="/item" className="feature-card">
+            <div className="feature-name">Objet</div>
+            <p>Sprites, noms et descriptions des objets.</p>
+          </Link>
+          <Link to="/ability" className="feature-card">
+            <div className="feature-name">Talent</div>
+            <p>Nom et explication des talents Pokémon.</p>
+          </Link>
+          <Link to="/pokemon" className="feature-card">
+            <div className="feature-name">Pokémon</div>
+            <p>Création complète avec l'image du Pokémon, ses attaques, son talent, et ses objets.</p>
+          </Link>
+          <Link to="/team" className="feature-card">
+            <div className="feature-name">Équipe</div>
+            <p>Assemblez et alignez jusqu'à 6 Pokémon dans une disposition personnalisable.</p>
+          </Link>
+        </div>
       </section>
     </div>
   );

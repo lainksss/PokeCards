@@ -107,9 +107,9 @@ def fetch_all_pokemon():
         # Small delay to prevent rate-limiting from the API for the main pokemon endpoint
         time.sleep(0.05)
 
-    with open('data/pokemon.json', 'w', encoding='utf-8') as f:
+    with open('frontend/public/data/pokemon.json', 'w', encoding='utf-8') as f:
         json.dump(pokemon_data, f, ensure_ascii=False, indent=4)
-    print("✅ All Pokemon saved in data/pokemon.json")
+    print("✅ All Pokemon saved in frontend/public/data/pokemon.json")
 
 if __name__ == "__main__":
     fetch_all_pokemon()

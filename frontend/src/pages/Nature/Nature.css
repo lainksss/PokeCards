@@ -1,0 +1,42 @@
+.nature-container {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.nature-container h1 {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.nature-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.flashcard-panel {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.customizer-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .nature-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .flashcard-panel {
+    order: -1;
+  }
+}

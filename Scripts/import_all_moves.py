@@ -47,9 +47,9 @@ def fetch_all_moves():
         
         time.sleep(0.05)
 
-    with open('data/moves.json', 'w', encoding='utf-8') as f:
+    with open('frontend/public/data/moves.json', 'w', encoding='utf-8') as f:
         json.dump(moves_data, f, ensure_ascii=False, indent=4)
-    print("✅ All moves saved in data/moves.json")
+    print("✅ All moves saved in frontend/public/data/moves.json")
 
 if __name__ == "__main__":
     fetch_all_moves()

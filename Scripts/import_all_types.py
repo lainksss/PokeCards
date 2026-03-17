@@ -8,7 +8,7 @@ BASE = "https://pokeapi.co/api/v2"
 SESSION = requests.Session()
 SESSION.headers.update({"User-Agent": "pokemon-types-script/1.2"})
 
-def fetch_all_types(save_to="data/types.json"):
+def fetch_all_types(save_to="frontend/public/data/types.json"):
     Path("data").mkdir(exist_ok=True)
     print("Fetching the exact number of types...")
     

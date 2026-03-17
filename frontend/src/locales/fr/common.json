@@ -19,5 +19,17 @@
   "transparent": "Transparent",
   "solid_color": "Couleur unie",
   "gradient": "Dégradé",
-  "upload_image": "Importer une image"
+  "upload_image": "Importer une image",
+  "customize_card": "Personnalisez votre carte",
+  "customizer_background": "Fond",
+  "background_transparent": "Transparent",
+  "background_solid": "Couleur unie",
+  "background_gradient": "Dégradé",
+  "customizer_borders": "Bordures",
+  "borders_rounded": "Arrondies",
+  "borders_square": "Carrées",
+  "customizer_font": "Police",
+  "font_standard": "Standard",
+  "font_pokemon_solid": "Pokémon Solid",
+  "font_pokemon_hollow": "Pokémon Hollow"
 }
