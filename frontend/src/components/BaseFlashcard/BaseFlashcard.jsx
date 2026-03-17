@@ -20,7 +20,9 @@ const BaseFlashcard = ({
   moveType = null,
   typeIcon = null,
   damageClass = null,
-  damageClassIcon = null
+  damageClassIcon = null,
+  isItem = false,
+  itemSprite = null
 }) => {
   const { t } = useLanguage();
   const cardRef = useRef(null);
@@ -210,6 +212,58 @@ const BaseFlashcard = ({
           {/* Description */}
           {descriptionEntry && (
             <div className="attack-description-box" style={{ borderColor: borderColor }}>
+              <span className="description-text" style={{ color: fontColor }}>
+                {descriptionEntry[1]}
+              </span>
+            </div>
+          )}
+        </div>
+
+        <button 
+          onClick={handleExportPNG} 
+          disabled={isExporting}
+          className="export-btn"
+        >
+          {isExporting ? 'Exporting...' : t('export_png')}
+        </button>
+      </div>
+    );
+  }
+
+  if (isItem) {
+    // Layout spécial pour les objets
+    const descriptionEntry = entries.find(([key]) => key === 'Description');
+    
+    return (
+      <div className="flashcard-container">
+        <div 
+          ref={cardRef}
+          className={`flashcard flashcard-item ${borderRadius ? 'rounded' : 'square'} font-${selectedFont}`}
+          style={{
+            ...getBackgroundStyle(),
+            color: fontColor,
+            borderColor: borderColor
+          }}
+        >
+          {/* Header: Title + Sprite */}
+          <div className="item-header" style={{ borderBottomColor: borderColor }}>
+            {titleEntry && (
+              <div className="item-title-section">
+                <span className="field-value title-value" style={{ color: fontColor }}>
+                  {titleEntry[1]}
+                </span>
+              </div>
+            )}
+            {itemSprite && (
+              <div className="item-sprite">
+                <img src={itemSprite} alt={titleEntry?.[1]} title={titleEntry?.[1]} />
+              </div>
+            )}
+          </div>
+
+          {/* Description */}
+          {descriptionEntry && (
+            <div className="item-description-box" style={{ borderColor: borderColor }}>
               <span className="description-text" style={{ color: fontColor }}>
                 {descriptionEntry[1]}
               </span>

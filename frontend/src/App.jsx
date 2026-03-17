@@ -4,9 +4,9 @@ import { ThemeProvider, useTheme } from './context/ThemeContext';
 import Home from './pages/Home/Home';
 import Nature from './pages/Nature/Nature';
 import Attack from './pages/Attack/Attack';
+import Item from './pages/Item/Item';
 import './App.css';
 
-const Item = () => <div className="placeholder-page"><h2>Flashcard Objet</h2></div>;
 const Ability = () => <div className="placeholder-page"><h2>Flashcard Talent</h2></div>;
 const Pokemon = () => <div className="placeholder-page"><h2>Flashcard Pokémon</h2></div>;
 const Team = () => <div className="placeholder-page"><h2>Flashcard Équipe</h2></div>;

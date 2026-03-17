@@ -1,1 +1,22 @@
-{}
+{
+  "item_name": "Objets Pokémon",
+  "search_item": "🔍 Rechercher un objet...",
+  "flashcard_language": "Langue de la carte",
+  "customize_card": "Personnalisez votre carte",
+  "customizer_font_color": "Couleur de la police",
+  "customizer_border_color": "Couleur de la bordure",
+  "export_png": "Exporter en PNG",
+  "loading": "Chargement...",
+  "description": "Description de l'objet",
+  "unknown": "Inconnue",
+  "lang_french": "🇫🇷 Français",
+  "lang_english": "🇬🇧 Anglais",
+  "lang_german": "🇩🇪 Allemand",
+  "lang_spanish": "🇪🇸 Espagnol",
+  "lang_italian": "🇮🇹 Italien",
+  "lang_japanese": "🇯🇵 Japonais",
+  "lang_korean": "🇰🇷 Coréen",
+  "lang_chinese_simp": "🇨🇳 Chinois (Simp.)",
+  "lang_chinese_trad": "🇹🇼 Chinois (Trad.)"
+}
+
