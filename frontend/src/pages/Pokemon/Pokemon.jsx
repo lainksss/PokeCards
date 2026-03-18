@@ -229,7 +229,7 @@ const Pokemon = () => {
   return (
     <div className="pokemon-container">
       <div className="top-bar">
-        <h1>{t('pokemon_name')}</h1>
+        <h1 className="page-title">{t('pokemon_name')}</h1>
         <div className="language-group">
           <label>{t('card_language') || 'Langue de la carte'}</label>
           <select 

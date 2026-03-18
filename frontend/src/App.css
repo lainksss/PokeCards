@@ -117,3 +117,13 @@ body {
 #spacer {
   display: none;
 }
+
+/* Shared title style for all pages */
+.page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

@@ -73,7 +73,7 @@ const Item = () => {
 
   return (
     <div className="item-container">
-      <h1>{t('item_name')}</h1>
+      <h1 className="page-title">{t('item_name')}</h1>
       
       <div className="item-layout">
         <div className="flashcard-panel">

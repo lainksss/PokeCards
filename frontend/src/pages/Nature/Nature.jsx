@@ -82,7 +82,7 @@ const Nature = () => {
 
   return (
     <div className="nature-container">
-      <h1>{t('nature_name')}</h1>
+      <h1 className="page-title">{t('nature_name')}</h1>
       
       <div className="nature-layout">
         <div className="flashcard-panel">

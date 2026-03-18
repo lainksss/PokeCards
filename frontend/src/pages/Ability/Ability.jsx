@@ -73,7 +73,7 @@ const Ability = () => {
 
   return (
     <div className="ability-container">
-      <h1>{t('ability_name')}</h1>
+      <h1 className="page-title">{t('ability_name')}</h1>
       
       <div className="ability-layout">
         <div className="flashcard-panel">

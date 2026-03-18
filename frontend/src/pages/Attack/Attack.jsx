@@ -99,7 +99,7 @@ const Attack = () => {
 
   return (
     <div className="attack-container">
-      <h1>{t('attack_name')}</h1>
+      <h1 className="page-title">{t('attack_name')}</h1>
       
       <div className="attack-layout">
         <div className="flashcard-panel">
