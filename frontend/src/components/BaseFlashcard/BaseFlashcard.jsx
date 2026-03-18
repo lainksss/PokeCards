@@ -354,7 +354,8 @@ const BaseFlashcard = ({
           style={{
             ...getBackgroundStyle(),
             color: fontColor,
-            borderColor: borderColor
+            borderColor: borderColor,
+            '--border-color': borderColor
           }}
         >
           {/* Header: Name (left) + Sprite (right) */}
