@@ -24,7 +24,15 @@ const BaseFlashcard = ({
   isItem = false,
   itemSprite = null,
   isAbility = false,
-  titleStyle = 'rounded'
+  titleStyle = 'rounded',
+  isPokemon = false,
+  selectedPokemon = null,
+  selectedMoves = [],
+  getTypeColor = null,
+  getTypeNameInLanguage = null,
+  getMoveNameInLanguage = null,
+  selectedSpriteType = 'official_artwork',
+  selectedSpriteVariant = 'normal'
 }) => {
   const { t } = useLanguage();
   const cardRef = useRef(null);
@@ -333,6 +341,108 @@ const BaseFlashcard = ({
 
   // Layout normal pour les Natures
   const otherEntries = entries.filter(([key]) => key !== 'Nom' && key !== 'Name');
+
+  if (isPokemon && selectedPokemon) {
+    // Layout spécial pour Pokémon
+    const spriteUrl = selectedPokemon.sprites?.[selectedSpriteType]?.[selectedSpriteVariant];
+    
+    return (
+      <div className="flashcard-container">
+        <div 
+          ref={cardRef}
+          className={`flashcard flashcard-pokemon ${borderRadius ? 'rounded' : 'square'} font-${selectedFont}`}
+          style={{
+            ...getBackgroundStyle(),
+            color: fontColor,
+            borderColor: borderColor
+          }}
+        >
+          {/* Header: Name (left) + Sprite (right) */}
+          <div className="pokemon-header">
+            <div className="pokemon-name-section">
+              <span className="pokemon-name" style={{ color: fontColor }}>
+                {data.name}
+              </span>
+            </div>
+            {spriteUrl && (
+              <div className="pokemon-sprite-section">
+                <img src={spriteUrl} alt={data.name} className="pokemon-sprite" />
+              </div>
+            )}
+          </div>
+
+          {/* Middle: Ability, Nature, Item (left side) */}
+          <div className="pokemon-info-section">
+            <div className="pokemon-info-row">
+              <div className="pokemon-info-item">
+                <span className="info-label" style={{ color: fontColor }}>
+                  {cardLanguage === 'fr' ? 'TALENT' : 'ABILITY'}
+                </span>
+                <span className="info-value" style={{ color: fontColor }}>
+                  {data.ability}
+                </span>
+              </div>
+            </div>
+            <div className="pokemon-info-row">
+              <div className="pokemon-info-item">
+                <span className="info-label" style={{ color: fontColor }}>
+                  {cardLanguage === 'fr' ? 'NATURE' : 'NATURE'}
+                </span>
+                <span className="info-value" style={{ color: fontColor }}>
+                  {data.nature}
+                </span>
+              </div>
+            </div>
+            <div className="pokemon-info-row">
+              <div className="pokemon-info-item">
+                <span className="info-label" style={{ color: fontColor }}>
+                  {cardLanguage === 'fr' ? 'OBJET' : 'ITEM'}
+                </span>
+                <span className="info-value" style={{ color: fontColor }}>
+                  {data.item}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Moves section: 2x2 grid */}
+          <div className="pokemon-moves-section">
+            <div className="moves-grid">
+              {data.moves && data.moves.map((move, index) => (
+                <div key={index} className="move-card" style={{ borderColor: move.typeColor || fontColor }}>
+                  <div className="move-name" style={{ color: fontColor }}>
+                    {move.name}
+                  </div>
+                  <div className="move-type" style={{ 
+                    backgroundColor: move.typeColor || fontColor,
+                    color: '#ffffff'
+                  }}>
+                    {move.type}
+                  </div>
+                </div>
+              ))}
+              {/* Placeholder for empty moves */}
+              {data.moves && data.moves.length < 4 && 
+                Array(4 - data.moves.length).fill(null).map((_, index) => (
+                  <div key={`empty-${index}`} className="move-card empty" style={{ borderColor: fontColor }}>
+                    <div className="move-name" style={{ color: fontColor }}>—</div>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+
+        <button 
+          onClick={handleExportPNG} 
+          disabled={isExporting}
+          className="export-btn"
+        >
+          {isExporting ? 'Exporting...' : t('export_png')}
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div className="flashcard-container">

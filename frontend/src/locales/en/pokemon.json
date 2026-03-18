@@ -1,1 +1,16 @@
-{}
+{
+  "pokemon_name": "Pokémon",
+  "pokemon_search": "Search for a Pokémon",
+  "pokemon_talent": "Ability",
+  "pokemon_nature": "Nature",
+  "pokemon_item": "Item",
+  "pokemon_attacks": "Moves",
+  "card_language": "Card Language",
+  "loading": "Loading...",
+  "search_placeholder": "Search...",
+  "customize_card": "Customize your card",
+  "sprite_type": "Sprite Type",
+  "sprite_variant": "Sprite Variant",
+  "export_png": "Export as PNG",
+  "show_db_names": "Show DB names"
+}

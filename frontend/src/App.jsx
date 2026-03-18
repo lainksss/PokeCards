@@ -6,9 +6,9 @@ import Nature from './pages/Nature/Nature';
 import Attack from './pages/Attack/Attack';
 import Item from './pages/Item/Item';
 import Ability from './pages/Ability/Ability';
+import Pokemon from './pages/Pokemon/Pokemon';
 import './App.css';
 
-const Pokemon = () => <div className="placeholder-page"><h2>Flashcard Pokémon</h2></div>;
 const Team = () => <div className="placeholder-page"><h2>Flashcard Équipe</h2></div>;
 
 const Sidebar = () => {

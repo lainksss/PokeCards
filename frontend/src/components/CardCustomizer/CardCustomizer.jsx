@@ -20,7 +20,13 @@ const CardCustomizer = ({
   isAttack = false,
   showTitleStyle = true,
   titleStyle,
-  onTitleStyleChange
+  onTitleStyleChange,
+  showSpriteSelector = false,
+  spriteType = 'official_artwork',
+  onSpriteTypeChange,
+  spriteVariant = 'normal',
+  onSpriteVariantChange,
+  availableSpriteTypes = []
 }) => {
   const { t } = useLanguage();
   const [background, setBackground] = useState('transparent');
@@ -31,6 +37,8 @@ const CardCustomizer = ({
   const [fontColorState, setFontColorState] = useState(fontColor || '#000000');
   const [borderColorState, setBorderColorState] = useState(borderColor || '#1a237e');
   const [generationState, setGenerationState] = useState(selectedGeneration || 'gen9_scarlet_violet');
+  const [spriteTypeState, setSpriteTypeState] = useState(spriteType);
+  const [spriteVariantState, setSpriteVariantState] = useState(spriteVariant);
 
   const handleBackgroundChange = (type) => {
     setBackground(type);
@@ -93,6 +101,16 @@ const CardCustomizer = ({
 
   const handleTitleStyleChange = (style) => {
     onTitleStyleChange?.(style);
+  };
+
+  const handleSpriteTypeChange = (e) => {
+    setSpriteTypeState(e.target.value);
+    onSpriteTypeChange?.(e.target.value);
+  };
+
+  const handleSpriteVariantChange = (variant) => {
+    setSpriteVariantState(variant);
+    onSpriteVariantChange?.(variant);
   };
 
   return (
@@ -301,6 +319,43 @@ const CardCustomizer = ({
           </select>
         </div>
       )}
+
+      {showSpriteSelector && (
+        <>
+          <div className="customizer-section">
+            <label>{t('sprite_type') || 'Sprite Type'}</label>
+            <select 
+              value={spriteTypeState} 
+              onChange={handleSpriteTypeChange}
+              className="sprite-select"
+            >
+              {availableSpriteTypes.map(spriteType => (
+                <option key={spriteType} value={spriteType}>
+                  {spriteType.replace(/_/g, ' ')}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div className="customizer-section">
+            <label>{t('sprite_variant') || 'Sprite Variant'}</label>
+            <div className="option-group">
+              <button 
+                className={spriteVariantState === 'normal' ? 'active' : ''}
+                onClick={() => handleSpriteVariantChange('normal')}
+              >
+                Normal
+              </button>
+              <button 
+                className={spriteVariantState === 'shiny' ? 'active' : ''}
+                onClick={() => handleSpriteVariantChange('shiny')}
+              >
+                Shiny
+              </button>
+            </div>
+          </div>
+        </>
+      )}
       </div>
 
     </div>
@@ -308,4 +363,3 @@ const CardCustomizer = ({
 };
 
 export default CardCustomizer;
-
