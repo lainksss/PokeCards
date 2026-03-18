@@ -124,22 +124,11 @@ const Pokemon = () => {
         setSelectedAbility(abilityData);
       }
 
-      if (pokemonData.moves && pokemonData.moves.length > 0) {
-        // Get first 4 moves
-        const firstFourMoves = pokemonData.moves.slice(0, 4);
-        const moveObjects = firstFourMoves.map((moveSlug) =>
-          moves.find((m) => getMoveSlug(m) === moveSlug)
-        );
-        setSelectedMoves(moveObjects);
-      }
     }
 
-    // Set first nature and item
+    // Set first nature (but no item by default)
     if (natures.length > 0) {
       setSelectedNature(natures[0]);
-    }
-    if (items.length > 0) {
-      setSelectedItem(items[0]);
     }
   };
 
