@@ -324,20 +324,20 @@
   font-size: 1.4rem;
 }
 
-.font-mario64 {
-  font-family: 'Mario64', sans-serif;
+.font-custom {
   letter-spacing: 0px;
+  font-family: var(--custom-font-name, sans-serif);
 }
 
-.font-mario64 .field-label {
+.font-custom .field-label {
   font-size: 0.7rem;
 }
 
-.font-mario64 .field-value {
+.font-custom .field-value {
   font-size: 0.9rem;
 }
 
-.font-mario64 .title-value {
+.font-custom .title-value {
   font-size: 1.4rem;
 }
 

@@ -15,6 +15,8 @@ const Ability = () => {
   const [backgroundImage, setBackgroundImage] = useState(null);
   const [borderRadius, setBorderRadius] = useState(true);
   const [selectedFont, setSelectedFont] = useState('default');
+  const [customFontFile, setCustomFontFile] = useState(null);
+  const [customFontName, setCustomFontName] = useState('');
   const [fontColor, setFontColor] = useState('#000000');
   const [borderColor, setBorderColor] = useState('#1a237e');
   const [borderOpacity, setBorderOpacity] = useState(1);
@@ -106,6 +108,8 @@ const Ability = () => {
                 backgroundImage={backgroundImage}
                 borderRadius={borderRadius}
                 selectedFont={selectedFont}
+                customFontFile={customFontFile}
+                customFontName={customFontName}
                 fontColor={fontColor}
                 borderColor={borderColor}
                 borderOpacity={borderOpacity}
@@ -146,6 +150,10 @@ const Ability = () => {
             onBorderRadiusChange={setBorderRadius}
             selectedFont={selectedFont}
             onFontChange={setSelectedFont}
+            onCustomFontChange={(data) => {
+              setCustomFontFile(data.fontFile);
+              setCustomFontName(data.fontName);
+            }}
             fontColor={fontColor}
             onFontColorChange={setFontColor}
             borderColor={borderColor}

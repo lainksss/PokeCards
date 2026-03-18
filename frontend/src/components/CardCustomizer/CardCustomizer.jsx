@@ -6,6 +6,7 @@ const CardCustomizer = ({
   onBackgroundChange, 
   onBorderRadiusChange,
   onFontChange,
+  onCustomFontChange,
   backgroundColor,
   onBackgroundColorChange,
   backgroundOpacity,
@@ -48,6 +49,8 @@ const CardCustomizer = ({
   const [typeGenerationState, setTypeGenerationState] = useState(selectedTypeGeneration || 'gen9_scarlet_violet');
   const [spriteTypeState, setSpriteTypeState] = useState(spriteType);
   const [spriteVariantState, setSpriteVariantState] = useState(spriteVariant);
+  const [customFontFile, setCustomFontFile] = useState(null);
+  const [customFontName, setCustomFontName] = useState('');
 
   const handleBackgroundChange = (type) => {
     setBackground(type);
@@ -137,6 +140,23 @@ const CardCustomizer = ({
   const handleSpriteVariantChange = (variant) => {
     setSpriteVariantState(variant);
     onSpriteVariantChange?.(variant);
+  };
+
+  const handleCustomFontUpload = (e) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        const fontData = event.target?.result;
+        const fontNameFromFile = file.name.split('.').slice(0, -1).join('.');
+        setCustomFontFile(fontData);
+        setCustomFontName(fontNameFromFile);
+        setFont('custom');
+        onFontChange?.('custom');
+        onCustomFontChange?.({ fontFile: fontData, fontName: fontNameFromFile });
+      };
+      reader.readAsDataURL(file);
+    }
   };
 
   return (
@@ -315,17 +335,24 @@ const CardCustomizer = ({
             {t('font_pokemon_hollow')}
           </button>
           <button 
-            className={font === 'mario64' ? 'active' : ''}
-            onClick={() => handleFontChange('mario64')}
-          >
-            {t('font_mario64')}
-          </button>
-          <button 
             className={font === 'dp-pro' ? 'active' : ''}
             onClick={() => handleFontChange('dp-pro')}
           >
             {t('font_pokemon_dp_pro')}
           </button>
+          <button 
+            className={font === 'custom' ? 'active' : ''}
+            onClick={() => document.getElementById('custom-font-input')?.click()}
+          >
+            {customFontName ? `✎ ${customFontName}` : t('font_custom')}
+          </button>
+          <input 
+            id="custom-font-input"
+            type="file" 
+            accept=".ttf,.otf,.woff,.woff2"
+            onChange={handleCustomFontUpload}
+            style={{ display: 'none' }}
+          />
         </div>
       </div>
 

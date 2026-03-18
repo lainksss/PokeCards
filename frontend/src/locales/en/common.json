@@ -41,6 +41,6 @@
   "font_standard": "Standard",
   "font_pokemon_solid": "Pokémon Solid",
   "font_pokemon_hollow": "Pokémon Hollow",
-  "font_mario64": "Mario64",
-  "font_pokemon_dp_pro": "Pokémon DP Pro"
+  "font_pokemon_dp_pro": "Pokémon DP Pro",
+  "font_custom": "Import Font"
 }

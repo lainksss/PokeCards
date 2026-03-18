@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { toPng } from 'html-to-image';
 import { useLanguage } from '../../context/LanguageContext';
 import './BaseFlashcard.css';
@@ -14,6 +14,8 @@ const BaseFlashcard = ({
   backgroundOpacity = 1,
   borderRadius = true,
   selectedFont = 'default',
+  customFontFile = null,
+  customFontName = '',
   fontColor = '#000000',
   borderColor = '#1a237e',
   borderOpacity = 1,
@@ -81,6 +83,32 @@ const BaseFlashcard = ({
   const [isExporting, setIsExporting] = useState(false);
   const [editingField, setEditingField] = useState(null);
   const [editValue, setEditValue] = useState('');
+
+  // Inject custom font if provided
+  useEffect(() => {
+    if (customFontFile && customFontName && selectedFont === 'custom') {
+      const styleId = 'custom-font-style';
+      let styleTag = document.getElementById(styleId);
+      
+      if (!styleTag) {
+        styleTag = document.createElement('style');
+        styleTag.id = styleId;
+        document.head.appendChild(styleTag);
+      }
+      
+      const fontFace = `
+        @font-face {
+          font-family: '${customFontName}';
+          src: url('${customFontFile}') format('truetype');
+        }
+      `;
+      styleTag.textContent = fontFace;
+      
+      return () => {
+        // Clean up is optional for custom fonts
+      };
+    }
+  }, [customFontFile, customFontName, selectedFont]);
 
   const handleExportPNG = async () => {
     if (!cardRef.current) return;
