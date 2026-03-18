@@ -17,6 +17,8 @@ const Ability = () => {
   const [selectedFont, setSelectedFont] = useState('default');
   const [fontColor, setFontColor] = useState('#000000');
   const [borderColor, setBorderColor] = useState('#1a237e');
+  const [borderOpacity, setBorderOpacity] = useState(1);
+  const [backgroundOpacity, setBackgroundOpacity] = useState(1);
   const [cardLanguage, setCardLanguage] = useState('fr');
   const [titleStyle, setTitleStyle] = useState('standard');
   const [loading, setLoading] = useState(true);
@@ -99,12 +101,14 @@ const Ability = () => {
                 data={getFlashcardData()}
                 background={background}
                 backgroundColor={bgColor}
+                backgroundOpacity={backgroundOpacity}
                 gradientColor2={gradColor2}
                 backgroundImage={backgroundImage}
                 borderRadius={borderRadius}
                 selectedFont={selectedFont}
                 fontColor={fontColor}
                 borderColor={borderColor}
+                borderOpacity={borderOpacity}
                 cardLanguage={cardLanguage}
                 isAbility={true}
                 titleStyle={titleStyle}
@@ -133,6 +137,8 @@ const Ability = () => {
             onBackgroundChange={setBackground}
             backgroundColor={bgColor}
             onBackgroundColorChange={setBgColor}
+            backgroundOpacity={backgroundOpacity}
+            onBackgroundOpacityChange={setBackgroundOpacity}
             gradientColor2={gradColor2}
             onGradientColor2Change={setGradColor2}
             onBackgroundImageChange={setBackgroundImage}
@@ -144,6 +150,8 @@ const Ability = () => {
             onFontColorChange={setFontColor}
             borderColor={borderColor}
             onBorderColorChange={setBorderColor}
+            borderOpacity={borderOpacity}
+            onBorderOpacityChange={setBorderOpacity}
             titleStyle={titleStyle}
             onTitleStyleChange={setTitleStyle}
           />

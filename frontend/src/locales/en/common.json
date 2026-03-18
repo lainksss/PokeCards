@@ -23,6 +23,8 @@
   "upload_image": "Upload Image",
   "customize_card": "Customize your card",
   "customizer_background": "Background",
+  "customizer_background_opacity": "Background opacity",
+  "customizer_border_opacity": "Border opacity",
   "background_transparent": "Transparent",
   "background_solid": "Solid Color",
   "background_gradient": "Gradient",

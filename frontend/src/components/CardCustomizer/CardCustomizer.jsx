@@ -8,6 +8,8 @@ const CardCustomizer = ({
   onFontChange,
   backgroundColor,
   onBackgroundColorChange,
+  backgroundOpacity,
+  onBackgroundOpacityChange,
   gradientColor2,
   onGradientColor2Change,
   onBackgroundImageChange,
@@ -15,6 +17,8 @@ const CardCustomizer = ({
   onFontColorChange,
   borderColor,
   onBorderColorChange,
+  borderOpacity,
+  onBorderOpacityChange,
   selectedGeneration,
   onGenerationChange,
   selectedTypeGeneration,
@@ -38,6 +42,8 @@ const CardCustomizer = ({
   const [font, setFont] = useState('default');
   const [fontColorState, setFontColorState] = useState(fontColor || '#000000');
   const [borderColorState, setBorderColorState] = useState(borderColor || '#1a237e');
+  const [backgroundOpacityState, setBackgroundOpacityState] = useState(backgroundOpacity ?? 1);
+  const [borderOpacityState, setBorderOpacityState] = useState(borderOpacity ?? 1);
   const [generationState, setGenerationState] = useState(selectedGeneration || 'gen9_scarlet_violet');
   const [typeGenerationState, setTypeGenerationState] = useState(selectedTypeGeneration || 'gen9_scarlet_violet');
   const [spriteTypeState, setSpriteTypeState] = useState(spriteType);
@@ -95,6 +101,18 @@ const CardCustomizer = ({
   const handleBorderColorChange = (e) => {
     setBorderColorState(e.target.value);
     onBorderColorChange?.(e.target.value);
+  };
+
+  const handleBackgroundOpacityChange = (e) => {
+    const value = Number(e.target.value) / 100;
+    setBackgroundOpacityState(value);
+    onBackgroundOpacityChange?.(value);
+  };
+
+  const handleBorderOpacityChange = (e) => {
+    const value = Number(e.target.value) / 100;
+    setBorderOpacityState(value);
+    onBorderOpacityChange?.(value);
   };
 
   const handleGenerationChange = (e) => {
@@ -194,6 +212,19 @@ const CardCustomizer = ({
             />
           </div>
         )}
+
+        <div className="range-control">
+          <label>{t('customizer_background_opacity') || 'Opacité fond'}</label>
+          <input
+            type="range"
+            min={0}
+            max={100}
+            value={backgroundOpacityState * 100}
+            onChange={handleBackgroundOpacityChange}
+            className="range-slider"
+          />
+          <span className="range-value">{Math.round(backgroundOpacityState * 100)}%</span>
+        </div>
         </div>
 
         <div className="customizer-section">
@@ -211,6 +242,19 @@ const CardCustomizer = ({
             >
               {t('borders_square')}
             </button>
+          </div>
+
+          <div className="range-control">
+            <label>{t('customizer_border_opacity') || 'Opacité bordures'}</label>
+            <input
+              type="range"
+              min={0}
+              max={100}
+              value={borderOpacityState * 100}
+              onChange={handleBorderOpacityChange}
+              className="range-slider"
+            />
+            <span className="range-value">{Math.round(borderOpacityState * 100)}%</span>
           </div>
         </div>
 
@@ -307,6 +351,7 @@ const CardCustomizer = ({
             className="color-picker"
           />
         </div>
+
       </div>
 
       {isAttack && (

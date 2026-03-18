@@ -11,10 +11,12 @@ const BaseFlashcard = ({
   backgroundColor = '#ffffff',
   gradientColor2 = '#3b4cca',
   backgroundImage = null,
+  backgroundOpacity = 1,
   borderRadius = true,
   selectedFont = 'default',
   fontColor = '#000000',
   borderColor = '#1a237e',
+  borderOpacity = 1,
   cardLanguage = 'fr',
   isAttack = false,
   moveType = null,
@@ -35,6 +37,45 @@ const BaseFlashcard = ({
   selectedSpriteVariant = 'normal',
   selectedTypeGeneration = 'gen9_scarlet_violet'
 }) => {
+  const applyOpacityToColor = (color, opacity) => {
+    if (!color) return color;
+    const normalizedOpacity = Math.max(0, Math.min(1, opacity));
+
+    // If already rgba, replace alpha
+    const rgbaMatch = color.match(/rgba\s*\(\s*(\d+),\s*(\d+),\s*(\d+),\s*([\d\.]+)\s*\)/i);
+    if (rgbaMatch) {
+      const [_, r, g, b] = rgbaMatch;
+      return `rgba(${r}, ${g}, ${b}, ${normalizedOpacity})`;
+    }
+
+    // If rgb, convert to rgba
+    const rgbMatch = color.match(/rgb\s*\(\s*(\d+),\s*(\d+),\s*(\d+)\s*\)/i);
+    if (rgbMatch) {
+      const [_, r, g, b] = rgbMatch;
+      return `rgba(${r}, ${g}, ${b}, ${normalizedOpacity})`;
+    }
+
+    // If hex, convert to rgba
+    const hexMatch = color.replace('#', '');
+    if (/^[0-9a-fA-F]{3}$/.test(hexMatch)) {
+      const r = parseInt(hexMatch[0] + hexMatch[0], 16);
+      const g = parseInt(hexMatch[1] + hexMatch[1], 16);
+      const b = parseInt(hexMatch[2] + hexMatch[2], 16);
+      return `rgba(${r}, ${g}, ${b}, ${normalizedOpacity})`;
+    }
+    if (/^[0-9a-fA-F]{6}$/.test(hexMatch)) {
+      const r = parseInt(hexMatch.slice(0, 2), 16);
+      const g = parseInt(hexMatch.slice(2, 4), 16);
+      const b = parseInt(hexMatch.slice(4, 6), 16);
+      return `rgba(${r}, ${g}, ${b}, ${normalizedOpacity})`;
+    }
+
+    // Fallback: return original (opacity not supported)
+    return color;
+  };
+
+  const borderColorWithOpacity = applyOpacityToColor(borderColor, borderOpacity);
+
   const { t } = useLanguage();
   const cardRef = useRef(null);
   const [isExporting, setIsExporting] = useState(false);
@@ -79,14 +120,14 @@ const BaseFlashcard = ({
     if (background === 'image' && backgroundImage) {
       return { 
         backgroundImage: `url(${backgroundImage})`,
-        backgroundColor: 'rgba(0, 0, 0, 0.7)',
+        backgroundColor: applyOpacityToColor('#000000', 1 - backgroundOpacity),
         backgroundBlendMode: 'overlay'
       };
     }
     if (background === 'transparent') return { backgroundColor: 'transparent' };
-    if (background === 'solid') return { backgroundColor };
+    if (background === 'solid') return { backgroundColor: applyOpacityToColor(backgroundColor, backgroundOpacity) };
     if (background === 'gradient') return {
-      background: `linear-gradient(135deg, ${backgroundColor} 0%, ${gradientColor2} 100%)`
+      background: `linear-gradient(135deg, ${applyOpacityToColor(backgroundColor, backgroundOpacity)} 0%, ${applyOpacityToColor(gradientColor2, backgroundOpacity)} 100%)`
     };
     return {};
   };
@@ -162,7 +203,7 @@ const BaseFlashcard = ({
           style={{
             ...getBackgroundStyle(),
             color: fontColor,
-            borderColor: borderColor
+            borderColor: borderColorWithOpacity
           }}
         >
           {/* Title avec Type badge et Damage Class */}
@@ -253,7 +294,7 @@ const BaseFlashcard = ({
           style={{
             ...getBackgroundStyle(),
             color: fontColor,
-            borderColor: borderColor
+            borderColor: borderColorWithOpacity
           }}
         >
           {/* Header: Title + Sprite */}
@@ -305,7 +346,7 @@ const BaseFlashcard = ({
           style={{
             ...getBackgroundStyle(),
             color: fontColor,
-            borderColor: borderColor
+            borderColor: borderColorWithOpacity
           }}
         >
           {/* Title field */}
@@ -355,7 +396,7 @@ const BaseFlashcard = ({
           style={{
             ...getBackgroundStyle(),
             color: fontColor,
-            borderColor: borderColor,
+            borderColor: borderColorWithOpacity,
             '--border-color': borderColor
           }}
         >
@@ -495,12 +536,12 @@ const BaseFlashcard = ({
         style={{
           ...getBackgroundStyle(),
           color: fontColor,
-          borderColor: borderColor
+          borderColor: borderColorWithOpacity
         }}
       >
         {/* Title field */}
         {titleEntry && (
-          <div key={titleEntry[0]} className={`flashcard-field field-title title-style-${titleStyle}`} style={{ borderColor: borderColor }}>
+          <div key={titleEntry[0]} className={`flashcard-field field-title title-style-${titleStyle}`} style={{ borderColor: borderColorWithOpacity }}>
             {editingField === titleEntry[0] ? (
               <div className="field-edit">
                 <input
@@ -537,7 +578,7 @@ const BaseFlashcard = ({
               <div 
                 key={key} 
                 className={`flashcard-field ${fieldClass}`}
-                style={{ borderColor: borderColor }}
+                style={{ borderColor: borderColorWithOpacity }}
               >
                 {editingField === key ? (
                   <div className="field-edit">

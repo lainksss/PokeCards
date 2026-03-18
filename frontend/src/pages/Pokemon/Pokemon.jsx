@@ -48,6 +48,8 @@ const Pokemon = () => {
   const [selectedFont, setSelectedFont] = useState('default');
   const [fontColor, setFontColor] = useState('#000000');
   const [borderColor, setBorderColor] = useState('#1a237e');
+  const [borderOpacity, setBorderOpacity] = useState(1);
+  const [backgroundOpacity, setBackgroundOpacity] = useState(1);
   const [cardLanguage, setCardLanguage] = useState('fr');
   const [selectedGeneration, setSelectedGeneration] = useState('gen9_scarlet_violet');
   const [showDbNames, setShowDbNames] = useState(false);
@@ -275,12 +277,14 @@ const Pokemon = () => {
               data={getFlashcardData()}
               background={background}
               backgroundColor={bgColor}
+              backgroundOpacity={backgroundOpacity}
               gradientColor2={gradColor2}
               backgroundImage={backgroundImage}
               borderRadius={borderRadius}
               selectedFont={selectedFont}
               fontColor={fontColor}
               borderColor={borderColor}
+              borderOpacity={borderOpacity}
               cardLanguage={cardLanguage}
               isPokemon={true}
               selectedPokemon={selectedPokemon}
@@ -398,6 +402,8 @@ const Pokemon = () => {
               onFontChange={setSelectedFont}
               backgroundColor={bgColor}
               onBackgroundColorChange={setBgColor}
+              backgroundOpacity={backgroundOpacity}
+              onBackgroundOpacityChange={setBackgroundOpacity}
               gradientColor2={gradColor2}
               onGradientColor2Change={setGradColor2}
               onBackgroundImageChange={setBackgroundImage}
@@ -405,6 +411,8 @@ const Pokemon = () => {
               onFontColorChange={setFontColor}
               borderColor={borderColor}
               onBorderColorChange={setBorderColor}
+              borderOpacity={borderOpacity}
+              onBorderOpacityChange={setBorderOpacity}
               selectedGeneration={selectedGeneration}
               onGenerationChange={setSelectedGeneration}
               selectedTypeGeneration={selectedTypeGeneration}

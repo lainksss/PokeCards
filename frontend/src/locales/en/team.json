@@ -1,1 +1,6 @@
-{}
+{
+  "customizer_font_color": "Font color",
+  "customizer_border_color": "Border color",
+  "customizer_type_sprite_generation": "Type sprite generation"
+}
+

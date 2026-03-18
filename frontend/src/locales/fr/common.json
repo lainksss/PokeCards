@@ -23,6 +23,8 @@
   "upload_image": "Importer une image",
   "customize_card": "Personnalisez votre carte",
   "customizer_background": "Fond",
+  "customizer_background_opacity": "Opacité du fond",
+  "customizer_border_opacity": "Opacité des bordures",
   "background_transparent": "Transparent",
   "background_solid": "Couleur unie",
   "background_gradient": "Dégradé",

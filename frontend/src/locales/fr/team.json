@@ -1,1 +1,6 @@
-{}
+{
+  "customizer_font_color": "Couleur de la police",
+  "customizer_border_color": "Couleur des bordures",
+  "customizer_type_sprite_generation": "Génération du sprite de type"
+}
+

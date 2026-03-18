@@ -19,6 +19,8 @@ const Attack = () => {
   const [selectedFont, setSelectedFont] = useState('default');
   const [fontColor, setFontColor] = useState('#000000');
   const [borderColor, setBorderColor] = useState('#1a237e');
+  const [borderOpacity, setBorderOpacity] = useState(1);
+  const [backgroundOpacity, setBackgroundOpacity] = useState(1);
   const [cardLanguage, setCardLanguage] = useState('fr');
   const [selectedGeneration, setSelectedGeneration] = useState('gen9_scarlet_violet');
   const [loading, setLoading] = useState(true);
@@ -125,12 +127,14 @@ const Attack = () => {
                 data={getFlashcardData()}
                 background={background}
                 backgroundColor={bgColor}
+                backgroundOpacity={backgroundOpacity}
                 gradientColor2={gradColor2}
                 backgroundImage={backgroundImage}
                 borderRadius={borderRadius}
                 selectedFont={selectedFont}
                 fontColor={fontColor}
                 borderColor={getTypeColor(selectedMove.type)}
+                borderOpacity={borderOpacity}
                 cardLanguage={cardLanguage}
                 isAttack={true}
                 moveType={selectedMove.type}
@@ -162,6 +166,8 @@ const Attack = () => {
             onBackgroundChange={setBackground}
             backgroundColor={bgColor}
             onBackgroundColorChange={setBgColor}
+            backgroundOpacity={backgroundOpacity}
+            onBackgroundOpacityChange={setBackgroundOpacity}
             gradientColor2={gradColor2}
             onGradientColor2Change={setGradColor2}
             onBackgroundImageChange={setBackgroundImage}
@@ -173,6 +179,8 @@ const Attack = () => {
             onFontColorChange={setFontColor}
             borderColor={borderColor}
             onBorderColorChange={setBorderColor}
+            borderOpacity={borderOpacity}
+            onBorderOpacityChange={setBorderOpacity}
             selectedGeneration={selectedGeneration}
             onGenerationChange={setSelectedGeneration}
             isAttack={true}
