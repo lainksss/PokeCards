@@ -18,6 +18,7 @@ const Ability = () => {
   const [fontColor, setFontColor] = useState('#000000');
   const [borderColor, setBorderColor] = useState('#1a237e');
   const [cardLanguage, setCardLanguage] = useState('fr');
+  const [titleStyle, setTitleStyle] = useState('standard');
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -90,6 +91,7 @@ const Ability = () => {
                 borderColor={borderColor}
                 cardLanguage={cardLanguage}
                 isAbility={true}
+                titleStyle={titleStyle}
               />
             </>
           )}
@@ -137,6 +139,8 @@ const Ability = () => {
             onFontColorChange={setFontColor}
             borderColor={borderColor}
             onBorderColorChange={setBorderColor}
+            titleStyle={titleStyle}
+            onTitleStyleChange={setTitleStyle}
           />
         </div>
       </div>

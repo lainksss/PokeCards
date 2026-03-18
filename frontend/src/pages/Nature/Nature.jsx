@@ -18,6 +18,7 @@ const Nature = () => {
   const [fontColor, setFontColor] = useState('#000000');
   const [borderColor, setBorderColor] = useState('#1a237e');
   const [cardLanguage, setCardLanguage] = useState('fr');
+  const [titleStyle, setTitleStyle] = useState('standard');
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -97,6 +98,7 @@ const Nature = () => {
               fontColor={fontColor}
               borderColor={borderColor}
               cardLanguage={cardLanguage}
+              titleStyle={titleStyle}
             />
           )}
         </div>
@@ -143,6 +145,8 @@ const Nature = () => {
             onFontColorChange={setFontColor}
             borderColor={borderColor}
             onBorderColorChange={setBorderColor}
+            titleStyle={titleStyle}
+            onTitleStyleChange={setTitleStyle}
           />
         </div>
       </div>

@@ -23,7 +23,8 @@ const BaseFlashcard = ({
   damageClassIcon = null,
   isItem = false,
   itemSprite = null,
-  isAbility = false
+  isAbility = false,
+  titleStyle = 'rounded'
 }) => {
   const { t } = useLanguage();
   const cardRef = useRef(null);
@@ -300,7 +301,7 @@ const BaseFlashcard = ({
         >
           {/* Title field */}
           {titleEntry && (
-            <div className="flashcard-field field-title" style={{ borderTopColor: borderColor, borderBottomColor: borderColor }}>
+            <div className={`flashcard-field field-title title-style-${titleStyle}`} style={{ borderTopColor: borderColor, borderBottomColor: borderColor }}>
               <div className="title-content">
                 <span className="field-value title-value" style={{ color: fontColor }}>
                   {titleEntry[1]}
@@ -346,7 +347,7 @@ const BaseFlashcard = ({
       >
         {/* Title field */}
         {titleEntry && (
-          <div key={titleEntry[0]} className="flashcard-field field-title" style={{ borderColor: borderColor }}>
+          <div key={titleEntry[0]} className={`flashcard-field field-title title-style-${titleStyle}`} style={{ borderColor: borderColor }}>
             {editingField === titleEntry[0] ? (
               <div className="field-edit">
                 <input

@@ -65,6 +65,31 @@
   max-width: 100%;
 }
 
+/* Title styles */
+.flashcard-field.field-title.title-style-standard {
+  border-top: 6px solid var(--color-primary);
+  border-bottom: 6px solid var(--color-primary);
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+}
+
+.flashcard-field.field-title.title-style-rounded {
+  border: 6px solid var(--color-primary);
+  border-radius: 8px;
+}
+
+.flashcard-field.field-title.title-style-bordered {
+  border: 6px solid var(--color-primary);
+  border-radius: 0;
+}
+
+.flashcard-field.field-title.title-style-none {
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+}
+
 /* Container for stats (Buff/Nerf aligned horizontally) */
 .flashcard-stats-container {
   display: flex;

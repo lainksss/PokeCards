@@ -18,6 +18,7 @@ const Item = () => {
   const [fontColor, setFontColor] = useState('#000000');
   const [borderColor, setBorderColor] = useState('#1a237e');
   const [cardLanguage, setCardLanguage] = useState('fr');
+  const [titleStyle, setTitleStyle] = useState('standard');
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -91,6 +92,7 @@ const Item = () => {
                 cardLanguage={cardLanguage}
                 isItem={true}
                 itemSprite={selectedItem.sprite}
+                titleStyle={titleStyle}
               />
             </>
           )}
@@ -138,6 +140,7 @@ const Item = () => {
             onFontColorChange={setFontColor}
             borderColor={borderColor}
             onBorderColorChange={setBorderColor}
+            showTitleStyle={false}
           />
         </div>
       </div>

@@ -17,7 +17,10 @@ const CardCustomizer = ({
   onBorderColorChange,
   selectedGeneration,
   onGenerationChange,
-  isAttack = false
+  isAttack = false,
+  showTitleStyle = true,
+  titleStyle,
+  onTitleStyleChange
 }) => {
   const { t } = useLanguage();
   const [background, setBackground] = useState('transparent');
@@ -86,6 +89,10 @@ const CardCustomizer = ({
   const handleGenerationChange = (e) => {
     setGenerationState(e.target.value);
     onGenerationChange?.(e.target.value);
+  };
+
+  const handleTitleStyleChange = (style) => {
+    onTitleStyleChange?.(style);
   };
 
   return (
@@ -179,6 +186,38 @@ const CardCustomizer = ({
           </button>
         </div>
       </div>
+
+      {showTitleStyle && (
+      <div className="customizer-section">
+        <label>{t('customizer_title_style')}</label>
+        <div className="option-group">
+          <button 
+            className={titleStyle === 'standard' ? 'active' : ''}
+            onClick={() => handleTitleStyleChange('standard')}
+          >
+            {t('title_style_standard')}
+          </button>
+          <button 
+            className={titleStyle === 'rounded' ? 'active' : ''}
+            onClick={() => handleTitleStyleChange('rounded')}
+          >
+            {t('title_style_rounded')}
+          </button>
+          <button 
+            className={titleStyle === 'bordered' ? 'active' : ''}
+            onClick={() => handleTitleStyleChange('bordered')}
+          >
+            {t('title_style_bordered')}
+          </button>
+          <button 
+            className={titleStyle === 'none' ? 'active' : ''}
+            onClick={() => handleTitleStyleChange('none')}
+          >
+            {t('title_style_none')}
+          </button>
+        </div>
+      </div>
+      )}
 
       <div className="customizer-section">
         <label>{t('customizer_font')}</label>
