@@ -205,7 +205,7 @@ const Pokemon = () => {
       };
     }) || [];
 
-    const itemSprite = selectedItem?.sprites?.default || null;
+    const itemSprite = selectedItem?.sprite || null;
     
     return {
       'name': selectedPokemon.names?.[cardLanguage] || selectedPokemon.names?.en || 'Pokemon',
