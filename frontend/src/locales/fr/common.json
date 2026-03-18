@@ -25,6 +25,7 @@
   "background_transparent": "Transparent",
   "background_solid": "Couleur unie",
   "background_gradient": "Dégradé",
+  "background_image": "Image",
   "customizer_borders": "Bordures",
   "borders_rounded": "Arrondies",
   "borders_square": "Carrées",

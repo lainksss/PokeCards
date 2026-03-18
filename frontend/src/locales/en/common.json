@@ -25,6 +25,7 @@
   "background_transparent": "Transparent",
   "background_solid": "Solid Color",
   "background_gradient": "Gradient",
+  "background_image": "Image",
   "customizer_borders": "Borders",
   "borders_rounded": "Rounded",
   "borders_square": "Square",

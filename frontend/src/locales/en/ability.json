@@ -1,1 +1,21 @@
-{}
+{
+  "ability_name": "Pokémon Abilities",
+  "search_ability": "🔍 Search for an ability...",
+  "flashcard_language": "Flashcard language",
+  "customize_card": "Customize your card",
+  "customizer_font_color": "Font color",
+  "customizer_border_color": "Border color",
+  "export_png": "Export as PNG",
+  "loading": "Loading...",
+  "description": "Ability description",
+  "unknown": "Unknown",
+  "lang_french": "🇫🇷 French",
+  "lang_english": "🇬🇧 English",
+  "lang_german": "🇩🇪 German",
+  "lang_spanish": "🇪🇸 Spanish",
+  "lang_italian": "🇮🇹 Italian",
+  "lang_japanese": "🇯🇵 Japanese",
+  "lang_korean": "🇰🇷 Korean",
+  "lang_chinese_simp": "🇨🇳 Chinese (Simp.)",
+  "lang_chinese_trad": "🇹🇼 Chinese (Trad.)"
+}

@@ -22,7 +22,8 @@ const BaseFlashcard = ({
   damageClass = null,
   damageClassIcon = null,
   isItem = false,
-  itemSprite = null
+  itemSprite = null,
+  isAbility = false
 }) => {
   const { t } = useLanguage();
   const cardRef = useRef(null);
@@ -264,6 +265,53 @@ const BaseFlashcard = ({
           {/* Description */}
           {descriptionEntry && (
             <div className="item-description-box" style={{ borderColor: borderColor }}>
+              <span className="description-text" style={{ color: fontColor }}>
+                {descriptionEntry[1]}
+              </span>
+            </div>
+          )}
+        </div>
+
+        <button 
+          onClick={handleExportPNG} 
+          disabled={isExporting}
+          className="export-btn"
+        >
+          {isExporting ? 'Exporting...' : t('export_png')}
+        </button>
+      </div>
+    );
+  }
+
+  if (isAbility) {
+    // Layout spécial pour les talents
+    const descriptionEntry = entries.find(([key]) => key === 'Description');
+    
+    return (
+      <div className="flashcard-container">
+        <div 
+          ref={cardRef}
+          className={`flashcard flashcard-ability ${borderRadius ? 'rounded' : 'square'} font-${selectedFont}`}
+          style={{
+            ...getBackgroundStyle(),
+            color: fontColor,
+            borderColor: borderColor
+          }}
+        >
+          {/* Title field */}
+          {titleEntry && (
+            <div className="flashcard-field field-title" style={{ borderTopColor: borderColor, borderBottomColor: borderColor }}>
+              <div className="title-content">
+                <span className="field-value title-value" style={{ color: fontColor }}>
+                  {titleEntry[1]}
+                </span>
+              </div>
+            </div>
+          )}
+
+          {/* Description */}
+          {descriptionEntry && (
+            <div className="ability-description-box" style={{ borderColor: borderColor }}>
               <span className="description-text" style={{ color: fontColor }}>
                 {descriptionEntry[1]}
               </span>

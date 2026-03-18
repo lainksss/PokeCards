@@ -568,3 +568,34 @@
   overflow-wrap: break-word;
   color: var(--text-primary);
 }
+
+/* ===== ABILITY FLASHCARD LAYOUT ===== */
+.flashcard.flashcard-ability {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: flex-start;
+  padding: 1.5rem;
+  height: auto;
+}
+
+.ability-description-box {
+  flex: 0 0 auto;
+  max-height: 250px;
+  padding: 0.8rem;
+  background-color: rgba(26, 35, 126, 0.05);
+  border: 3px solid var(--color-primary);
+  border-radius: 4px;
+  overflow-y: auto;
+  display: flex;
+  align-items: flex-start;
+  box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.ability-description-box .description-text {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  color: var(--text-primary);
+}
