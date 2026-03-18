@@ -7,7 +7,8 @@ const SearchableSelector = ({
   selectedId,
   getDisplayName,
   getSearchStrings,
-  placeholder = 'Search...'
+  placeholder = 'Search...',
+  inlineSelected = false,
 }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [isOpen, setIsOpen] = useState(false);
@@ -39,8 +40,10 @@ const SearchableSelector = ({
     };
   }, [isOpen]);
 
+  const containerClass = inlineSelected ? 'searchable-selector inline-selected' : 'searchable-selector';
+
   return (
-    <div className="searchable-selector" ref={containerRef}>
+    <div className={containerClass} ref={containerRef}>
       <div className="selector-input-wrapper">
         <input
           type="text"
@@ -50,29 +53,29 @@ const SearchableSelector = ({
           onFocus={() => setIsOpen(true)}
           className="selector-input"
         />
-      </div>
 
-      {isOpen && (
-        <div className="selector-dropdown">
-          {filteredItems.length > 0 ? (
-            filteredItems.map((item) => (
-              <button
-                key={item.id}
-                className={`selector-item ${selectedId === item.id ? 'active' : ''}`}
-                onClick={() => {
-                  onSelect(item);
-                  setIsOpen(false);
-                  setSearchTerm('');
-                }}
-              >
-                {getDisplayName(item)}
-              </button>
-            ))
-          ) : (
-            <div className="selector-empty">No results</div>
-          )}
-        </div>
-      )}
+        {isOpen && (
+          <div className="selector-dropdown">
+            {filteredItems.length > 0 ? (
+              filteredItems.map((item) => (
+                <button
+                  key={item.id}
+                  className={`selector-item ${selectedId === item.id ? 'active' : ''}`}
+                  onClick={() => {
+                    onSelect(item);
+                    setIsOpen(false);
+                    setSearchTerm('');
+                  }}
+                >
+                  {getDisplayName(item)}
+                </button>
+              ))
+            ) : (
+              <div className="selector-empty">No results</div>
+            )}
+          </div>
+        )}
+      </div>
 
       {!isOpen && selectedItem && (
         <div className="selector-selected">

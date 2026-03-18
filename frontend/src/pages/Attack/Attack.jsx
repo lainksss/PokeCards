@@ -152,6 +152,7 @@ const Attack = () => {
                 getDisplayName={(move) => move.names?.[language] || move.names?.en || 'Unknown'}
                 getSearchStrings={(move) => Object.values(move.names || {}).filter(name => name)}
                 placeholder={t('search_move')}
+                inlineSelected={true}
               />
             </div>
           </div>

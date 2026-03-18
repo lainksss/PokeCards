@@ -129,6 +129,7 @@ const Nature = () => {
                 getDisplayName={(nature) => nature.names?.[language] || nature.names?.en || 'Unknown'}
                 getSearchStrings={(nature) => Object.values(nature.names || {}).filter(name => name)}
                 placeholder={t('search_nature')}
+                inlineSelected={true}
               />
             </div>
           </div>

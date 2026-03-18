@@ -124,6 +124,7 @@ const Item = () => {
                 getDisplayName={(item) => item.names?.[language] || item.names?.en || 'Unknown'}
                 getSearchStrings={(item) => Object.values(item.names || {}).filter(name => name)}
                 placeholder={t('search_item')}
+                inlineSelected={true}
               />
             </div>
           </div>

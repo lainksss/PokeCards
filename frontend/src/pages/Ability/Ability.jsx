@@ -123,6 +123,7 @@ const Ability = () => {
                 getDisplayName={(ability) => ability.names?.[language] || ability.names?.en || 'Unknown'}
                 getSearchStrings={(ability) => Object.values(ability.names || {}).filter(name => name)}
                 placeholder={t('search_ability')}
+                inlineSelected={true}
               />
             </div>
           </div>
