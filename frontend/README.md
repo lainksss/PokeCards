@@ -1,16 +1,38 @@
-# React + Vite
+﻿# PokeCards Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This folder contains the React + Vite web application for **PokeCards**. The app loads locally-generated JSON data and allows users to build and export Pokémon flashcards.
 
-Currently, two official plugins are available:
+## 🚀 Run locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-## React Compiler
+Then open the URL shown in the terminal (default: `http://localhost:5173`).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🧱 Build for production
 
-## Expanding the ESLint configuration
+```bash
+cd frontend
+npm run build
+npm run preview
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🔥 Features
+
+- Create cards for Pokémon, Moves, Items, Abilities, Natures, and Teams
+- Configure card styling (backgrounds, borders, fonts, opacity, etc.)
+- Export as PNG (and animated GIF when available)
+- Multi-language UI (English / French, with more languages available)
+
+## 📁 Data
+
+The frontend reads JSON data from `public/data/`. The data is generated from the root-level `data/` folder via the scripts in the `Scripts/` directory.
+
+## 🛠️ Notes
+
+- The project is designed to work as a purely static site (no backend required).
+- Translations are located under `src/locales/{en,fr}/`.
+- Styles are in `src/components/` and `src/pages/`.

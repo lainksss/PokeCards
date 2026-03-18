@@ -1,61 +1,83 @@
 # PokeCards
 
-A small project that generates Pokémon flashcard, taking data from the PokéAPI.
+A small project that generates Pokémon flashcards, taking data from the PokéAPI.
 
-This repository contains scripts to fetch Pokémon content (types, natures, items, abilities, moves, and Pokémon forms) and save them as JSON files under the `data/` folder. The generated data is intended for use in flashcard-style apps or other Pokémon tooling.
+This repository contains two main parts:
 
-# 🃏 PokéCards - The Creative Pokémon Flashcard Builder
-**PokéCards** is a web-based application designed for content creators, competitive players, team builders, and Pokémon enthusiasts. Its main goal is to generate comprehensive and highly visual "Flashcards" for any Pokémon/Move/Nature/Item/Pokemon Team/Ability.
+1. **Data generation scripts** (`Scripts/`) that download and normalize Pokémon data from PokéAPI into JSON files under `data/`.
+2. **Web application** (`frontend/`) that uses the generated JSON to build customizable Pokémon flashcards, exportable as PNG (and GIF in some cases).
 
 ---
 
-## ⚙️ Prerequisites & Setup
+## 🧠 Data Generation (Python scripts)
 
-To generate or update the local database, you will need Python installed on your machine.
-Install the required library for HTTP requests:
+### Prerequisites
+- Python 3.8+ (or newer)
+- `requests` library
+
+Install dependencies:
 
 ```bash
 pip install requests
----
+```
 
-## 🚀 Getting Started
-
-To generate the data, run the main import script:
+### Generate / update the local database
 
 ```bash
 python Scripts/import_all_files.py
 ```
 
-This will execute all data import scripts in a recommended order and output JSON files into `data/`.
+This runs all the individual import scripts in a recommended order and writes JSON files into `data/`.
 
----
-
-## 📁 Output Data
-
-The generated JSON files are stored in the `data/` directory and include:
+### Output files (in `data/`)
 
 - `types.json` — Pokémon types + sprite URLs
 - `natures.json` — Pokémon natures and stat effects
 - `items.json` — Battle-relevant items (held items, stones, etc.)
 - `abilities.json` — Pokémon abilities + flavor descriptions
-- `moves.json` — Pokémon moves + stats/description
+- `moves.json` — Pokémon moves + stats / descriptions
 - `pokemon.json` — Pokémon forms and sprites
 - `pokemon_mapping.json` — Mapping of each Pokémon to its abilities and moves
 
 ---
 
-## 🧠 Scripts
+## 🧩 Web Application (React + Vite)
 
-All scripts are located in `Scripts/`. Each one is self-contained and can be run individually if you only need to update part of the dataset. For example:
+The frontend is located in `frontend/` and reads data from `frontend/public/data/` (which is populated from the root `data/`).
+
+### Run locally
 
 ```bash
-python Scripts/import_all_moves.py
+cd frontend
+npm install
+npm run dev
 ```
+
+Then open the URL shown in the terminal (usually `http://localhost:5173`).
+
+### Build for production
+
+```bash
+cd frontend
+npm run build
+npm run preview
+```
+
+---
+
+## 🚀 Features
+
+- Create flashcards for Pokémon, Moves, Items, Abilities, Natures, and Teams
+- Customize backgrounds (transparent / solid / gradient / image)
+- Configure borders (rounded / square, color, opacity)
+- Choose fonts (including Pokémon-themed fonts)
+- Export cards as PNG (and animated GIFs in some cases)
+- Multi-language support (English, French, and more)
 
 ---
 
 ## Notes
 
-- The scripts create `data/` automatically if it does not exist.
-- API requests include small delays to avoid rate limiting.
-- Some scripts use custom `User-Agent` headers to prevent being blocked by the API.
+- The frontend is designed for static hosting (e.g., GitHub Pages).
+- The JSON data is read directly from `frontend/public/data/` and does not require a backend.
+- When changing data generation scripts, re-run `python Scripts/import_all_files.py` to update `data/`.
