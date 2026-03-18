@@ -310,7 +310,7 @@ const BaseFlashcard = ({
         >
           {/* Title field */}
           {titleEntry && (
-            <div className={`flashcard-field field-title title-style-${titleStyle}`} style={{ borderTopColor: borderColor, borderBottomColor: borderColor }}>
+            <div className={`flashcard-field field-title title-style-${titleStyle}`} style={{ borderColor: borderColor, borderTopColor: borderColor, borderBottomColor: borderColor, borderLeftColor: borderColor, borderRightColor: borderColor }}>
               <div className="title-content">
                 <span className="field-value title-value" style={{ color: fontColor }}>
                   {titleEntry[1]}
