@@ -16,6 +16,28 @@ const Pokemon = () => {
   const [allItems, setAllItems] = useState([]);
   const [types, setTypes] = useState([]);
   const [pokemonMapping, setPokemonMapping] = useState({});
+
+  const slugify = (text) => {
+    if (!text) return '';
+    return text
+      .toString()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/['’`]/g, '')
+      .replace(/[^a-zA-Z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '')
+      .toLowerCase();
+  };
+
+  const getAbilitySlug = (ability) => {
+    const name = ability?.names?.en;
+    return slugify(name);
+  };
+
+  const getMoveSlug = (move) => {
+    const name = move?.names?.en;
+    return slugify(name);
+  };
   
   // Customization states
   const [background, setBackground] = useState('transparent');
@@ -97,15 +119,16 @@ const Pokemon = () => {
     if (pokemonData) {
       // Set first available ability
       if (pokemonData.abilities && pokemonData.abilities.length > 0) {
-        const abilityData = abilities.find(a => a.name_en === pokemonData.abilities[0]);
+        const abilitySlug = pokemonData.abilities[0];
+        const abilityData = abilities.find((a) => getAbilitySlug(a) === abilitySlug);
         setSelectedAbility(abilityData);
       }
 
       if (pokemonData.moves && pokemonData.moves.length > 0) {
         // Get first 4 moves
         const firstFourMoves = pokemonData.moves.slice(0, 4);
-        const moveObjects = firstFourMoves.map(moveName => 
-          moves.find(m => m.name_en === moveName)
+        const moveObjects = firstFourMoves.map((moveSlug) =>
+          moves.find((m) => getMoveSlug(m) === moveSlug)
         );
         setSelectedMoves(moveObjects);
       }
@@ -122,43 +145,36 @@ const Pokemon = () => {
 
   const handlePokemonChange = (pokemon) => {
     setSelectedPokemon(pokemon);
-    initializePokemonDefaults(pokemon, pokemonMapping, allAbilities, allNatures, allItems, allMoves);
     setSelectedMoves([null, null, null, null]);
+    initializePokemonDefaults(pokemon, pokemonMapping, allAbilities, allNatures, allItems, allMoves);
   };
 
   const getAvailableAbilities = () => {
     if (!selectedPokemon) return [];
     const pokemonId = String(selectedPokemon.id);
     const pokemonData = pokemonMapping[pokemonId];
-    
+
     if (!pokemonData || !pokemonData.abilities) return [];
-    
-    return allAbilities.filter(ability => 
-      pokemonData.abilities.includes(ability.name_en)
-    );
+
+    const abilitySlugs = new Set(pokemonData.abilities);
+    return allAbilities.filter((ability) => abilitySlugs.has(getAbilitySlug(ability)));
   };
 
   const getAvailableMoves = () => {
     if (!selectedPokemon) return [];
     const pokemonId = String(selectedPokemon.id);
     const pokemonData = pokemonMapping[pokemonId];
-    
+
     if (!pokemonData || !pokemonData.moves) return [];
-    
-    return allMoves.filter(move => 
-      pokemonData.moves.includes(move.name_en)
-    );
+
+    const moveSlugs = new Set(pokemonData.moves);
+    return allMoves.filter((move) => moveSlugs.has(getMoveSlug(move)));
   };
 
   const handleMoveChange = (index, move) => {
     const newMoves = [...selectedMoves];
     newMoves[index] = move;
     setSelectedMoves(newMoves);
-  };
-
-  const getTypeColor = (typeName) => {
-    const typeData = types.find(t => t.name_en === typeName);
-    return typeData?.color || '#999999';
   };
 
   const getTypeNameInLanguage = (typeName) => {
@@ -183,7 +199,7 @@ const Pokemon = () => {
 
   const getMoveNameInLanguage = (move) => {
     if (!move) return '';
-    return move.names?.[cardLanguage] || move.names?.en || move.name_en;
+    return move.names?.[cardLanguage] || move.names?.en || '';
   };
 
   const getFlashcardData = () => {
@@ -201,7 +217,9 @@ const Pokemon = () => {
           return {
             name: getMoveNameInLanguage(move),
             type: getTypeNameInLanguage(typeName),
-            typeColor: getTypeColor(typeName)
+            typeColor: getTypeColor(typeName),
+            power: move.power != null ? move.power : '—',
+            accuracy: move.accuracy != null ? `${move.accuracy}%` : '—'
           };
         })
     };
@@ -321,7 +339,7 @@ const Pokemon = () => {
                 items={getAvailableAbilities()}
                 onSelect={setSelectedAbility}
                 selectedId={selectedAbility?.id}
-                getDisplayName={(ability) => ability.names?.[cardLanguage] || ability.names?.en || ability.name_en}
+                getDisplayName={(ability) => ability.names?.[cardLanguage] || ability.names?.en || ''}
                 getSearchStrings={(ability) => Object.values(ability.names || {}).filter(Boolean)}
                 placeholder={t('search_placeholder') || 'Sélectionner un talent...'}
               />
@@ -333,7 +351,7 @@ const Pokemon = () => {
                 items={allNatures}
                 onSelect={setSelectedNature}
                 selectedId={selectedNature?.id}
-                getDisplayName={(nature) => nature.names?.[cardLanguage] || nature.names?.en || nature.name_en}
+                getDisplayName={(nature) => nature.names?.[cardLanguage] || nature.names?.en || ''}
                 getSearchStrings={(nature) => Object.values(nature.names || {}).filter(Boolean)}
                 placeholder={t('search_placeholder') || 'Sélectionner une nature...'}
               />
@@ -345,7 +363,7 @@ const Pokemon = () => {
                 items={allItems}
                 onSelect={setSelectedItem}
                 selectedId={selectedItem?.id}
-                getDisplayName={(item) => item.names?.[cardLanguage] || item.names?.en || item.name_en}
+                getDisplayName={(item) => item.names?.[cardLanguage] || item.names?.en || ''}
                 getSearchStrings={(item) => Object.values(item.names || {}).filter(Boolean)}
                 placeholder={t('search_placeholder') || 'Sélectionner un objet...'}
               />
@@ -359,7 +377,7 @@ const Pokemon = () => {
                     items={getAvailableMoves()}
                     onSelect={(m) => handleMoveChange(index, m)}
                     selectedId={move?.id}
-                    getDisplayName={(m) => m.names?.[cardLanguage] || m.names?.en || m.name_en}
+                    getDisplayName={(m) => m.names?.[cardLanguage] || m.names?.en || ''}
                     getSearchStrings={(m) => Object.values(m.names || {}).filter(Boolean)}
                     placeholder={`Attaque ${index + 1}`}
                   />

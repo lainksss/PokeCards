@@ -410,15 +410,29 @@ const BaseFlashcard = ({
           <div className="pokemon-moves-section">
             <div className="moves-grid">
               {data.moves && data.moves.map((move, index) => (
-                <div key={index} className="move-card" style={{ borderColor: move.typeColor || fontColor }}>
+                <div
+                  key={index}
+                  className="move-card"
+                  style={{
+                    border: `3px solid ${move.typeColor || fontColor}`,
+                  }}
+                >
                   <div className="move-name" style={{ color: fontColor }}>
                     {move.name}
                   </div>
-                  <div className="move-type" style={{ 
-                    backgroundColor: move.typeColor || fontColor,
-                    color: '#ffffff'
-                  }}>
-                    {move.type}
+                  <div className="move-meta-row">
+                    <div className="move-stat-box" style={{ color: fontColor }}>
+                      {move.power}
+                    </div>
+                    <div className="move-type" style={{ 
+                      backgroundColor: move.typeColor || fontColor,
+                      color: '#ffffff'
+                    }}>
+                      {move.type}
+                    </div>
+                    <div className="move-stat-box" style={{ color: fontColor }}>
+                      {move.accuracy}
+                    </div>
                   </div>
                 </div>
               ))}
