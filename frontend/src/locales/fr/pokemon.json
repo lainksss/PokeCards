@@ -12,5 +12,14 @@
   "sprite_type": "Type de sprite",
   "sprite_variant": "Variant du sprite",
   "export_png": "Exporter en PNG",
-  "show_db_names": "Afficher noms DB"
+  "show_db_names": "Afficher noms DB",
+  "lang_french": "🇫🇷 Français",
+  "lang_english": "🇬🇧 Anglais",
+  "lang_german": "🇩🇪 Allemand",
+  "lang_spanish": "🇪🇸 Espagnol",
+  "lang_italian": "🇮🇹 Italien",
+  "lang_japanese": "🇯🇵 Japonais",
+  "lang_korean": "🇰🇷 Coréen",
+  "lang_chinese_simp": "🇨🇳 Chinois (simplifié)",
+  "lang_chinese_trad": "🇹🇼 Chinois (traditionnel)"
 }

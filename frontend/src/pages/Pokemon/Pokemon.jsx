@@ -228,8 +228,24 @@ const Pokemon = () => {
 
   return (
     <div className="pokemon-container">
-      <h1>{t('pokemon_name')}</h1>
-      
+      <div className="top-bar">
+        <h1>{t('pokemon_name')}</h1>
+        <div className="language-group">
+          <label>{t('card_language') || 'Langue de la carte'}</label>
+          <select 
+            value={cardLanguage}
+            onChange={(e) => setCardLanguage(e.target.value)}
+            className="language-select"
+          >
+            {availableLanguages.map(lang => (
+              <option key={lang.code} value={lang.code}>
+                {t(lang.label) || lang.code}
+              </option>
+            ))}
+          </select>
+        </div>
+      </div>
+
       <div className="pokemon-layout">
         <div className="flashcard-panel">
           <div className="pokemon-flashcard">
@@ -257,139 +273,126 @@ const Pokemon = () => {
         </div>
 
         <div className="controls-panel">
-          <div className="selector-group">
-            <div className="selector-header">
-              <label>{t('pokemon_search') || 'Rechercher un Pokémon'}</label>
-              <button
-                type="button"
-                className={`toggle-db-name ${showDbNames ? 'active' : ''}`}
-                onClick={() => setShowDbNames((prev) => !prev)}
-              >
-                {t('show_db_names') || 'DB names'}
-              </button>
-            </div>
-            <SearchableSelector
-              items={pokemons}
-              onSelect={handlePokemonChange}
-              selectedId={selectedPokemon?.id}
-              getDisplayName={(pokemon) => {
-                const name = showDbNames
-                  ? pokemon.name_en
-                  : (pokemon.names?.[cardLanguage] || pokemon.names?.en || pokemon.name_en);
-
-                const pokemonTypes = pokemon.types || [];
-                if (pokemonTypes.length === 0) return name;
-
-                const typeNames = pokemonTypes.map((typeName) => {
-                  const typeData = types.find((t) => t.name_en === typeName);
-                  return typeData?.names?.[cardLanguage] || typeData?.names?.en || typeName;
-                });
-
-                return `${name} [${typeNames.join(', ')}]`;
-              }}
-              getSearchStrings={(pokemon) => {
-                const searchStrings = [...Object.values(pokemon.names || {}).filter(Boolean)];
-                if (pokemon.name_en) {
-                  searchStrings.push(pokemon.name_en);
-                }
-                return searchStrings;
-              }}
-              placeholder={t('search_placeholder') || 'Rechercher...'}
-            />
-          </div>
-
-          <div className="selector-group">
-            <label>{t('pokemon_talent') || 'Talent'}</label>
-            <SearchableSelector
-              items={getAvailableAbilities()}
-              onSelect={setSelectedAbility}
-              selectedId={selectedAbility?.id}
-              getDisplayName={(ability) => ability.names?.[cardLanguage] || ability.names?.en || ability.name_en}
-              getSearchStrings={(ability) => Object.values(ability.names || {}).filter(Boolean)}
-              placeholder={t('search_placeholder') || 'Sélectionner un talent...'}
-            />
-          </div>
-
-          <div className="selector-group">
-            <label>{t('pokemon_nature') || 'Nature'}</label>
-            <SearchableSelector
-              items={allNatures}
-              onSelect={setSelectedNature}
-              selectedId={selectedNature?.id}
-              getDisplayName={(nature) => nature.names?.[cardLanguage] || nature.names?.en || nature.name_en}
-              getSearchStrings={(nature) => Object.values(nature.names || {}).filter(Boolean)}
-              placeholder={t('search_placeholder') || 'Sélectionner une nature...'}
-            />
-          </div>
-
-          <div className="selector-group">
-            <label>{t('pokemon_item') || 'Objet'}</label>
-            <SearchableSelector
-              items={allItems}
-              onSelect={setSelectedItem}
-              selectedId={selectedItem?.id}
-              getDisplayName={(item) => item.names?.[cardLanguage] || item.names?.en || item.name_en}
-              getSearchStrings={(item) => Object.values(item.names || {}).filter(Boolean)}
-              placeholder={t('search_placeholder') || 'Sélectionner un objet...'}
-            />
-          </div>
-
-          <div className="moves-group">
-            <label>{t('pokemon_attacks') || 'Attaques'}</label>
-            {selectedMoves.map((move, index) => (
-              <div key={index} className="move-selector">
-                <SearchableSelector
-                  items={getAvailableMoves()}
-                onSelect={(m) => handleMoveChange(index, m)}
-                selectedId={move?.id}
-                getDisplayName={(m) => m.names?.[cardLanguage] || m.names?.en || m.name_en}
-                getSearchStrings={(m) => Object.values(m.names || {}).filter(Boolean)}
-                  placeholder={`Attaque ${index + 1}`}
-                />
+          <div className="controls-left">
+            <div className="selector-group">
+              <div className="selector-header">
+                <label>{t('pokemon_search') || 'Rechercher un Pokémon'}</label>
+                <button
+                  type="button"
+                  className={`toggle-db-name ${showDbNames ? 'active' : ''}`}
+                  onClick={() => setShowDbNames((prev) => !prev)}
+                >
+                  {t('show_db_names') || 'DB names'}
+                </button>
               </div>
-            ))}
+              <SearchableSelector
+                items={pokemons}
+                onSelect={handlePokemonChange}
+                selectedId={selectedPokemon?.id}
+                getDisplayName={(pokemon) => {
+                  const name = showDbNames
+                    ? pokemon.name_en
+                    : (pokemon.names?.[cardLanguage] || pokemon.names?.en || pokemon.name_en);
+
+                  const pokemonTypes = pokemon.types || [];
+                  if (pokemonTypes.length === 0) return name;
+
+                  const typeNames = pokemonTypes.map((typeName) => {
+                    const typeData = types.find((t) => t.name_en === typeName);
+                    return typeData?.names?.[cardLanguage] || typeData?.names?.en || typeName;
+                  });
+
+                  return `${name} [${typeNames.join(', ')}]`;
+                }}
+                getSearchStrings={(pokemon) => {
+                  const searchStrings = [...Object.values(pokemon.names || {}).filter(Boolean)];
+                  if (pokemon.name_en) {
+                    searchStrings.push(pokemon.name_en);
+                  }
+                  return searchStrings;
+                }}
+                placeholder={t('search_placeholder') || 'Rechercher...'}
+              />
+            </div>
+
+            <div className="selector-group">
+              <label>{t('pokemon_talent') || 'Talent'}</label>
+              <SearchableSelector
+                items={getAvailableAbilities()}
+                onSelect={setSelectedAbility}
+                selectedId={selectedAbility?.id}
+                getDisplayName={(ability) => ability.names?.[cardLanguage] || ability.names?.en || ability.name_en}
+                getSearchStrings={(ability) => Object.values(ability.names || {}).filter(Boolean)}
+                placeholder={t('search_placeholder') || 'Sélectionner un talent...'}
+              />
+            </div>
+
+            <div className="selector-group">
+              <label>{t('pokemon_nature') || 'Nature'}</label>
+              <SearchableSelector
+                items={allNatures}
+                onSelect={setSelectedNature}
+                selectedId={selectedNature?.id}
+                getDisplayName={(nature) => nature.names?.[cardLanguage] || nature.names?.en || nature.name_en}
+                getSearchStrings={(nature) => Object.values(nature.names || {}).filter(Boolean)}
+                placeholder={t('search_placeholder') || 'Sélectionner une nature...'}
+              />
+            </div>
+
+            <div className="selector-group">
+              <label>{t('pokemon_item') || 'Objet'}</label>
+              <SearchableSelector
+                items={allItems}
+                onSelect={setSelectedItem}
+                selectedId={selectedItem?.id}
+                getDisplayName={(item) => item.names?.[cardLanguage] || item.names?.en || item.name_en}
+                getSearchStrings={(item) => Object.values(item.names || {}).filter(Boolean)}
+                placeholder={t('search_placeholder') || 'Sélectionner un objet...'}
+              />
+            </div>
+
+            <div className="moves-group">
+              <label>{t('pokemon_attacks') || 'Attaques'}</label>
+              {selectedMoves.map((move, index) => (
+                <div key={index} className="move-selector">
+                  <SearchableSelector
+                    items={getAvailableMoves()}
+                    onSelect={(m) => handleMoveChange(index, m)}
+                    selectedId={move?.id}
+                    getDisplayName={(m) => m.names?.[cardLanguage] || m.names?.en || m.name_en}
+                    getSearchStrings={(m) => Object.values(m.names || {}).filter(Boolean)}
+                    placeholder={`Attaque ${index + 1}`}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
 
-          <div className="language-group">
-            <label>{t('card_language') || 'Langue de la carte'}</label>
-            <select 
-              value={cardLanguage}
-              onChange={(e) => setCardLanguage(e.target.value)}
-              className="language-select"
-            >
-              {availableLanguages.map(lang => (
-                <option key={lang.code} value={lang.code}>
-                  {t(lang.label) || lang.code}
-                </option>
-              ))}
-            </select>
+          <div className="controls-right">
+            <CardCustomizer
+              onBackgroundChange={setBackground}
+              onBorderRadiusChange={setBorderRadius}
+              onFontChange={setSelectedFont}
+              backgroundColor={bgColor}
+              onBackgroundColorChange={setBgColor}
+              gradientColor2={gradColor2}
+              onGradientColor2Change={setGradColor2}
+              onBackgroundImageChange={setBackgroundImage}
+              fontColor={fontColor}
+              onFontColorChange={setFontColor}
+              borderColor={borderColor}
+              onBorderColorChange={setBorderColor}
+              selectedGeneration={selectedGeneration}
+              onGenerationChange={setSelectedGeneration}
+              showSpriteSelector={true}
+              spriteType={selectedSpriteType}
+              onSpriteTypeChange={setSelectedSpriteType}
+              spriteVariant={selectedSpriteVariant}
+              onSpriteVariantChange={setSelectedSpriteVariant}
+              availableSpriteTypes={availableSpriteTypes}
+            />
           </div>
         </div>
-      </div>
-
-      <div className="customizer-section-wrapper">
-        <CardCustomizer
-          onBackgroundChange={setBackground}
-          onBorderRadiusChange={setBorderRadius}
-          onFontChange={setSelectedFont}
-          backgroundColor={bgColor}
-          onBackgroundColorChange={setBgColor}
-          gradientColor2={gradColor2}
-          onGradientColor2Change={setGradColor2}
-          onBackgroundImageChange={setBackgroundImage}
-          fontColor={fontColor}
-          onFontColorChange={setFontColor}
-          borderColor={borderColor}
-          onBorderColorChange={setBorderColor}
-          selectedGeneration={selectedGeneration}
-          onGenerationChange={setSelectedGeneration}
-          showSpriteSelector={true}
-          spriteType={selectedSpriteType}
-          onSpriteTypeChange={setSelectedSpriteType}
-          spriteVariant={selectedSpriteVariant}
-          onSpriteVariantChange={setSelectedSpriteVariant}
-          availableSpriteTypes={availableSpriteTypes}
-        />
       </div>
     </div>
   );

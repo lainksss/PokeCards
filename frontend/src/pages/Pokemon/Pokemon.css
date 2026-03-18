@@ -7,8 +7,22 @@
 .pokemon-container h1 {
   font-size: 2.5rem;
   color: var(--color-primary);
-  margin-bottom: 2rem;
-  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.top-bar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .pokemon-layout {
@@ -32,9 +46,27 @@
 }
 
 .controls-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.controls-left {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+.controls-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .controls-panel {
+    grid-template-columns: 1fr;
+  }
 }
 
 .selector-group {
@@ -79,12 +111,19 @@
   color: white;
 }
 
-.language-group {
+.controls-panel .language-group {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   padding-top: 1rem;
   border-top: 2px solid var(--border-color);
+}
+
+.top-bar .language-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
 }
 
 .language-group label {

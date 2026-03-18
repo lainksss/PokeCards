@@ -12,5 +12,14 @@
   "sprite_type": "Sprite Type",
   "sprite_variant": "Sprite Variant",
   "export_png": "Export as PNG",
-  "show_db_names": "Show DB names"
+  "show_db_names": "Show DB names",
+  "lang_french": "🇫🇷 French",
+  "lang_english": "🇬🇧 English",
+  "lang_german": "🇩🇪 German",
+  "lang_spanish": "🇪🇸 Spanish",
+  "lang_italian": "🇮🇹 Italian",
+  "lang_japanese": "🇯🇵 Japanese",
+  "lang_korean": "🇰🇷 Korean",
+  "lang_chinese_simp": "🇨🇳 Chinese (Simplified)",
+  "lang_chinese_trad": "🇹🇼 Chinese (Traditional)"
 }
