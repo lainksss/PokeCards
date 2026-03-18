@@ -32,7 +32,8 @@ const BaseFlashcard = ({
   getTypeNameInLanguage = null,
   getMoveNameInLanguage = null,
   selectedSpriteType = 'official_artwork',
-  selectedSpriteVariant = 'normal'
+  selectedSpriteVariant = 'normal',
+  selectedTypeGeneration = 'gen9_scarlet_violet'
 }) => {
   const { t } = useLanguage();
   const cardRef = useRef(null);
@@ -364,6 +365,23 @@ const BaseFlashcard = ({
               <span className="pokemon-name" style={{ color: fontColor }}>
                 {data.name}
               </span>
+              {/* Type icons below name */}
+              {data.pokemonTypes && data.pokemonTypes.length > 0 && (
+                <div className="pokemon-types-row">
+                  {data.pokemonTypes.map((type, idx) => (
+                    <div key={idx} className="type-icon-wrapper">
+                      {type.sprite && (
+                        <img 
+                          src={type.sprite} 
+                          alt={type.name} 
+                          title={type.name}
+                          className="pokemon-type-icon"
+                        />
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
             {spriteUrl && (
               <div className="pokemon-sprite-section">
@@ -399,9 +417,19 @@ const BaseFlashcard = ({
                 <span className="info-label" style={{ color: fontColor }}>
                   {cardLanguage === 'fr' ? 'OBJET' : 'ITEM'}
                 </span>
-                <span className="info-value" style={{ color: fontColor }}>
-                  {data.item}
-                </span>
+                <div className="info-value-with-sprite">
+                  <span className="info-value" style={{ color: fontColor }}>
+                    {data.item}
+                  </span>
+                  {data.itemSprite && (
+                    <img 
+                      src={data.itemSprite} 
+                      alt={data.item}
+                      title={data.item}
+                      className="item-icon"
+                    />
+                  )}
+                </div>
               </div>
             </div>
           </div>

@@ -59,6 +59,7 @@ const Pokemon = () => {
   const [selectedMoves, setSelectedMoves] = useState([null, null, null, null]);
   const [selectedSpriteType, setSelectedSpriteType] = useState('official_artwork');
   const [selectedSpriteVariant, setSelectedSpriteVariant] = useState('normal');
+  const [selectedTypeGeneration, setSelectedTypeGeneration] = useState('gen9_scarlet_violet');
   
   const [loading, setLoading] = useState(true);
 
@@ -194,8 +195,22 @@ const Pokemon = () => {
   const getFlashcardData = () => {
     if (!selectedPokemon) return {};
     
+    const pokemonTypes = selectedPokemon.types?.map(typeName => {
+      const typeData = types.find(t => t.name_en?.toLowerCase() === typeName?.toLowerCase());
+      return {
+        name: typeData?.names?.[cardLanguage] || typeData?.names?.en || typeName,
+        nameEn: typeName,
+        sprite: typeData?.sprites?.[selectedTypeGeneration],
+        color: getTypeColor(typeName)
+      };
+    }) || [];
+
+    const itemSprite = selectedItem?.sprites?.default || null;
+    
     return {
       'name': selectedPokemon.names?.[cardLanguage] || selectedPokemon.names?.en || 'Pokemon',
+      'pokemonTypes': pokemonTypes,
+      'itemSprite': itemSprite,
       'ability': selectedAbility ? (selectedAbility.names?.[cardLanguage] || selectedAbility.names?.en) : 'N/A',
       'nature': selectedNature ? (selectedNature.names?.[cardLanguage] || selectedNature.names?.en) : 'N/A',
       'item': selectedItem ? (selectedItem.names?.[cardLanguage] || selectedItem.names?.en) : 'N/A',
@@ -275,6 +290,7 @@ const Pokemon = () => {
               getMoveNameInLanguage={getMoveNameInLanguage}
               selectedSpriteType={selectedSpriteType}
               selectedSpriteVariant={selectedSpriteVariant}
+              selectedTypeGeneration={selectedTypeGeneration}
             />
           </div>
         </div>
@@ -391,6 +407,8 @@ const Pokemon = () => {
               onBorderColorChange={setBorderColor}
               selectedGeneration={selectedGeneration}
               onGenerationChange={setSelectedGeneration}
+              selectedTypeGeneration={selectedTypeGeneration}
+              onTypeGenerationChange={setSelectedTypeGeneration}
               showSpriteSelector={true}
               spriteType={selectedSpriteType}
               onSpriteTypeChange={setSelectedSpriteType}
