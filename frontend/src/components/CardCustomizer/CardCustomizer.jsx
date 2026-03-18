@@ -99,8 +99,9 @@ const CardCustomizer = ({
     <div className="card-customizer">
       <h3>{t('customize_card')}</h3>
       
-      <div className="customizer-section">
-        <label>{t('customizer_background')}</label>
+      <div className="customizer-top-section">
+        <div className="customizer-section">
+          <label>{t('customizer_background')}</label>
         <div className="option-group">
           <button 
             className={background === 'transparent' ? 'active' : ''}
@@ -167,57 +168,60 @@ const CardCustomizer = ({
             />
           </div>
         )}
+        </div>
+
+        <div className="customizer-section">
+          <label>{t('customizer_borders')}</label>
+          <div className="option-group">
+            <button 
+              className={borderRadius ? 'active' : ''}
+              onClick={() => handleBorderRadiusChange(true)}
+            >
+              {t('borders_rounded')}
+            </button>
+            <button 
+              className={!borderRadius ? 'active' : ''}
+              onClick={() => handleBorderRadiusChange(false)}
+            >
+              {t('borders_square')}
+            </button>
+          </div>
+        </div>
+
+        {showTitleStyle && (
+          <div className="customizer-section">
+            <label>{t('customizer_title_style')}</label>
+            <div className="option-group">
+              <button 
+                className={titleStyle === 'standard' ? 'active' : ''}
+                onClick={() => handleTitleStyleChange('standard')}
+              >
+                {t('title_style_standard')}
+              </button>
+              <button 
+                className={titleStyle === 'rounded' ? 'active' : ''}
+                onClick={() => handleTitleStyleChange('rounded')}
+              >
+                {t('title_style_rounded')}
+              </button>
+              <button 
+                className={titleStyle === 'bordered' ? 'active' : ''}
+                onClick={() => handleTitleStyleChange('bordered')}
+              >
+                {t('title_style_bordered')}
+              </button>
+              <button 
+                className={titleStyle === 'none' ? 'active' : ''}
+                onClick={() => handleTitleStyleChange('none')}
+              >
+                {t('title_style_none')}
+              </button>
+            </div>
+          </div>
+        )}
       </div>
 
-      <div className="customizer-section">
-        <label>{t('customizer_borders')}</label>
-        <div className="option-group">
-          <button 
-            className={borderRadius ? 'active' : ''}
-            onClick={() => handleBorderRadiusChange(true)}
-          >
-            {t('borders_rounded')}
-          </button>
-          <button 
-            className={!borderRadius ? 'active' : ''}
-            onClick={() => handleBorderRadiusChange(false)}
-          >
-            {t('borders_square')}
-          </button>
-        </div>
-      </div>
-
-      {showTitleStyle && (
-      <div className="customizer-section">
-        <label>{t('customizer_title_style')}</label>
-        <div className="option-group">
-          <button 
-            className={titleStyle === 'standard' ? 'active' : ''}
-            onClick={() => handleTitleStyleChange('standard')}
-          >
-            {t('title_style_standard')}
-          </button>
-          <button 
-            className={titleStyle === 'rounded' ? 'active' : ''}
-            onClick={() => handleTitleStyleChange('rounded')}
-          >
-            {t('title_style_rounded')}
-          </button>
-          <button 
-            className={titleStyle === 'bordered' ? 'active' : ''}
-            onClick={() => handleTitleStyleChange('bordered')}
-          >
-            {t('title_style_bordered')}
-          </button>
-          <button 
-            className={titleStyle === 'none' ? 'active' : ''}
-            onClick={() => handleTitleStyleChange('none')}
-          >
-            {t('title_style_none')}
-          </button>
-        </div>
-      </div>
-      )}
+      <div className="customizer-bottom-section">
 
       <div className="customizer-section">
         <label>{t('customizer_font')}</label>
@@ -297,6 +301,8 @@ const CardCustomizer = ({
           </select>
         </div>
       )}
+      </div>
+
     </div>
   );
 };

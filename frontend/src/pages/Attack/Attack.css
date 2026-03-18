@@ -20,7 +20,7 @@
 
 .attack-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.8fr 1.5fr;
   gap: 2rem;
   align-items: start;
 }

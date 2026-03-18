@@ -6,6 +6,9 @@
   height: fit-content;
   position: sticky;
   top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
 }
 
 .card-customizer h3 {
@@ -13,6 +16,14 @@
   color: var(--color-primary);
   margin-bottom: 1.5rem;
   text-align: center;
+  grid-column: 1 / -1;
+}
+
+.customizer-top-section,
+.customizer-bottom-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
 .customizer-section {

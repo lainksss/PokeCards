@@ -171,6 +171,7 @@ const Attack = () => {
             selectedGeneration={selectedGeneration}
             onGenerationChange={setSelectedGeneration}
             isAttack={true}
+            showTitleStyle={false}
           />
         </div>
       </div>
