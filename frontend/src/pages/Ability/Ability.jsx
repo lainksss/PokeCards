@@ -98,30 +98,33 @@ const Ability = () => {
         </div>
 
         <div className="customizer-panel">
-          <div className="language-selector">
-            <label>{t('flashcard_language')}</label>
-            <div className="lang-buttons-grid">
-              {availableLanguages.map((lang) => (
-                <button 
-                  key={lang.code}
-                  className={cardLanguage === lang.code ? 'active' : ''}
-                  onClick={() => setCardLanguage(lang.code)}
-                  title={t(lang.label)}
-                >
-                  {t(lang.label)}
-                </button>
-              ))}
+          <div className="top-controls-row">
+            <div className="language-selector">
+              <label>{t('flashcard_language')}</label>
+              <select 
+                value={cardLanguage} 
+                onChange={(e) => setCardLanguage(e.target.value)}
+                className="language-select"
+              >
+                {availableLanguages.map((lang) => (
+                  <option key={lang.code} value={lang.code}>
+                    {t(lang.label)}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className="item-selector">
+              <SearchableSelector
+                items={abilities}
+                onSelect={setSelectedAbility}
+                selectedId={selectedAbility?.id}
+                getDisplayName={(ability) => ability.names?.[language] || ability.names?.en || 'Unknown'}
+                getSearchStrings={(ability) => Object.values(ability.names || {}).filter(name => name)}
+                placeholder={t('search_ability')}
+              />
             </div>
           </div>
-
-          <SearchableSelector
-            items={abilities}
-            onSelect={setSelectedAbility}
-            selectedId={selectedAbility?.id}
-            getDisplayName={(ability) => ability.names?.[language] || ability.names?.en || 'Unknown'}
-            getSearchStrings={(ability) => Object.values(ability.names || {}).filter(name => name)}
-            placeholder={t('search_ability')}
-          />
 
           <CardCustomizer
             background={background}

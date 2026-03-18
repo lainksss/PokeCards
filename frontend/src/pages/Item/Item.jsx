@@ -99,30 +99,33 @@ const Item = () => {
         </div>
 
         <div className="customizer-panel">
-          <div className="language-selector">
-            <label>{t('flashcard_language')}</label>
-            <div className="lang-buttons-grid">
-              {availableLanguages.map((lang) => (
-                <button 
-                  key={lang.code}
-                  className={cardLanguage === lang.code ? 'active' : ''}
-                  onClick={() => setCardLanguage(lang.code)}
-                  title={t(lang.label)}
-                >
-                  {t(lang.label)}
-                </button>
-              ))}
+          <div className="top-controls-row">
+            <div className="language-selector">
+              <label>{t('flashcard_language')}</label>
+              <select 
+                value={cardLanguage} 
+                onChange={(e) => setCardLanguage(e.target.value)}
+                className="language-select"
+              >
+                {availableLanguages.map((lang) => (
+                  <option key={lang.code} value={lang.code}>
+                    {t(lang.label)}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className="item-selector">
+              <SearchableSelector
+                items={items}
+                onSelect={setSelectedItem}
+                selectedId={selectedItem?.id}
+                getDisplayName={(item) => item.names?.[language] || item.names?.en || 'Unknown'}
+                getSearchStrings={(item) => Object.values(item.names || {}).filter(name => name)}
+                placeholder={t('search_item')}
+              />
             </div>
           </div>
-
-          <SearchableSelector
-            items={items}
-            onSelect={setSelectedItem}
-            selectedId={selectedItem?.id}
-            getDisplayName={(item) => item.names?.[language] || item.names?.en || 'Unknown'}
-            getSearchStrings={(item) => Object.values(item.names || {}).filter(name => name)}
-            placeholder={t('search_item')}
-          />
 
           <CardCustomizer
             background={background}
