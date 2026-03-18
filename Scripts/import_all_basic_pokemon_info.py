@@ -5,10 +5,10 @@ import time
 
 BASE_URL = "https://pokeapi.co/api/v2"
 SESSION = requests.Session()
-SESSION.headers.update({"User-Agent": "pokemon-basic-info-script/1.6"})
+SESSION.headers.update({"User-Agent": "pokemon-basic-info-script/1.7"})
 
 def fetch_all_pokemon():
-    os.makedirs('data', exist_ok=True)
+    os.makedirs('frontend/public/data', exist_ok=True)
     print("Fetching the exact number of Pokemon forms...")
     
     # We query 'pokemon' instead of 'pokemon-species' to get ALL forms (Megas, Alolan, etc.)
@@ -29,6 +29,9 @@ def fetch_all_pokemon():
             # 1. Fetch the specific Pokemon form data
             pkmn_info = SESSION.get(pkmn_url).json()
             pkmn_id = pkmn_info['id']
+            
+            # 1.5 Extract types (list of type names)
+            types = [t['type']['name'] for t in pkmn_info.get('types', [])]
             
             # 2. Fetch the Species data to get localized names
             species_url = pkmn_info['species']['url']
@@ -96,6 +99,7 @@ def fetch_all_pokemon():
                 "id": pkmn_id,
                 "name_en": item['name'], # Internal name like 'venusaur-mega'
                 "names": names, # Translated base name like 'Florizarre'
+                "types": types, # List of type names like ['grass', 'poison']
                 "sprites": sprites
             }
             pokemon_data.append(pkmn_dict)
