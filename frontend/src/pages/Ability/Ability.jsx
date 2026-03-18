@@ -73,7 +73,23 @@ const Ability = () => {
 
   return (
     <div className="ability-container">
-      <h1 className="page-title">{t('ability_name')}</h1>
+      <div className="top-bar">
+        <h1 className="page-title">{t('ability_name')}</h1>
+        <div className="language-group">
+          <label>{t('card_language') || 'Langue de la carte'}</label>
+          <select 
+            value={cardLanguage}
+            onChange={(e) => setCardLanguage(e.target.value)}
+            className="language-select"
+          >
+            {availableLanguages.map(lang => (
+              <option key={lang.code} value={lang.code}>
+                {t(lang.label) || lang.code}
+              </option>
+            ))}
+          </select>
+        </div>
+      </div>
       
       <div className="ability-layout">
         <div className="flashcard-panel">
@@ -99,21 +115,6 @@ const Ability = () => {
 
         <div className="customizer-panel">
           <div className="top-controls-row">
-            <div className="language-selector">
-              <label>{t('flashcard_language')}</label>
-              <select 
-                value={cardLanguage} 
-                onChange={(e) => setCardLanguage(e.target.value)}
-                className="language-select"
-              >
-                {availableLanguages.map((lang) => (
-                  <option key={lang.code} value={lang.code}>
-                    {t(lang.label)}
-                  </option>
-                ))}
-              </select>
-            </div>
-
             <div className="item-selector">
               <SearchableSelector
                 items={abilities}

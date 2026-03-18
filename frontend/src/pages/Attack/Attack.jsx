@@ -99,7 +99,23 @@ const Attack = () => {
 
   return (
     <div className="attack-container">
-      <h1 className="page-title">{t('attack_name')}</h1>
+      <div className="top-bar">
+        <h1 className="page-title">{t('attack_name')}</h1>
+        <div className="language-group">
+          <label>{t('card_language') || 'Langue de la carte'}</label>
+          <select 
+            value={cardLanguage}
+            onChange={(e) => setCardLanguage(e.target.value)}
+            className="language-select"
+          >
+            {availableLanguages.map(lang => (
+              <option key={lang.code} value={lang.code}>
+                {t(lang.label) || lang.code}
+              </option>
+            ))}
+          </select>
+        </div>
+      </div>
       
       <div className="attack-layout">
         <div className="flashcard-panel">
@@ -128,21 +144,6 @@ const Attack = () => {
 
         <div className="customizer-panel">
           <div className="top-controls-row">
-            <div className="language-selector">
-              <label>{t('flashcard_language')}</label>
-              <select 
-                value={cardLanguage} 
-                onChange={(e) => setCardLanguage(e.target.value)}
-                className="language-select"
-              >
-                {availableLanguages.map((lang) => (
-                  <option key={lang.code} value={lang.code}>
-                    {t(lang.label)}
-                  </option>
-                ))}
-              </select>
-            </div>
-
             <div className="item-selector">
               <SearchableSelector
                 items={moves}
@@ -150,7 +151,7 @@ const Attack = () => {
                 selectedId={selectedMove?.id}
                 getDisplayName={(move) => move.names?.[language] || move.names?.en || 'Unknown'}
                 getSearchStrings={(move) => Object.values(move.names || {}).filter(name => name)}
-                placeholder={t('search_attack')}
+                placeholder={t('search_move')}
               />
             </div>
           </div>
