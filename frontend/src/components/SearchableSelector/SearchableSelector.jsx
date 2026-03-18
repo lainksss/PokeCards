@@ -41,9 +41,10 @@ const SearchableSelector = ({
   }, [isOpen]);
 
   const containerClass = inlineSelected ? 'searchable-selector inline-selected' : 'searchable-selector';
+  const openClass = isOpen ? 'is-open' : '';
 
   return (
-    <div className={containerClass} ref={containerRef}>
+    <div className={`${containerClass} ${openClass}`} ref={containerRef}>
       <div className="selector-input-wrapper">
         <input
           type="text"
