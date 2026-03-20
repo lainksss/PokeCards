@@ -19,6 +19,8 @@
   "loading": "Chargement...",
   "customizer_font_color": "Couleur de la police",
   "customizer_border_color": "Couleur des bordures",
-  "customizer_type_sprite_generation": "Génération du sprite de type"
+  "customizer_type_sprite_generation": "Génération du sprite de type",
+  "team_cards_style": "Style des cartes",
+  "team_outer_box_style": "Style de la bordure extérieure"
 }
 

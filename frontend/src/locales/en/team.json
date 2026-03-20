@@ -19,6 +19,8 @@
   "loading": "Loading...",
   "customizer_font_color": "Font color",
   "customizer_border_color": "Border color",
-  "customizer_type_sprite_generation": "Type sprite generation"
+  "customizer_type_sprite_generation": "Type sprite generation",
+  "team_cards_style": "Cards Style",
+  "team_outer_box_style": "Outer Box Style"
 }
 
