@@ -33,7 +33,11 @@ const CardCustomizer = ({
   onSpriteTypeChange,
   spriteVariant = 'normal',
   onSpriteVariantChange,
-  availableSpriteTypes = []
+  availableSpriteTypes = [],
+  hideFontSettings = false,
+  hideLanguageSettings = false,
+  hideSpriteSettings = false,
+  isTeamBorderLayout = false
 }) => {
   const { t } = useLanguage();
   const [background, setBackground] = useState('transparent');
@@ -161,7 +165,7 @@ const CardCustomizer = ({
 
   return (
     <div className="card-customizer">
-      <h3>{t('customize_card')}</h3>
+      {!hideFontSettings && <h3>{t('customize_card')}</h3>}
       
       <div className="customizer-top-section">
         <div className="customizer-section">
@@ -278,7 +282,7 @@ const CardCustomizer = ({
           </div>
         </div>
 
-        {showTitleStyle && (
+        {!isTeamBorderLayout && showTitleStyle && (
           <div className="customizer-section">
             <label>{t('customizer_title_style')}</label>
             <div className="option-group">
@@ -313,75 +317,121 @@ const CardCustomizer = ({
 
       <div className="customizer-bottom-section">
 
-      <div className="customizer-section">
-        <label>{t('customizer_font')}</label>
-        <div className="option-group">
-          <button 
-            className={font === 'default' ? 'active' : ''}
-            onClick={() => handleFontChange('default')}
-          >
-            {t('font_standard')}
-          </button>
-          <button 
-            className={font === 'solid' ? 'active' : ''}
-            onClick={() => handleFontChange('solid')}
-          >
-            {t('font_pokemon_solid')}
-          </button>
-          <button 
-            className={font === 'hollow' ? 'active' : ''}
-            onClick={() => handleFontChange('hollow')}
-          >
-            {t('font_pokemon_hollow')}
-          </button>
-          <button 
-            className={font === 'dp-pro' ? 'active' : ''}
-            onClick={() => handleFontChange('dp-pro')}
-          >
-            {t('font_pokemon_dp_pro')}
-          </button>
-          <button 
-            className={font === 'custom' ? 'active' : ''}
-            onClick={() => document.getElementById('custom-font-input')?.click()}
-          >
-            {customFontName ? `✎ ${customFontName}` : t('font_custom')}
-          </button>
-          <input 
-            id="custom-font-input"
-            type="file" 
-            accept=".ttf,.otf,.woff,.woff2"
-            onChange={handleCustomFontUpload}
-            style={{ display: 'none' }}
-          />
-        </div>
-      </div>
+      {!hideFontSettings && (
+        <>
+          <div className="customizer-section">
+            <label>{t('customizer_font')}</label>
+            <div className="option-group">
+              <button 
+                className={font === 'default' ? 'active' : ''}
+                onClick={() => handleFontChange('default')}
+              >
+                {t('font_standard')}
+              </button>
+              <button 
+                className={font === 'solid' ? 'active' : ''}
+                onClick={() => handleFontChange('solid')}
+              >
+                {t('font_pokemon_solid')}
+              </button>
+              <button 
+                className={font === 'hollow' ? 'active' : ''}
+                onClick={() => handleFontChange('hollow')}
+              >
+                {t('font_pokemon_hollow')}
+              </button>
+              <button 
+                className={font === 'dp-pro' ? 'active' : ''}
+                onClick={() => handleFontChange('dp-pro')}
+              >
+                {t('font_pokemon_dp_pro')}
+              </button>
+              <button 
+                className={font === 'custom' ? 'active' : ''}
+                onClick={() => document.getElementById('custom-font-input')?.click()}
+              >
+                {customFontName ? `✎ ${customFontName}` : t('font_custom')}
+              </button>
+              <input 
+                id="custom-font-input"
+                type="file" 
+                accept=".ttf,.otf,.woff,.woff2"
+                onChange={handleCustomFontUpload}
+                style={{ display: 'none' }}
+              />
+            </div>
+          </div>
 
-      <div className="customizer-section">
-        <label>{t('customizer_font_color') || 'Police'}</label>
-        <div className="color-control">
-          <input 
-            type="color" 
-            value={fontColorState} 
-            onChange={handleFontColorChange}
-            className="color-picker"
-          />
-        </div>
-      </div>
+          <div className="customizer-section">
+            <label>{t('customizer_font_color') || 'Police'}</label>
+            <div className="color-control">
+              <input 
+                type="color" 
+                value={fontColorState} 
+                onChange={handleFontColorChange}
+                className="color-picker"
+              />
+            </div>
+          </div>
+        </>
+      )}
 
       <div className="customizer-section">
         <label>{t('customizer_border_color') || 'Bordures'}</label>
-        <div className="color-control">
-          <input 
-            type="color" 
-            value={borderColorState} 
-            onChange={handleBorderColorChange}
-            className="color-picker"
-          />
-        </div>
-
+        {isTeamBorderLayout ? (
+          <div className="border-horizontal-layout">
+            <div className="border-color-picker">
+              <input 
+                type="color" 
+                value={borderColorState} 
+                onChange={handleBorderColorChange}
+                className="color-picker"
+              />
+            </div>
+            <div className="border-options-right">
+              <div className="border-buttons">
+                <button 
+                  className={borderRadius ? 'active' : ''}
+                  onClick={() => handleBorderRadiusChange(true)}
+                  title={t('borders_rounded')}
+                >
+                  {t('borders_rounded')}
+                </button>
+                <button 
+                  className={!borderRadius ? 'active' : ''}
+                  onClick={() => handleBorderRadiusChange(false)}
+                  title={t('borders_square')}
+                >
+                  {t('borders_square')}
+                </button>
+              </div>
+              <div className="border-opacity">
+                <label>{t('customizer_border_opacity') || 'Opacité'}</label>
+                <input
+                  type="range"
+                  min={0}
+                  max={100}
+                  value={borderOpacityState * 100}
+                  onChange={handleBorderOpacityChange}
+                  className="range-slider"
+                />
+                <span className="range-value">{Math.round(borderOpacityState * 100)}%</span>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div className="color-control">
+            <input 
+              type="color" 
+              value={borderColorState} 
+              onChange={handleBorderColorChange}
+              className="color-picker"
+            />
+          </div>
+        )}
       </div>
 
-      {isAttack && (
+      {(isAttack && !hideSpriteSettings) && (
         <div className="customizer-section">
           <label>{t('customizer_sprite_generation') || 'Sprite Generation'}</label>
           <select 
@@ -400,7 +450,7 @@ const CardCustomizer = ({
         </div>
       )}
 
-      {selectedTypeGeneration !== undefined && (
+      {(selectedTypeGeneration !== undefined && !hideLanguageSettings) && (
         <div className="customizer-section">
           <label>{t('customizer_type_sprite_generation') || 'Type Sprite Generation'}</label>
           <select 
@@ -419,7 +469,7 @@ const CardCustomizer = ({
         </div>
       )}
 
-      {showSpriteSelector && (
+      {(showSpriteSelector && !hideSpriteSettings) && (
         <>
           <div className="customizer-section">
             <label>{t('sprite_type') || 'Sprite Type'}</label>

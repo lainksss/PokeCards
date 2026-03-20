@@ -42,5 +42,7 @@
   "font_pokemon_solid": "Pokémon Solid",
   "font_pokemon_hollow": "Pokémon Hollow",
   "font_pokemon_dp_pro": "Pokémon DP Pro",
-  "font_custom": "Import Font"
+  "font_custom": "Import Font",
+  "customizer_background_color": "Background Color",
+  "customizer_border_color": "Border Color"
 }

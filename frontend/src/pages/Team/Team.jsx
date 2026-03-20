@@ -45,6 +45,18 @@ const Team = () => {
   const [selectedSpriteType, setSelectedSpriteType] = useState('official_artwork');
   const [selectedSpriteVariant, setSelectedSpriteVariant] = useState('normal');
   const [selectedTypeGeneration, setSelectedTypeGeneration] = useState('gen9_scarlet_violet');
+  
+  // Outer Box Customization states
+  const [outerBackground, setOuterBackground] = useState('transparent');
+  const [outerBgColor, setOuterBgColor] = useState('#ffffff');
+  const [outerGradColor2, setOuterGradColor2] = useState('#3b4cca');
+  const [outerBackgroundImage, setOuterBackgroundImage] = useState(null);
+  const [outerBackgroundOpacity, setOuterBackgroundOpacity] = useState(1);
+  const [outerBorderRadius, setOuterBorderRadius] = useState(true);
+  const [outerBorderColor, setOuterBorderColor] = useState('#1a237e');
+  const [outerBorderOpacity, setOuterBorderOpacity] = useState(1);
+  const [outerBorderSize, setOuterBorderSize] = useState(4);
+
   const [importText, setImportText] = useState('');
   const [importError, setImportError] = useState('');
   const [loading, setLoading] = useState(true);
@@ -439,6 +451,70 @@ const Team = () => {
     return layoutMap[layout] || '';
   };
 
+  const getOuterBackgroundStyle = () => {
+    const opacity = outerBackgroundOpacity;
+    if (outerBackground === 'transparent') return { background: 'transparent' };
+    
+    if (outerBackground === 'solid') {
+      const color = outerBgColor;
+      // Handle hex to rgba with opacity
+      if (color.startsWith('#')) {
+        const r = parseInt(color.slice(1, 3), 16);
+        const g = parseInt(color.slice(3, 5), 16);
+        const b = parseInt(color.slice(5, 7), 16);
+        return { background: `rgba(${r}, ${g}, ${b}, ${opacity})` };
+      }
+      return { background: color };
+    }
+    
+    if (outerBackground === 'gradient') {
+      const c1 = outerBgColor;
+      const c2 = outerGradColor2;
+      let r1 = 255, g1 = 255, b1 = 255, r2 = 59, g2 = 76, b2 = 202;
+      
+      if (c1.startsWith('#')) {
+        r1 = parseInt(c1.slice(1, 3), 16);
+        g1 = parseInt(c1.slice(3, 5), 16);
+        b1 = parseInt(c1.slice(5, 7), 16);
+      }
+      if (c2.startsWith('#')) {
+        r2 = parseInt(c2.slice(1, 3), 16);
+        g2 = parseInt(c2.slice(3, 5), 16);
+        b2 = parseInt(c2.slice(5, 7), 16);
+      }
+      
+      return { background: `linear-gradient(135deg, rgba(${r1}, ${g1}, ${b1}, ${opacity}), rgba(${r2}, ${g2}, ${b2}, ${opacity}))` };
+    }
+    
+    if (outerBackground === 'image' && outerBackgroundImage) {
+      return { 
+        backgroundImage: `url(${outerBackgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        opacity: opacity
+      };
+    }
+    
+    return { background: 'transparent' };
+  };
+
+  const getOuterBorderStyle = () => {
+    const color = outerBorderColor;
+    let borderColorWithOpacity = color;
+    
+    if (color.startsWith('#')) {
+      const r = parseInt(color.slice(1, 3), 16);
+      const g = parseInt(color.slice(3, 5), 16);
+      const b = parseInt(color.slice(5, 7), 16);
+      borderColorWithOpacity = `rgba(${r}, ${g}, ${b}, ${outerBorderOpacity})`;
+    }
+
+    return {
+      border: `${outerBorderSize}px solid ${borderColorWithOpacity}`,
+      borderRadius: outerBorderRadius ? '12px' : '0px'
+    };
+  };
+
   const getActivePokemonCount = () => {
     return teamPokemon.filter(p => p !== null).length;
   };
@@ -463,7 +539,13 @@ const Team = () => {
         {/* Left box: Team preview only */}
         <div className="team-preview-box">
           <div className={`team-grid-container ${getLayoutGridClass()}`}>
-            <div className="team-grid">
+            <div 
+              className="team-grid"
+              style={{
+                ...getOuterBackgroundStyle(),
+                ...getOuterBorderStyle()
+              }}
+            >
               {teamPokemon.map((pokemon, index) => {
                 if (!pokemon) return null;
                 
@@ -684,6 +766,9 @@ const Team = () => {
           {rightPanelMode === 'customizer' && (
             <div className="team-customizer-panel">
               <div className="customizer-content">
+                <div className="customizer-section-title">
+                  <h4>{t('team_cards_style') || 'Cards Style'}</h4>
+                </div>
                 <CardCustomizer
                   onBackgroundChange={setBackground}
                   onBorderRadiusChange={setBorderRadius}
@@ -709,6 +794,35 @@ const Team = () => {
                   onGenerationChange={() => {}}
                   selectedTypeGeneration={selectedTypeGeneration}
                   onTypeGenerationChange={setSelectedTypeGeneration}
+                />
+
+                <div className="customizer-divider"></div>
+
+                <div className="customizer-section-title">
+                  <h4>{t('team_outer_box_style') || 'Outer Box Style'}</h4>
+                </div>
+                <CardCustomizer
+                  onBackgroundChange={setOuterBackground}
+                  onBorderRadiusChange={setOuterBorderRadius}
+                  onFontChange={() => {}}
+                  onCustomFontChange={() => {}}
+                  backgroundColor={outerBgColor}
+                  onBackgroundColorChange={setOuterBgColor}
+                  backgroundOpacity={outerBackgroundOpacity}
+                  onBackgroundOpacityChange={setOuterBackgroundOpacity}
+                  gradientColor2={outerGradColor2}
+                  onGradientColor2Change={setOuterGradColor2}
+                  onBackgroundImageChange={setOuterBackgroundImage}
+                  fontColor={''} // Hidden
+                  onFontColorChange={() => {}}
+                  borderColor={outerBorderColor}
+                  onBorderColorChange={setOuterBorderColor}
+                  borderOpacity={outerBorderOpacity}
+                  onBorderOpacityChange={setOuterBorderOpacity}
+                  hideFontSettings={true}
+                  hideLanguageSettings={true}
+                  hideSpriteSettings={true}
+                  isTeamBorderLayout={true}
                 />
               </div>
               <button className="export-btn" onClick={exportTeamImage}>
