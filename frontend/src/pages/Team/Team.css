@@ -81,8 +81,20 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  flex: 1;
+  overflow: hidden;
+}
+
+.team-control-panel {
   overflow-y: auto;
-  max-height: calc(100vh - 280px);
+}
+
+.customizer-content {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 /* Layout selector */

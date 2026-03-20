@@ -683,32 +683,34 @@ const Team = () => {
           {/* Customizer panel */}
           {rightPanelMode === 'customizer' && (
             <div className="team-customizer-panel">
-              <CardCustomizer
-                onBackgroundChange={setBackground}
-                onBorderRadiusChange={setBorderRadius}
-                onFontChange={setSelectedFont}
-                onCustomFontChange={(file, name) => {
-                  setCustomFontFile(file);
-                  setCustomFontName(name);
-                }}
-                backgroundColor={bgColor}
-                onBackgroundColorChange={setBgColor}
-                backgroundOpacity={backgroundOpacity}
-                onBackgroundOpacityChange={setBackgroundOpacity}
-                gradientColor2={gradColor2}
-                onGradientColor2Change={setGradColor2}
-                onBackgroundImageChange={setBackgroundImage}
-                fontColor={fontColor}
-                onFontColorChange={setFontColor}
-                borderColor={borderColor}
-                onBorderColorChange={setBorderColor}
-                borderOpacity={borderOpacity}
-                onBorderOpacityChange={setBorderOpacity}
-                selectedGeneration={'gen9_scarlet_violet'}
-                onGenerationChange={() => {}}
-                selectedTypeGeneration={selectedTypeGeneration}
-                onTypeGenerationChange={setSelectedTypeGeneration}
-              />
+              <div className="customizer-content">
+                <CardCustomizer
+                  onBackgroundChange={setBackground}
+                  onBorderRadiusChange={setBorderRadius}
+                  onFontChange={setSelectedFont}
+                  onCustomFontChange={(file, name) => {
+                    setCustomFontFile(file);
+                    setCustomFontName(name);
+                  }}
+                  backgroundColor={bgColor}
+                  onBackgroundColorChange={setBgColor}
+                  backgroundOpacity={backgroundOpacity}
+                  onBackgroundOpacityChange={setBackgroundOpacity}
+                  gradientColor2={gradColor2}
+                  onGradientColor2Change={setGradColor2}
+                  onBackgroundImageChange={setBackgroundImage}
+                  fontColor={fontColor}
+                  onFontColorChange={setFontColor}
+                  borderColor={borderColor}
+                  onBorderColorChange={setBorderColor}
+                  borderOpacity={borderOpacity}
+                  onBorderOpacityChange={setBorderOpacity}
+                  selectedGeneration={'gen9_scarlet_violet'}
+                  onGenerationChange={() => {}}
+                  selectedTypeGeneration={selectedTypeGeneration}
+                  onTypeGenerationChange={setSelectedTypeGeneration}
+                />
+              </div>
               <button className="export-btn" onClick={exportTeamImage}>
                 {t('team_export') || 'Export as PNG'}
               </button>
