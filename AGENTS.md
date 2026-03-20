@@ -97,11 +97,24 @@ frontend/src/
    - **Key constraint**: Moves and abilities shown must be limited to what the selected Pokémon can actually have
    - Data source: `data/pokemon.json` + `data/pokemon_mapping.json` (restricts available moves/abilities per Pokémon)
 
-7. **Team Page (`/team`)**
-   - Assemble up to 6 Pokémon in customizable grid layouts
-   - User can choose layout (6x1, 1x6, 3x2, 2x3, etc.)
-   - Each Pokémon displays its full card (name, image, moves, ability, item)
-   - Export entire team as a single PNG or animated GIF
+7. **Team Page (`/team`)** ⭐ TEAM MANAGEMENT
+   - Assemble up to 6 Pokémon with personalized configurations
+   - Layout options: **6x1, 1x6, 2x3, 3x2** (customizable grid)
+   - Each Pokémon fully configured with:
+     - Ability (restricted to available abilities per Pokémon)
+     - Nature (optional)
+     - Item (any item available)
+     - 4 Moves (restricted to available moves per Pokémon)
+   - **Team Import** (Pokémon Showdown format):
+     - Text-based import of teams
+     - Format: `PokémonName @ Item` / `Ability:` / `Nature` / `- Move1/2/3/4`
+     - Invalid entries are gracefully skipped with error messages
+   - **Team Management**:
+     - Add/remove/reorder Pokémon by slot
+     - All Pokémon share same visual customization (background, borders, fonts)
+     - Cards adapt size based on team size and layout
+   - **Export**: Entire team grid as single PNG image
+   - Data source: `data/pokemon.json`, `data/pokemon_mapping.json`, `data/moves.json`, `data/abilities.json`, `data/items.json`, `data/natures.json`
 
 ### Customization Options (available on all cards)
 
@@ -110,19 +123,22 @@ frontend/src/
   - Solid color (user selectable)
   - Gradient (two colors, user selectable)
   - Custom image upload
+  - Can chooste opacity of it
 
 - **Borders**
   - Rounded corners (CSS border-radius)
   - Square corners
+  - Can choose opacity of it
 
 - **Font Selection**
   - Pokemon Solid (from `Assets/fonts/Pokemon Solid.ttf`)
   - Pokemon Hollow (from `Assets/fonts/Pokemon Hollow.ttf`)
   - (Additional standard fonts available)
+  - Custom font upload
 
 - **Export Options**
   - Export as PNG (static image)
-  - Export as GIF (if card contains animated sprites from Pokémon data)
+  - Export as GIF (if card contains animated sprites from Pokémon data) -- TODO
   - Download with custom filename
 
 ### Multi-Language Support
@@ -189,7 +205,7 @@ When working in this repository, focus on:
 3. ✅ Implement complex Pokémon page with move/ability filtering
 4. ✅ Implement Team page with custom grid layouts
 5. ⏳ Refine styles and UI polishing
-6. ⏳ Implement PNG export feature
+6. ✅ Implement PNG export feature
 7. ⏳ Implement GIF export feature (stretch goal)
 8. ⏳ Pre-deployment testing on GitHub Pages
 

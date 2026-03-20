@@ -37,7 +37,8 @@ const BaseFlashcard = ({
   getMoveNameInLanguage = null,
   selectedSpriteType = 'official_artwork',
   selectedSpriteVariant = 'normal',
-  selectedTypeGeneration = 'gen9_scarlet_violet'
+  selectedTypeGeneration = 'gen9_scarlet_violet',
+  hideExportButton = false
 }) => {
   const applyOpacityToColor = (color, opacity) => {
     if (!color) return color;
@@ -299,13 +300,15 @@ const BaseFlashcard = ({
           )}
         </div>
 
-        <button 
-          onClick={handleExportPNG} 
-          disabled={isExporting}
-          className="export-btn"
-        >
-          {isExporting ? 'Exporting...' : t('export_png')}
-        </button>
+        {!hideExportButton && (
+          <button 
+            onClick={handleExportPNG} 
+            disabled={isExporting}
+            className="export-btn"
+          >
+            {isExporting ? 'Exporting...' : t('export_png')}
+          </button>
+        )}
       </div>
     );
   }
@@ -398,13 +401,15 @@ const BaseFlashcard = ({
           )}
         </div>
 
-        <button 
-          onClick={handleExportPNG} 
-          disabled={isExporting}
-          className="export-btn"
-        >
-          {isExporting ? 'Exporting...' : t('export_png')}
-        </button>
+        {!hideExportButton && (
+          <button 
+            onClick={handleExportPNG} 
+            disabled={isExporting}
+            className="export-btn"
+          >
+            {isExporting ? 'Exporting...' : t('export_png')}
+          </button>
+        )}
       </div>
     );
   }
@@ -545,13 +550,15 @@ const BaseFlashcard = ({
           </div>
         </div>
 
-        <button 
-          onClick={handleExportPNG} 
-          disabled={isExporting}
-          className="export-btn"
-        >
-          {isExporting ? 'Exporting...' : t('export_png')}
-        </button>
+        {!hideExportButton && (
+          <button 
+            onClick={handleExportPNG} 
+            disabled={isExporting}
+            className="export-btn"
+          >
+            {isExporting ? 'Exporting...' : t('export_png')}
+          </button>
+        )}
       </div>
     );
   }
@@ -639,13 +646,15 @@ const BaseFlashcard = ({
         )}
       </div>
       
-      <button 
-        onClick={handleExportPNG} 
-        disabled={isExporting}
-        className="export-btn"
-      >
-        {isExporting ? 'Exporting...' : t('export_png')}
-      </button>
+      {!hideExportButton && (
+        <button 
+          onClick={handleExportPNG} 
+          disabled={isExporting}
+          className="export-btn"
+        >
+          {isExporting ? 'Exporting...' : t('export_png')}
+        </button>
+      )}
     </div>
   );
 };
