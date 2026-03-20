@@ -211,12 +211,17 @@ const Pokemon = () => {
 
     const itemSprite = selectedItem?.sprite || null;
     
+    const isNeutralNature = selectedNature && !selectedNature.increased_stat && !selectedNature.decreased_stat;
+    const natureText = selectedNature && !isNeutralNature
+      ? (selectedNature.names?.[cardLanguage] || selectedNature.names?.en)
+      : null;
+
     return {
       'name': selectedPokemon.names?.[cardLanguage] || selectedPokemon.names?.en || 'Pokemon',
       'pokemonTypes': pokemonTypes,
       'itemSprite': itemSprite,
       'ability': selectedAbility ? (selectedAbility.names?.[cardLanguage] || selectedAbility.names?.en) : 'N/A',
-      'nature': selectedNature ? (selectedNature.names?.[cardLanguage] || selectedNature.names?.en) : 'N/A',
+      'nature': natureText,
       'item': selectedItem ? (selectedItem.names?.[cardLanguage] || selectedItem.names?.en) : 'N/A',
       'moves': selectedMoves
         .filter(move => move && move.type)

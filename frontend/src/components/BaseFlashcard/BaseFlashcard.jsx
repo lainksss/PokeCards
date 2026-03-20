@@ -476,16 +476,18 @@ const BaseFlashcard = ({
                 </span>
               </div>
             </div>
-            <div className="pokemon-info-row">
-              <div className="pokemon-info-item">
-                <span className="info-label" style={{ color: fontColor }}>
-                  {cardLanguage === 'fr' ? 'NATURE' : 'NATURE'}
-                </span>
-                <span className="info-value" style={{ color: fontColor }}>
-                  {data.nature}
-                </span>
+            {data.nature && data.nature !== 'N/A' && (
+              <div className="pokemon-info-row">
+                <div className="pokemon-info-item">
+                  <span className="info-label" style={{ color: fontColor }}>
+                    {cardLanguage === 'fr' ? 'NATURE' : 'NATURE'}
+                  </span>
+                  <span className="info-value" style={{ color: fontColor }}>
+                    {data.nature}
+                  </span>
+                </div>
               </div>
-            </div>
+            )}
             <div className="pokemon-info-row">
               <div className="pokemon-info-item">
                 <span className="info-label" style={{ color: fontColor }}>

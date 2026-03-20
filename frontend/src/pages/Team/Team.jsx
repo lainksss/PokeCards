@@ -237,12 +237,17 @@ const Team = () => {
 
     const itemSprite = slotData?.item?.sprite || null;
     
+    const isNeutralNature = slotData?.nature && !slotData.nature.increased_stat && !slotData.nature.decreased_stat;
+    const natureText = slotData?.nature && !isNeutralNature
+      ? (slotData.nature.names?.[cardLanguage] || slotData.nature.names?.en)
+      : null;
+
     return {
       'name': pokemonData.names?.[cardLanguage] || pokemonData.names?.en || 'Pokemon',
       'pokemonTypes': pokemonTypes,
       'itemSprite': itemSprite,
       'ability': slotData?.ability ? (slotData.ability.names?.[cardLanguage] || slotData.ability.names?.en) : 'N/A',
-      'nature': slotData?.nature ? (slotData.nature.names?.[cardLanguage] || slotData.nature.names?.en) : 'N/A',
+      'nature': natureText,
       'item': slotData?.item ? (slotData.item.names?.[cardLanguage] || slotData.item.names?.en) : 'N/A',
       'moves': (slotData?.moves || [])
         .filter(move => move && move.type)
