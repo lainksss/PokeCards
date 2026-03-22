@@ -20,6 +20,11 @@
   margin-bottom: 0.5rem;
 }
 
+[data-theme='light'] .home-header .title {
+  color: #ff4500; /* couleur plus vive en mode clair */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.18);
+}
+
 .subtitle {
   font-size: 1.5rem;
   color: var(--color-primary);
@@ -79,8 +84,20 @@
   margin-bottom: 0.5rem;
 }
 
-.feature-card p {
+..feature-card p {
   font-size: 0.95rem;
   color: var(--text-secondary);
   line-height: 1.5;
+}
+
+.home-footer {
+  margin-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.home-footer p {
+  margin: 0.2rem 0;
 }

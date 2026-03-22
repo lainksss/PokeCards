@@ -47,6 +47,10 @@ const Home = () => {
           </Link>
         </div>
       </section>
+
+      <footer className="home-footer">
+        <p>Made with ♥ by Lainkss · @lainkss on Discord</p>
+      </footer>
     </div>
   );
 };
