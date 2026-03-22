@@ -48,6 +48,11 @@ const Home = () => {
         </div>
       </section>
 
+      <section className="home-translations-note">
+        <h3>{t('translation_note_title')}</h3>
+        <p>{t('translation_note_content')}</p>
+      </section>
+
       <footer className="home-footer">
         <p>Made with ♥ by Lainkss · @lainkss on Discord</p>
       </footer>

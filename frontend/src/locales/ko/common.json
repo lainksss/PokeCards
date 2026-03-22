@@ -1,0 +1,14 @@
+{
+  "card_power": "위력",
+  "card_accuracy": "명중",
+  "card_pp": "PP",
+  "card_description": "설명",
+  "card_type": "타입",
+  "card_name": "이름",
+  "card_nature": "성격",
+  "card_increased_stat": "상승하는 능력",
+  "card_decreased_stat": "하락하는 능력",
+  "card_ability": "특성",
+  "card_item": "지닌물건",
+  "card_moves": "기술"
+}

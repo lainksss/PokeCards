@@ -1,0 +1,14 @@
+{
+  "card_power": "Potencia",
+  "card_accuracy": "Precisión",
+  "card_pp": "PP",
+  "card_description": "Descripción",
+  "card_type": "Tipo",
+  "card_name": "Nombre",
+  "card_nature": "Naturaleza",
+  "card_increased_stat": "Sube el stat",
+  "card_decreased_stat": "Baja el stat",
+  "card_ability": "Habilidad",
+  "card_item": "Objeto",
+  "card_moves": "Movimientos"
+}

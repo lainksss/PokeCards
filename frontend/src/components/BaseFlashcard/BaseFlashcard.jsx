@@ -79,7 +79,7 @@ const BaseFlashcard = ({
 
   const borderColorWithOpacity = applyOpacityToColor(borderColor, borderOpacity);
 
-  const { t } = useLanguage();
+  const { t, getTranslationForLanguage } = useLanguage();
   const cardRef = useRef(null);
   const [isExporting, setIsExporting] = useState(false);
   const [editingField, setEditingField] = useState(null);
@@ -184,33 +184,34 @@ const BaseFlashcard = ({
   };
 
   const getTranslatedLabel = (key) => {
-    // Seulement FR et EN - tout le reste en anglais
-    if (cardLanguage === 'fr') {
-      const frTranslations = {
-        'Nom': 'Nom',
-        'Stat améliorée': 'Stat améliorée',
-        'Stat réduite': 'Stat réduite',
-        'Type': 'Type',
-        'Puissance': 'Puissance',
-        'Précision': 'Précision',
-        'PP': 'PP',
-        'Description': 'Description'
-      };
-      return frTranslations[key] || key;
-    }
-    
-    // Par défaut en anglais pour toutes les autres langues
-    const enTranslations = {
-      'Nom': 'Name',
-      'Stat améliorée': 'Increased Stat',
-      'Stat réduite': 'Decreased Stat',
-      'Type': 'Type',
-      'Puissance': 'Power',
-      'Précision': 'Accuracy',
-      'PP': 'PP',
-      'Description': 'Description'
+    const normalizedKey = key.trim();
+
+    const KEY_TRANSLATION_MAP = {
+      'Nom': 'card_name',
+      'Name': 'card_name',
+      'Stat améliorée': 'card_increased_stat',
+      'Increased Stat': 'card_increased_stat',
+      'Stat réduite': 'card_decreased_stat',
+      'Decreased Stat': 'card_decreased_stat',
+      'Type': 'card_type',
+      'Puissance': 'card_power',
+      'Power': 'card_power',
+      'Précision': 'card_accuracy',
+      'Accuracy': 'card_accuracy',
+      'Précision ': 'card_accuracy',
+      'Accuracy ': 'card_accuracy',
+      'PP': 'card_pp',
+      'Description': 'card_description',
+      'Move': 'card_moves',
+      'Ability': 'card_ability',
+      'Talent': 'card_ability',
+      'Item': 'card_item',
+      'Objet': 'card_item',
+      'Nature': 'card_nature'
     };
-    return enTranslations[key] || key;
+
+    const translationKey = KEY_TRANSLATION_MAP[normalizedKey] || normalizedKey;
+    return getTranslationForLanguage(translationKey, cardLanguage) || normalizedKey;
   };
 
   const entries = data ? Object.entries(data) : [];
@@ -469,7 +470,7 @@ const BaseFlashcard = ({
             <div className="pokemon-info-row">
               <div className="pokemon-info-item">
                 <span className="info-label" style={{ color: fontColor }}>
-                  {cardLanguage === 'fr' ? 'TALENT' : 'ABILITY'}
+                  {getTranslatedLabel('Ability')}
                 </span>
                 <span className="info-value" style={{ color: fontColor }}>
                   {data.ability}
@@ -480,7 +481,7 @@ const BaseFlashcard = ({
               <div className="pokemon-info-row">
                 <div className="pokemon-info-item">
                   <span className="info-label" style={{ color: fontColor }}>
-                    {cardLanguage === 'fr' ? 'NATURE' : 'NATURE'}
+                    {getTranslatedLabel('Nature')}
                   </span>
                   <span className="info-value" style={{ color: fontColor }}>
                     {data.nature}
@@ -491,7 +492,7 @@ const BaseFlashcard = ({
             <div className="pokemon-info-row">
               <div className="pokemon-info-item">
                 <span className="info-label" style={{ color: fontColor }}>
-                  {cardLanguage === 'fr' ? 'OBJET' : 'ITEM'}
+                  {getTranslatedLabel('Item')}
                 </span>
                 <div className="info-value-with-sprite">
                   <span className="info-value" style={{ color: fontColor }}>
@@ -526,6 +527,7 @@ const BaseFlashcard = ({
                   </div>
                   <div className="move-meta-row">
                     <div className="move-stat-box" style={{ color: fontColor }}>
+                      <div className="move-stat-label">{getTranslatedLabel('Power')}</div>
                       {move.power}
                     </div>
                     <div className="move-type" style={{ 
@@ -535,6 +537,7 @@ const BaseFlashcard = ({
                       {move.type}
                     </div>
                     <div className="move-stat-box" style={{ color: fontColor }}>
+                      <div className="move-stat-label">{getTranslatedLabel('Accuracy')}</div>
                       {move.accuracy}
                     </div>
                   </div>

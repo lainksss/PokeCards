@@ -1,0 +1,14 @@
+{
+  "card_power": "威力",
+  "card_accuracy": "命中",
+  "card_pp": "PP",
+  "card_description": "描述",
+  "card_type": "屬性",
+  "card_name": "名稱",
+  "card_nature": "性格",
+  "card_increased_stat": "提升能力",
+  "card_decreased_stat": "降低能力",
+  "card_ability": "特性",
+  "card_item": "攜帶物品",
+  "card_moves": "招式"
+}

@@ -1,12 +1,26 @@
 import React, { createContext, useState, useContext } from 'react';
 import frTranslations from '../locales/fr';
 import enTranslations from '../locales/en';
+import deTranslations from '../locales/de';
+import esTranslations from '../locales/es';
+import itTranslations from '../locales/it';
+import jaTranslations from '../locales/ja';
+import koTranslations from '../locales/ko';
+import zhHansTranslations from '../locales/zh-hans';
+import zhHantTranslations from '../locales/zh-hant';
 
 const LanguageContext = createContext();
 
 const allTranslations = {
   fr: frTranslations,
-  en: enTranslations
+  en: enTranslations,
+  de: deTranslations,
+  es: esTranslations,
+  it: itTranslations,
+  ja: jaTranslations,
+  ko: koTranslations,
+  'zh-hans': zhHansTranslations,
+  'zh-hant': zhHantTranslations
 };
 
 export const LanguageProvider = ({ children }) => {
@@ -35,12 +49,26 @@ export const LanguageProvider = ({ children }) => {
     return key;
   };
 
+  const getTranslationForLanguage = (key, lang, page = 'common') => {
+    const translations = allTranslations[lang] || allTranslations['en'];
+    
+    if (translations[page] && translations[page][key]) {
+      return translations[page][key];
+    }
+    
+    if (translations.common && translations.common[key]) {
+      return translations.common[key];
+    }
+    
+    return key;
+  };
+
   const toggleLanguage = () => {
     setLanguage((prevLang) => (prevLang === 'fr' ? 'en' : 'fr'));
   };
 
   return (
-    <LanguageContext.Provider value={{ language, toggleLanguage, t, loadPageTranslations }}>
+    <LanguageContext.Provider value={{ language, toggleLanguage, t, getTranslationForLanguage, loadPageTranslations }}>
       {children}
     </LanguageContext.Provider>
   );

@@ -1,0 +1,14 @@
+{
+  "card_power": "威力",
+  "card_accuracy": "命中",
+  "card_pp": "PP",
+  "card_description": "説明",
+  "card_type": "タイプ",
+  "card_name": "名前",
+  "card_nature": "性格",
+  "card_increased_stat": "上がりやすい能力",
+  "card_decreased_stat": "下がりやすい能力",
+  "card_ability": "特性",
+  "card_item": "持ち物",
+  "card_moves": "技"
+}

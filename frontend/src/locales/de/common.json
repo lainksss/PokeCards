@@ -1,0 +1,14 @@
+{
+  "card_power": "Stärke",
+  "card_accuracy": "Genauigkeit",
+  "card_pp": "AP",
+  "card_description": "Beschreibung",
+  "card_type": "Typ",
+  "card_name": "Name",
+  "card_nature": "Wesen",
+  "card_increased_stat": "Erhöhter Wert",
+  "card_decreased_stat": "Verringerter Wert",
+  "card_ability": "Fähigkeit",
+  "card_item": "Item",
+  "card_moves": "Attacken"
+}

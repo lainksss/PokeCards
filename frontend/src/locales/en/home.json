@@ -8,5 +8,7 @@
   "feature_item": "🎒 Items: Sprites, names, and descriptions.",
   "feature_ability": "🌟 Abilities: Names and effects of Pokémon abilities.",
   "feature_pokemon": "🐾 Pokémon: Full cards featuring models, moves, abilities, and items.",
-  "feature_team": "🛡️ Team: Assemble up to 6 Pokémon in customizable layouts."
+  "feature_team": "🛡️ Team: Assemble up to 6 Pokémon in customizable layouts.",
+  "translation_note_title": "⚠️ Translation Note",
+  "translation_note_content": "Translations for the 7 additional languages (German, Spanish, Italian, Japanese, Korean, Simplified and Traditional Chinese) were generated using Copilot and may not be accurate. If you notice any errors or inaccuracies, please report them for correction."
 }

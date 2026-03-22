@@ -8,5 +8,7 @@
   "feature_item": "🎒 Objets : Sprites, noms et descriptions des objets.",
   "feature_ability": "🌟 Talents : Nom et explication des talents Pokémon.",
   "feature_pokemon": "🐾 Pokémon : Création complète avec l'image du Pokémon, ses attaques, son talent, et ses objets.",
-  "feature_team": "🛡️ Équipe : Assemblez et alignez jusqu'à 6 Pokémon dans une disposition personnalisable."
+  "feature_team": "🛡️ Équipe : Assemblez et alignez jusqu'à 6 Pokémon dans une disposition personnalisable.",
+  "translation_note_title": "⚠️ Note sur les traductions",
+  "translation_note_content": "Les traductions pour les 7 langues supplémentaires (Allemand, Espagnol, Italien, Japonais, Coréen, Chinois simplifié et traditionnel) ont été générées à l'aide de Copilot et peuvent ne pas être précises. Si vous remarquez des erreurs ou des imprécisions, merci de les signaler pour correction."
 }
