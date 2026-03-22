@@ -13,6 +13,55 @@
   margin-bottom: 1rem;
 }
 
+/* Top bar with title and language selector */
+.top-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.top-bar .page-title {
+  margin-bottom: 0;
+}
+
+/* Language group */
+.language-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.language-group label {
+  font-weight: 600;
+  color: var(--text-primary, #1a237e);
+  font-size: 0.9rem;
+}
+
+.language-select {
+  padding: 0.7rem 1rem;
+  border: 2px solid var(--border-color, #ddd);
+  background-color: white;
+  color: var(--text-primary, #1a237e);
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+  min-width: 150px;
+}
+
+.language-select:hover {
+  border-color: var(--text-primary, #1a237e);
+}
+
+.language-select:focus {
+  outline: none;
+  border-color: var(--text-primary, #1a237e);
+  box-shadow: 0 0 0 2px rgba(26, 35, 126, 0.1);
+}
+
 .team-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;

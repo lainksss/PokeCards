@@ -532,13 +532,42 @@ const Team = () => {
     }
   }, [getActivePokemonCount()]);
 
+  const availableLanguages = [
+    { code: 'fr', label: 'lang_french' },
+    { code: 'en', label: 'lang_english' },
+    { code: 'de', label: 'lang_german' },
+    { code: 'es', label: 'lang_spanish' },
+    { code: 'it', label: 'lang_italian' },
+    { code: 'ja', label: 'lang_japanese' },
+    { code: 'ko', label: 'lang_korean' },
+    { code: 'zh-hans', label: 'lang_chinese_simp' },
+    { code: 'zh-hant', label: 'lang_chinese_trad' },
+    { code: 'ja-hrkt', label: 'lang_japanese' }
+  ];
+
   if (loading) {
     return <div className="team-container"><p>{t('loading')}</p></div>;
   }
 
   return (
     <div className="team-container">
-      <h1 className="page-title">{t('team_title') || 'Team'}</h1>
+      <div className="top-bar">
+        <h1 className="page-title">{t('team_title') || 'Team'}</h1>
+        <div className="language-group">
+          <label>{t('card_language') || 'Langue de la carte'}</label>
+          <select 
+            value={cardLanguage}
+            onChange={(e) => setCardLanguage(e.target.value)}
+            className="language-select"
+          >
+            {availableLanguages.map(lang => (
+              <option key={lang.code} value={lang.code}>
+                {t(lang.label) || lang.code}
+              </option>
+            ))}
+          </select>
+        </div>
+      </div>
 
       <div className="team-layout">
         {/* Left box: Team preview only */}
