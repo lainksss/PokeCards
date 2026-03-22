@@ -1,0 +1,511 @@
+[
+    {
+        "id": 1,
+        "name_en": "normal",
+        "names": {
+            "ja-hrkt": "ノーマル",
+            "ko": "노말",
+            "zh-hant": "一般",
+            "fr": "Normal",
+            "de": "Normal",
+            "es": "Normal",
+            "it": "Normale",
+            "en": "Normal",
+            "ja": "ノーマル",
+            "zh-hans": "一般"
+        },
+        "sprites": {
+            "gen3_emerald": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iii/emerald/1.png",
+            "gen4_platinum": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iv/platinum/1.png",
+            "gen5_black_white": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-v/black-white/1.png",
+            "gen6_xy": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vi/x-y/1.png",
+            "gen7_sun_moon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vii/sun-moon/1.png",
+            "gen8_sword_shield": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-viii/sword-shield/1.png",
+            "gen9_scarlet_violet": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-ix/scarlet-violet/1.png"
+        }
+    },
+    {
+        "id": 2,
+        "name_en": "fighting",
+        "names": {
+            "ja-hrkt": "かくとう",
+            "ko": "격투",
+            "zh-hant": "格鬥",
+            "fr": "Combat",
+            "de": "Kampf",
+            "es": "Lucha",
+            "it": "Lotta",
+            "en": "Fighting",
+            "ja": "かくとう",
+            "zh-hans": "格斗"
+        },
+        "sprites": {
+            "gen3_emerald": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iii/emerald/2.png",
+            "gen4_platinum": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iv/platinum/2.png",
+            "gen5_black_white": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-v/black-white/2.png",
+            "gen6_xy": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vi/x-y/2.png",
+            "gen7_sun_moon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vii/sun-moon/2.png",
+            "gen8_sword_shield": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-viii/sword-shield/2.png",
+            "gen9_scarlet_violet": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-ix/scarlet-violet/2.png"
+        }
+    },
+    {
+        "id": 3,
+        "name_en": "flying",
+        "names": {
+            "ja-hrkt": "ひこう",
+            "ko": "비행",
+            "zh-hant": "飛行",
+            "fr": "Vol",
+            "de": "Flug",
+            "es": "Volador",
+            "it": "Volante",
+            "en": "Flying",
+            "ja": "ひこう",
+            "zh-hans": "飞行"
+        },
+        "sprites": {
+            "gen3_emerald": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iii/emerald/3.png",
+            "gen4_platinum": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iv/platinum/3.png",
+            "gen5_black_white": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-v/black-white/3.png",
+            "gen6_xy": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vi/x-y/3.png",
+            "gen7_sun_moon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vii/sun-moon/3.png",
+            "gen8_sword_shield": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-viii/sword-shield/3.png",
+            "gen9_scarlet_violet": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-ix/scarlet-violet/3.png"
+        }
+    },
+    {
+        "id": 4,
+        "name_en": "poison",
+        "names": {
+            "ja-hrkt": "どく",
+            "ko": "독",
+            "zh-hant": "毒",
+            "fr": "Poison",
+            "de": "Gift",
+            "es": "Veneno",
+            "it": "Veleno",
+            "en": "Poison",
+            "ja": "どく",
+            "zh-hans": "毒"
+        },
+        "sprites": {
+            "gen3_emerald": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iii/emerald/4.png",
+            "gen4_platinum": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iv/platinum/4.png",
+            "gen5_black_white": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-v/black-white/4.png",
+            "gen6_xy": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vi/x-y/4.png",
+            "gen7_sun_moon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vii/sun-moon/4.png",
+            "gen8_sword_shield": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-viii/sword-shield/4.png",
+            "gen9_scarlet_violet": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-ix/scarlet-violet/4.png"
+        }
+    },
+    {
+        "id": 5,
+        "name_en": "ground",
+        "names": {
+            "ja-hrkt": "じめん",
+            "ko": "땅",
+            "zh-hant": "地面",
+            "fr": "Sol",
+            "de": "Boden",
+            "es": "Tierra",
+            "it": "Terra",
+            "en": "Ground",
+            "ja": "じめん",
+            "zh-hans": "地面"
+        },
+        "sprites": {
+            "gen3_emerald": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iii/emerald/5.png",
+            "gen4_platinum": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iv/platinum/5.png",
+            "gen5_black_white": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-v/black-white/5.png",
+            "gen6_xy": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vi/x-y/5.png",
+            "gen7_sun_moon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vii/sun-moon/5.png",
+            "gen8_sword_shield": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-viii/sword-shield/5.png",
+            "gen9_scarlet_violet": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-ix/scarlet-violet/5.png"
+        }
+    },
+    {
+        "id": 6,
+        "name_en": "rock",
+        "names": {
+            "ja-hrkt": "いわ",
+            "ko": "바위",
+            "zh-hant": "岩石",
+            "fr": "Roche",
+            "de": "Gestein",
+            "es": "Roca",
+            "it": "Roccia",
+            "en": "Rock",
+            "ja": "いわ",
+            "zh-hans": "岩石"
+        },
+        "sprites": {
+            "gen3_emerald": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iii/emerald/6.png",
+            "gen4_platinum": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iv/platinum/6.png",
+            "gen5_black_white": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-v/black-white/6.png",
+            "gen6_xy": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vi/x-y/6.png",
+            "gen7_sun_moon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vii/sun-moon/6.png",
+            "gen8_sword_shield": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-viii/sword-shield/6.png",
+            "gen9_scarlet_violet": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-ix/scarlet-violet/6.png"
+        }
+    },
+    {
+        "id": 7,
+        "name_en": "bug",
+        "names": {
+            "ja-hrkt": "むし",
+            "ko": "벌레",
+            "zh-hant": "蟲",
+            "fr": "Insecte",
+            "de": "Käfer",
+            "es": "Bicho",
+            "it": "Coleottero",
+            "en": "Bug",
+            "ja": "むし",
+            "zh-hans": "虫"
+        },
+        "sprites": {
+            "gen3_emerald": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iii/emerald/7.png",
+            "gen4_platinum": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iv/platinum/7.png",
+            "gen5_black_white": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-v/black-white/7.png",
+            "gen6_xy": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vi/x-y/7.png",
+            "gen7_sun_moon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vii/sun-moon/7.png",
+            "gen8_sword_shield": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-viii/sword-shield/7.png",
+            "gen9_scarlet_violet": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-ix/scarlet-violet/7.png"
+        }
+    },
+    {
+        "id": 8,
+        "name_en": "ghost",
+        "names": {
+            "ja-hrkt": "ゴースト",
+            "ko": "고스트",
+            "zh-hant": "幽靈",
+            "fr": "Spectre",
+            "de": "Geist",
+            "es": "Fantasma",
+            "it": "Spettro",
+            "en": "Ghost",
+            "ja": "ゴースト",
+            "zh-hans": "幽灵"
+        },
+        "sprites": {
+            "gen3_emerald": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iii/emerald/8.png",
+            "gen4_platinum": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iv/platinum/8.png",
+            "gen5_black_white": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-v/black-white/8.png",
+            "gen6_xy": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vi/x-y/8.png",
+            "gen7_sun_moon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vii/sun-moon/8.png",
+            "gen8_sword_shield": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-viii/sword-shield/8.png",
+            "gen9_scarlet_violet": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-ix/scarlet-violet/8.png"
+        }
+    },
+    {
+        "id": 9,
+        "name_en": "steel",
+        "names": {
+            "ja-hrkt": "はがね",
+            "ko": "강철",
+            "zh-hant": "鋼",
+            "fr": "Acier",
+            "de": "Stahl",
+            "es": "Acero",
+            "it": "Acciaio",
+            "en": "Steel",
+            "ja": "はがね",
+            "zh-hans": "钢"
+        },
+        "sprites": {
+            "gen3_emerald": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iii/emerald/9.png",
+            "gen4_platinum": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iv/platinum/9.png",
+            "gen5_black_white": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-v/black-white/9.png",
+            "gen6_xy": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vi/x-y/9.png",
+            "gen7_sun_moon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vii/sun-moon/9.png",
+            "gen8_sword_shield": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-viii/sword-shield/9.png",
+            "gen9_scarlet_violet": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-ix/scarlet-violet/9.png"
+        }
+    },
+    {
+        "id": 10,
+        "name_en": "fire",
+        "names": {
+            "ja-hrkt": "ほのお",
+            "ko": "불꽃",
+            "zh-hant": "火",
+            "fr": "Feu",
+            "de": "Feuer",
+            "es": "Fuego",
+            "it": "Fuoco",
+            "en": "Fire",
+            "ja": "ほのお",
+            "zh-hans": "火"
+        },
+        "sprites": {
+            "gen3_emerald": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iii/emerald/10.png",
+            "gen4_platinum": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iv/platinum/10.png",
+            "gen5_black_white": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-v/black-white/10.png",
+            "gen6_xy": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vi/x-y/10.png",
+            "gen7_sun_moon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vii/sun-moon/10.png",
+            "gen8_sword_shield": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-viii/sword-shield/10.png",
+            "gen9_scarlet_violet": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-ix/scarlet-violet/10.png"
+        }
+    },
+    {
+        "id": 11,
+        "name_en": "water",
+        "names": {
+            "ja-hrkt": "みず",
+            "ko": "물",
+            "zh-hant": "水",
+            "fr": "Eau",
+            "de": "Wasser",
+            "es": "Agua",
+            "it": "Acqua",
+            "en": "Water",
+            "ja": "みず",
+            "zh-hans": "水"
+        },
+        "sprites": {
+            "gen3_emerald": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iii/emerald/11.png",
+            "gen4_platinum": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iv/platinum/11.png",
+            "gen5_black_white": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-v/black-white/11.png",
+            "gen6_xy": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vi/x-y/11.png",
+            "gen7_sun_moon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vii/sun-moon/11.png",
+            "gen8_sword_shield": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-viii/sword-shield/11.png",
+            "gen9_scarlet_violet": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-ix/scarlet-violet/11.png"
+        }
+    },
+    {
+        "id": 12,
+        "name_en": "grass",
+        "names": {
+            "ja-hrkt": "くさ",
+            "ko": "풀",
+            "zh-hant": "草",
+            "fr": "Plante",
+            "de": "Pflanze",
+            "es": "Planta",
+            "it": "Erba",
+            "en": "Grass",
+            "ja": "くさ",
+            "zh-hans": "草"
+        },
+        "sprites": {
+            "gen3_emerald": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iii/emerald/12.png",
+            "gen4_platinum": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iv/platinum/12.png",
+            "gen5_black_white": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-v/black-white/12.png",
+            "gen6_xy": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vi/x-y/12.png",
+            "gen7_sun_moon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vii/sun-moon/12.png",
+            "gen8_sword_shield": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-viii/sword-shield/12.png",
+            "gen9_scarlet_violet": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-ix/scarlet-violet/12.png"
+        }
+    },
+    {
+        "id": 13,
+        "name_en": "electric",
+        "names": {
+            "ja-hrkt": "でんき",
+            "ko": "전기",
+            "zh-hant": "電",
+            "fr": "Électrik",
+            "de": "Elektro",
+            "es": "Eléctrico",
+            "it": "Elettro",
+            "en": "Electric",
+            "ja": "でんき",
+            "zh-hans": "电"
+        },
+        "sprites": {
+            "gen3_emerald": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iii/emerald/13.png",
+            "gen4_platinum": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iv/platinum/13.png",
+            "gen5_black_white": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-v/black-white/13.png",
+            "gen6_xy": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vi/x-y/13.png",
+            "gen7_sun_moon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vii/sun-moon/13.png",
+            "gen8_sword_shield": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-viii/sword-shield/13.png",
+            "gen9_scarlet_violet": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-ix/scarlet-violet/13.png"
+        }
+    },
+    {
+        "id": 14,
+        "name_en": "psychic",
+        "names": {
+            "ja-hrkt": "エスパー",
+            "ko": "에스퍼",
+            "zh-hant": "超能力",
+            "fr": "Psy",
+            "de": "Psycho",
+            "es": "Psíquico",
+            "it": "Psico",
+            "en": "Psychic",
+            "ja": "エスパー",
+            "zh-hans": "超能力"
+        },
+        "sprites": {
+            "gen3_emerald": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iii/emerald/14.png",
+            "gen4_platinum": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iv/platinum/14.png",
+            "gen5_black_white": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-v/black-white/14.png",
+            "gen6_xy": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vi/x-y/14.png",
+            "gen7_sun_moon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vii/sun-moon/14.png",
+            "gen8_sword_shield": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-viii/sword-shield/14.png",
+            "gen9_scarlet_violet": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-ix/scarlet-violet/14.png"
+        }
+    },
+    {
+        "id": 15,
+        "name_en": "ice",
+        "names": {
+            "ja-hrkt": "こおり",
+            "ko": "얼음",
+            "zh-hant": "冰",
+            "fr": "Glace",
+            "de": "Eis",
+            "es": "Hielo",
+            "it": "Ghiaccio",
+            "en": "Ice",
+            "ja": "こおり",
+            "zh-hans": "冰"
+        },
+        "sprites": {
+            "gen3_emerald": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iii/emerald/15.png",
+            "gen4_platinum": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iv/platinum/15.png",
+            "gen5_black_white": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-v/black-white/15.png",
+            "gen6_xy": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vi/x-y/15.png",
+            "gen7_sun_moon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vii/sun-moon/15.png",
+            "gen8_sword_shield": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-viii/sword-shield/15.png",
+            "gen9_scarlet_violet": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-ix/scarlet-violet/15.png"
+        }
+    },
+    {
+        "id": 16,
+        "name_en": "dragon",
+        "names": {
+            "ja-hrkt": "ドラゴン",
+            "ko": "드래곤",
+            "zh-hant": "龍",
+            "fr": "Dragon",
+            "de": "Drache",
+            "es": "Dragón",
+            "it": "Drago",
+            "en": "Dragon",
+            "ja": "ドラゴン",
+            "zh-hans": "龙"
+        },
+        "sprites": {
+            "gen3_emerald": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iii/emerald/16.png",
+            "gen4_platinum": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iv/platinum/16.png",
+            "gen5_black_white": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-v/black-white/16.png",
+            "gen6_xy": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vi/x-y/16.png",
+            "gen7_sun_moon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vii/sun-moon/16.png",
+            "gen8_sword_shield": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-viii/sword-shield/16.png",
+            "gen9_scarlet_violet": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-ix/scarlet-violet/16.png"
+        }
+    },
+    {
+        "id": 17,
+        "name_en": "dark",
+        "names": {
+            "ja-hrkt": "あく",
+            "ko": "악",
+            "zh-hant": "惡",
+            "fr": "Ténèbres",
+            "de": "Unlicht",
+            "es": "Siniestro",
+            "it": "Buio",
+            "en": "Dark",
+            "ja": "あく",
+            "zh-hans": "恶"
+        },
+        "sprites": {
+            "gen3_emerald": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iii/emerald/17.png",
+            "gen4_platinum": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iv/platinum/17.png",
+            "gen5_black_white": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-v/black-white/17.png",
+            "gen6_xy": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vi/x-y/17.png",
+            "gen7_sun_moon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vii/sun-moon/17.png",
+            "gen8_sword_shield": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-viii/sword-shield/17.png",
+            "gen9_scarlet_violet": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-ix/scarlet-violet/17.png"
+        }
+    },
+    {
+        "id": 18,
+        "name_en": "fairy",
+        "names": {
+            "ja-hrkt": "フェアリー",
+            "ko": "페어리",
+            "zh-hant": "妖精",
+            "fr": "Fée",
+            "de": "Fee",
+            "es": "Hada",
+            "it": "Folletto",
+            "en": "Fairy",
+            "ja": "フェアリー",
+            "zh-hans": "妖精"
+        },
+        "sprites": {
+            "gen3_emerald": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iii/emerald/18.png",
+            "gen4_platinum": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iv/platinum/18.png",
+            "gen5_black_white": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-v/black-white/18.png",
+            "gen6_xy": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vi/x-y/18.png",
+            "gen7_sun_moon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vii/sun-moon/18.png",
+            "gen8_sword_shield": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-viii/sword-shield/18.png",
+            "gen9_scarlet_violet": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-ix/scarlet-violet/18.png"
+        }
+    },
+    {
+        "id": 19,
+        "name_en": "stellar",
+        "names": {
+            "ja-hrkt": "ステラ",
+            "ja-roma": " Stella",
+            "ko": " 스텔라",
+            "zh-hant": "星晶",
+            "fr": "Stellaire",
+            "de": "Stellar",
+            "es": "Astral",
+            "it": "Astrale",
+            "en": "Stellar",
+            "ja": "ステラ",
+            "zh-hans": "星晶"
+        },
+        "sprites": {
+            "gen3_emerald": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iii/emerald/19.png",
+            "gen4_platinum": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iv/platinum/19.png",
+            "gen5_black_white": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-v/black-white/19.png",
+            "gen6_xy": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vi/x-y/19.png",
+            "gen7_sun_moon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-vii/sun-moon/19.png",
+            "gen8_sword_shield": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-viii/sword-shield/19.png",
+            "gen9_scarlet_violet": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-ix/scarlet-violet/19.png"
+        }
+    },
+    {
+        "id": 10001,
+        "name_en": "unknown",
+        "names": {
+            "ja-hrkt": "？？？",
+            "ko": "???",
+            "zh-hant": "???",
+            "fr": "???",
+            "de": "???",
+            "es": "???",
+            "it": "???",
+            "en": "???",
+            "ja": "？？？",
+            "zh-hans": "???"
+        },
+        "sprites": null
+    },
+    {
+        "id": 10002,
+        "name_en": "shadow",
+        "names": {
+            "ja-hrkt": "ダーク",
+            "ko": "다크",
+            "zh-hant": "暗",
+            "fr": "Obscur",
+            "de": "Crypto",
+            "it": "Ombra",
+            "en": "Shadow",
+            "ja": "ダーク",
+            "zh-hans": "暗"
+        },
+        "sprites": null
+    }
+]

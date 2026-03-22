@@ -1,0 +1,427 @@
+[
+    {
+        "id": 1,
+        "names": {
+            "ja-hrkt": "がんばりや",
+            "ko": "노력",
+            "zh-hant": "勤奮",
+            "fr": "Hardi",
+            "de": "Robust",
+            "es": "Fuerte",
+            "it": "Ardita",
+            "en": "Hardy",
+            "ja": "がんばりや",
+            "zh-hans": "勤奋"
+        },
+        "increased_stat": null,
+        "decreased_stat": null
+    },
+    {
+        "id": 2,
+        "names": {
+            "ja-hrkt": "ずぶとい",
+            "ko": "대담",
+            "zh-hant": "大膽",
+            "fr": "Assuré",
+            "de": "Kühn",
+            "es": "Osada",
+            "it": "Sicura",
+            "en": "Bold",
+            "ja": "ずぶとい",
+            "zh-hans": "大胆"
+        },
+        "increased_stat": "defense",
+        "decreased_stat": "attack"
+    },
+    {
+        "id": 3,
+        "names": {
+            "ja-hrkt": "ひかえめ",
+            "ko": "조심",
+            "zh-hant": "內斂",
+            "fr": "Modeste",
+            "de": "Mäßig",
+            "es": "Modesta",
+            "it": "Modesta",
+            "en": "Modest",
+            "ja": "ひかえめ",
+            "zh-hans": "内敛"
+        },
+        "increased_stat": "special-attack",
+        "decreased_stat": "attack"
+    },
+    {
+        "id": 4,
+        "names": {
+            "ja-hrkt": "おだやか",
+            "ko": "차분",
+            "zh-hant": "溫和",
+            "fr": "Calme",
+            "de": "Still",
+            "es": "Serena",
+            "it": "Calma",
+            "en": "Calm",
+            "ja": "おだやか",
+            "zh-hans": "温和"
+        },
+        "increased_stat": "special-defense",
+        "decreased_stat": "attack"
+    },
+    {
+        "id": 5,
+        "names": {
+            "ja-hrkt": "おくびょう",
+            "ko": "겁쟁이",
+            "zh-hant": "膽小",
+            "fr": "Timide",
+            "de": "Scheu",
+            "es": "Miedosa",
+            "it": "Timida",
+            "en": "Timid",
+            "ja": "おくびょう",
+            "zh-hans": "胆小"
+        },
+        "increased_stat": "speed",
+        "decreased_stat": "attack"
+    },
+    {
+        "id": 6,
+        "names": {
+            "ja-hrkt": "さみしがり",
+            "ko": "외로움",
+            "zh-hant": "怕寂寞",
+            "fr": "Solo",
+            "de": "Solo",
+            "es": "Huraña",
+            "it": "Schiva",
+            "en": "Lonely",
+            "ja": "さみしがり",
+            "zh-hans": "怕寂寞"
+        },
+        "increased_stat": "attack",
+        "decreased_stat": "defense"
+    },
+    {
+        "id": 7,
+        "names": {
+            "ja-hrkt": "すなお",
+            "ko": "온순",
+            "zh-hant": "坦率",
+            "fr": "Docile",
+            "de": "Sanft",
+            "es": "Dócil",
+            "it": "Docile",
+            "en": "Docile",
+            "ja": "すなお",
+            "zh-hans": "坦率"
+        },
+        "increased_stat": null,
+        "decreased_stat": null
+    },
+    {
+        "id": 8,
+        "names": {
+            "ja-hrkt": "おっとり",
+            "ko": "의젓",
+            "zh-hant": "慢吞吞",
+            "fr": "Doux",
+            "de": "Mild",
+            "es": "Afable",
+            "it": "Mite",
+            "en": "Mild",
+            "ja": "おっとり",
+            "zh-hans": "慢吞吞"
+        },
+        "increased_stat": "special-attack",
+        "decreased_stat": "defense"
+    },
+    {
+        "id": 9,
+        "names": {
+            "ja-hrkt": "おとなしい",
+            "ko": "얌전",
+            "zh-hant": "溫順",
+            "fr": "Gentil",
+            "de": "Zart",
+            "es": "Amable",
+            "it": "Gentile",
+            "en": "Gentle",
+            "ja": "おとなしい",
+            "zh-hans": "温顺"
+        },
+        "increased_stat": "special-defense",
+        "decreased_stat": "defense"
+    },
+    {
+        "id": 10,
+        "names": {
+            "ja-hrkt": "せっかち",
+            "ko": "성급",
+            "zh-hant": "急躁",
+            "fr": "Pressé",
+            "de": "Hastig",
+            "es": "Activa",
+            "it": "Lesta",
+            "en": "Hasty",
+            "ja": "せっかち",
+            "zh-hans": "急躁"
+        },
+        "increased_stat": "speed",
+        "decreased_stat": "defense"
+    },
+    {
+        "id": 11,
+        "names": {
+            "ja-hrkt": "いじっぱり",
+            "ko": "고집",
+            "zh-hant": "固執",
+            "fr": "Rigide",
+            "de": "Hart",
+            "es": "Firme",
+            "it": "Decisa",
+            "en": "Adamant",
+            "ja": "いじっぱり",
+            "zh-hans": "固执"
+        },
+        "increased_stat": "attack",
+        "decreased_stat": "special-attack"
+    },
+    {
+        "id": 12,
+        "names": {
+            "ja-hrkt": "わんぱく",
+            "ko": "장난꾸러기",
+            "zh-hant": "淘氣",
+            "fr": "Malin",
+            "de": "Pfiffig",
+            "es": "Agitada",
+            "it": "Scaltra",
+            "en": "Impish",
+            "ja": "わんぱく",
+            "zh-hans": "淘气"
+        },
+        "increased_stat": "defense",
+        "decreased_stat": "special-attack"
+    },
+    {
+        "id": 13,
+        "names": {
+            "ja-hrkt": "てれや",
+            "ko": "수줍음",
+            "zh-hant": "害羞",
+            "fr": "Pudique",
+            "de": "Zaghaft",
+            "es": "Tímida",
+            "it": "Ritrosa",
+            "en": "Bashful",
+            "ja": "てれや",
+            "zh-hans": "害羞"
+        },
+        "increased_stat": null,
+        "decreased_stat": null
+    },
+    {
+        "id": 14,
+        "names": {
+            "ja-hrkt": "しんちょう",
+            "ko": "신중",
+            "zh-hant": "慎重",
+            "fr": "Prudent",
+            "de": "Sacht",
+            "es": "Cauta",
+            "it": "Cauta",
+            "en": "Careful",
+            "ja": "しんちょう",
+            "zh-hans": "慎重"
+        },
+        "increased_stat": "special-defense",
+        "decreased_stat": "special-attack"
+    },
+    {
+        "id": 15,
+        "names": {
+            "ja-hrkt": "うっかりや",
+            "ko": "덜렁",
+            "zh-hant": "馬虎",
+            "fr": "Foufou",
+            "de": "Hitzig",
+            "es": "Alocada",
+            "it": "Ardente",
+            "en": "Rash",
+            "ja": "うっかりや",
+            "zh-hans": "马虎"
+        },
+        "increased_stat": "special-attack",
+        "decreased_stat": "special-defense"
+    },
+    {
+        "id": 16,
+        "names": {
+            "ja-hrkt": "ようき",
+            "ko": "명랑",
+            "zh-hant": "爽朗",
+            "fr": "Jovial",
+            "de": "Froh",
+            "es": "Alegre",
+            "it": "Allegra",
+            "en": "Jolly",
+            "ja": "ようき",
+            "zh-hans": "爽朗"
+        },
+        "increased_stat": "speed",
+        "decreased_stat": "special-attack"
+    },
+    {
+        "id": 17,
+        "names": {
+            "ja-hrkt": "やんちゃ",
+            "ko": "개구쟁이",
+            "zh-hant": "頑皮",
+            "fr": "Mauvais",
+            "de": "Frech",
+            "es": "Pícara",
+            "it": "Birbona",
+            "en": "Naughty",
+            "ja": "やんちゃ",
+            "zh-hans": "顽皮"
+        },
+        "increased_stat": "attack",
+        "decreased_stat": "special-defense"
+    },
+    {
+        "id": 18,
+        "names": {
+            "ja-hrkt": "のうてんき",
+            "ko": "촐랑",
+            "zh-hant": "樂天",
+            "fr": "Lâche",
+            "de": "Lasch",
+            "es": "Floja",
+            "it": "Fiacca",
+            "en": "Lax",
+            "ja": "のうてんき",
+            "zh-hans": "乐天"
+        },
+        "increased_stat": "defense",
+        "decreased_stat": "special-defense"
+    },
+    {
+        "id": 19,
+        "names": {
+            "ja-hrkt": "きまぐれ",
+            "ko": "변덕",
+            "zh-hant": "浮躁",
+            "fr": "Bizarre",
+            "de": "Kauzig",
+            "es": "Rara",
+            "it": "Furba",
+            "en": "Quirky",
+            "ja": "きまぐれ",
+            "zh-hans": "浮躁"
+        },
+        "increased_stat": null,
+        "decreased_stat": null
+    },
+    {
+        "id": 20,
+        "names": {
+            "ja-hrkt": "むじゃき",
+            "ko": "천진난만",
+            "zh-hant": "天真",
+            "fr": "Naïf",
+            "de": "Naiv",
+            "es": "Ingenua",
+            "it": "Ingenua",
+            "en": "Naive",
+            "ja": "むじゃき",
+            "zh-hans": "天真"
+        },
+        "increased_stat": "speed",
+        "decreased_stat": "special-defense"
+    },
+    {
+        "id": 21,
+        "names": {
+            "ja-hrkt": "ゆうかん",
+            "ko": "용감",
+            "zh-hant": "勇敢",
+            "fr": "Brave",
+            "de": "Mutig",
+            "es": "Audaz",
+            "it": "Audace",
+            "en": "Brave",
+            "ja": "ゆうかん",
+            "zh-hans": "勇敢"
+        },
+        "increased_stat": "attack",
+        "decreased_stat": "speed"
+    },
+    {
+        "id": 22,
+        "names": {
+            "ja-hrkt": "のんき",
+            "ko": "무사태평",
+            "zh-hant": "悠閒",
+            "fr": "Relax",
+            "de": "Locker",
+            "es": "Plácida",
+            "it": "Placida",
+            "en": "Relaxed",
+            "ja": "のんき",
+            "zh-hans": "悠闲"
+        },
+        "increased_stat": "defense",
+        "decreased_stat": "speed"
+    },
+    {
+        "id": 23,
+        "names": {
+            "ja-hrkt": "れいせい",
+            "ko": "냉정",
+            "zh-hant": "冷靜",
+            "fr": "Discret",
+            "de": "Ruhig",
+            "es": "Mansa",
+            "it": "Quieta",
+            "en": "Quiet",
+            "ja": "れいせい",
+            "zh-hans": "冷静"
+        },
+        "increased_stat": "special-attack",
+        "decreased_stat": "speed"
+    },
+    {
+        "id": 24,
+        "names": {
+            "ja-hrkt": "なまいき",
+            "ko": "건방",
+            "zh-hant": "自大",
+            "fr": "Malpoli",
+            "de": "Forsch",
+            "es": "Grosera",
+            "it": "Vivace",
+            "en": "Sassy",
+            "ja": "なまいき",
+            "zh-hans": "自大"
+        },
+        "increased_stat": "special-defense",
+        "decreased_stat": "speed"
+    },
+    {
+        "id": 25,
+        "names": {
+            "ja-hrkt": "まじめ",
+            "ko": "성실",
+            "zh-hant": "認真",
+            "fr": "Sérieux",
+            "de": "Ernst",
+            "es": "Seria",
+            "it": "Seria",
+            "en": "Serious",
+            "ja": "まじめ",
+            "zh-hans": "认真"
+        },
+        "increased_stat": null,
+        "decreased_stat": null
+    }
+]
