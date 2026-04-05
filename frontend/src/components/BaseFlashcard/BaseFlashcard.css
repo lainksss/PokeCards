@@ -818,6 +818,10 @@
   line-height: 1.2;
 }
 
+.move-stat-label {
+  display: none;
+}
+
 .move-type {
   padding: 0.35rem 0.6rem;
   font-size: 0.75rem;
