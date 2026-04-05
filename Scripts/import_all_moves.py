@@ -2,22 +2,32 @@ import requests
 import json
 import os
 import time
+from import_utils import build_retry_session, get_json, load_checkpoint, save_checkpoint, clear_checkpoint
+
+
+BASE_URL = 'https://pokeapi.co/api/v2'
+CHECKPOINT_PATH = 'Scripts/checkpoints/moves.checkpoint.json'
+OUTPUT_PATH = 'frontend/public/data/moves.json'
 
 def fetch_all_moves():
     os.makedirs('data', exist_ok=True)
+    session = build_retry_session('pokemon-moves-script/2.0')
     print("Fetching the exact number of moves...")
-    
+
     # Get the total count dynamically to avoid hardcoded limits
-    initial_request = requests.get('https://pokeapi.co/api/v2/move').json()
+    initial_request = get_json(session, f'{BASE_URL}/move')
     total_count = initial_request['count']
     print(f"Found {total_count} moves. Starting data collection...")
-    
-    response = requests.get(f'https://pokeapi.co/api/v2/move?limit={total_count}').json()
-    moves_data = []
 
-    for item in response['results']:
+    response = get_json(session, f'{BASE_URL}/move?limit={total_count}')
+    start_index, moves_data = load_checkpoint(CHECKPOINT_PATH, [])
+
+    for index, item in enumerate(response['results']):
+        if index < start_index:
+            continue
+
         move_url = item['url']
-        move_info = requests.get(move_url).json()
+        move_info = get_json(session, move_url)
         
         # Extracting multilingual names
         names = {n['language']['name']: n['name'] for n in move_info['names']}
@@ -44,12 +54,18 @@ def fetch_all_moves():
         }
         moves_data.append(move_dict)
         print(f"Fetched move: {item['name']}")
+
+        save_checkpoint(CHECKPOINT_PATH, index + 1, moves_data)
         
         time.sleep(0.05)
 
-    with open('frontend/public/data/moves.json', 'w', encoding='utf-8') as f:
+    with open(OUTPUT_PATH, 'w', encoding='utf-8') as f:
         json.dump(moves_data, f, ensure_ascii=False, indent=4)
-    print("✅ All moves saved in frontend/public/data/moves.json")
+    clear_checkpoint(CHECKPOINT_PATH)
+    print(f"✅ All moves saved in {OUTPUT_PATH}")
 
 if __name__ == "__main__":
-    fetch_all_moves()
+    try:
+        fetch_all_moves()
+    except KeyboardInterrupt:
+        print("\n[INFO] Interrupted by user. Progress kept in checkpoint.")

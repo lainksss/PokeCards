@@ -3,27 +3,31 @@ import time
 import json
 import os
 from pathlib import Path
+from import_utils import build_retry_session, get_json, load_checkpoint, save_checkpoint, clear_checkpoint
 
 BASE = "https://pokeapi.co/api/v2"
-SESSION = requests.Session()
-SESSION.headers.update({"User-Agent": "pokemon-types-script/1.2"})
+SESSION = build_retry_session("pokemon-types-script/2.0")
+CHECKPOINT_PATH = "Scripts/checkpoints/types.checkpoint.json"
 
 def fetch_all_types(save_to="frontend/public/data/types.json"):
     Path("data").mkdir(exist_ok=True)
     print("Fetching the exact number of types...")
     
-    initial_request = SESSION.get(f'{BASE}/type').json()
+    initial_request = get_json(SESSION, f'{BASE}/type')
     total_count = initial_request['count']
     print(f"Found {total_count} types. Starting data collection...")
     
-    response = SESSION.get(f'{BASE}/type?limit={total_count}').json()
-    types_data = []
+    response = get_json(SESSION, f'{BASE}/type?limit={total_count}')
+    start_index, types_data = load_checkpoint(CHECKPOINT_PATH, [])
 
-    for item in response['results']:
+    for index, item in enumerate(response['results']):
+        if index < start_index:
+            continue
+
         type_url = item['url']
         
         try:
-            type_info = SESSION.get(type_url).json()
+            type_info = get_json(SESSION, type_url)
             
             # Extracting multilingual names
             names = {n['language']['name']: n['name'] for n in type_info.get('names', [])}
@@ -52,6 +56,7 @@ def fetch_all_types(save_to="frontend/public/data/types.json"):
             }
             types_data.append(type_dict)
             print(f"Fetched type: {item['name']}")
+            save_checkpoint(CHECKPOINT_PATH, index + 1, types_data)
             
         except Exception as e:
             print(f"Error fetching type {item['name']}: {e}")
@@ -60,7 +65,11 @@ def fetch_all_types(save_to="frontend/public/data/types.json"):
 
     with open(save_to, "w", encoding="utf-8") as f:
         json.dump(types_data, f, indent=4, ensure_ascii=False)
+    clear_checkpoint(CHECKPOINT_PATH)
     print(f"✅ All types saved in {save_to}")
 
 if __name__ == "__main__":
-    fetch_all_types()
+    try:
+        fetch_all_types()
+    except KeyboardInterrupt:
+        print("\n[INFO] Interrupted by user. Progress kept in checkpoint.")

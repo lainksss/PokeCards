@@ -2,22 +2,24 @@ import requests
 import time
 import json
 from pathlib import Path
+from import_utils import build_retry_session, get_json, load_checkpoint, save_checkpoint, clear_checkpoint
 
 BASE = "https://pokeapi.co/api/v2"
-SESSION = requests.Session()
-SESSION.headers.update({"User-Agent": "pokemon-items-filtered-script/1.3"})
+SESSION = build_retry_session("pokemon-items-filtered-script/2.0")
+CHECKPOINT_PATH = "Scripts/checkpoints/items.checkpoint.json"
 
 def fetch_filtered_items(save_to="frontend/public/data/items.json"):
     Path("data").mkdir(exist_ok=True)
     print("Fetching the exact number of items...")
     
-    initial_request = SESSION.get(f'{BASE}/item').json()
+    initial_request = get_json(SESSION, f'{BASE}/item')
     total_count = initial_request['count']
     print(f"Found {total_count} total items. Starting data collection and filtering...\n")
     
-    response = SESSION.get(f'{BASE}/item?limit={total_count}').json()
-    items_data = []
-    skipped_count = 0
+    response = get_json(SESSION, f'{BASE}/item?limit={total_count}')
+    start_index, checkpoint_data = load_checkpoint(CHECKPOINT_PATH, {"items_data": [], "skipped_count": 0})
+    items_data = checkpoint_data.get("items_data", [])
+    skipped_count = checkpoint_data.get("skipped_count", 0)
 
     # Categories that are 100% used for holding items in battle
     safe_categories = [
@@ -25,12 +27,15 @@ def fetch_filtered_items(save_to="frontend/public/data/items.json"):
         'held-items', 'choice', 'type-enhancement', 'scarf', 'jewels', 'training', 'healing'
     ]
 
-    for item in response['results']:
+    for index, item in enumerate(response['results']):
+        if index < start_index:
+            continue
+
         item_name = item['name']
         item_url = item['url']
         
         try:
-            item_info = SESSION.get(item_url).json()
+            item_info = get_json(SESSION, item_url)
             
             # Extract attributes and category
             attributes = [a['name'] for a in item_info.get('attributes', [])]
@@ -43,6 +48,11 @@ def fetch_filtered_items(save_to="frontend/public/data/items.json"):
             if not is_holdable_attr and not is_safe_category:
                 skipped_count += 1
                 print(f"[-] Skipped: {item_name} (Category: {category})")
+                save_checkpoint(
+                    CHECKPOINT_PATH,
+                    index + 1,
+                    {"items_data": items_data, "skipped_count": skipped_count},
+                )
                 time.sleep(0.05)
                 continue
             
@@ -67,6 +77,11 @@ def fetch_filtered_items(save_to="frontend/public/data/items.json"):
                 "category": category
             }
             items_data.append(item_dict)
+            save_checkpoint(
+                CHECKPOINT_PATH,
+                index + 1,
+                {"items_data": items_data, "skipped_count": skipped_count},
+            )
             
         except Exception as e:
             print(f"[WARN] Error fetching item {item_name}: {e}")
@@ -75,9 +90,13 @@ def fetch_filtered_items(save_to="frontend/public/data/items.json"):
 
     with open(save_to, "w", encoding="utf-8") as f:
         json.dump(items_data, f, indent=4, ensure_ascii=False)
+    clear_checkpoint(CHECKPOINT_PATH)
         
     print(f"\n✅ Filtered items saved in {save_to}")
     print(f"📊 Final Stats: Kept {len(items_data)} usable items, Skipped {skipped_count} useless items.")
 
 if __name__ == "__main__":
-    fetch_filtered_items()
+    try:
+        fetch_filtered_items()
+    except KeyboardInterrupt:
+        print("\n[INFO] Interrupted by user. Progress kept in checkpoint.")

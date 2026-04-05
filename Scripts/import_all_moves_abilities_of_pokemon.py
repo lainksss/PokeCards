@@ -16,11 +16,12 @@ import requests
 import time
 import json
 from pathlib import Path
+from import_utils import build_retry_session, get_json, load_checkpoint, save_checkpoint, clear_checkpoint
 
 BASE = "https://pokeapi.co/api/v2"
 POKEMON_ENDPOINT = f"{BASE}/pokemon?limit=100&offset=0"
-SESSION = requests.Session()
-SESSION.headers.update({"User-Agent": "pokemon-mapping-script/1.0"})
+SESSION = build_retry_session("pokemon-mapping-script/2.0")
+CHECKPOINT_PATH = "Scripts/checkpoints/pokemon_mapping.checkpoint.json"
 
 
 def fetch_all_pokemon_urls():
@@ -28,9 +29,7 @@ def fetch_all_pokemon_urls():
     url = POKEMON_ENDPOINT
     urls = []
     while url:
-        r = SESSION.get(url, timeout=15)
-        r.raise_for_status()
-        data = r.json()
+        data = get_json(SESSION, url)
         urls.extend([p["url"] for p in data["results"]])
         url = data.get("next")
         time.sleep(0.1)
@@ -39,9 +38,7 @@ def fetch_all_pokemon_urls():
 
 def fetch_pokemon_data(pokemon_url):
     """Fetch both abilities and moves for a single Pokémon by its API URL."""
-    r = SESSION.get(pokemon_url, timeout=15)
-    r.raise_for_status()
-    data = r.json()
+    data = get_json(SESSION, pokemon_url)
     
     abilities = [a["ability"]["name"] for a in data["abilities"]]
     moves = [m["move"]["name"] for m in data["moves"]]
@@ -59,7 +56,12 @@ def build_pokemon_mapping(save_to="frontend/public/data/pokemon_mapping.json"):
     print(f"Found {len(urls)} Pokémon forms. Fetching abilities and moves...")
 
     all_mapping = {}
+    start_index, all_mapping = load_checkpoint(CHECKPOINT_PATH, {})
     for i, url in enumerate(urls, start=1):
+        index = i - 1
+        if index < start_index:
+            continue
+
         # Extract the ID or Name from the URL (e.g., "1" or "bulbasaur")
         pokemon_identifier = url.split("/")[-2] 
         
@@ -71,6 +73,7 @@ def build_pokemon_mapping(save_to="frontend/public/data/pokemon_mapping.json"):
             pokemon_data = fetch_pokemon_data(url)
             
         all_mapping[pokemon_identifier] = pokemon_data
+        save_checkpoint(CHECKPOINT_PATH, index + 1, all_mapping)
         
         if i % 50 == 0:
             print(f"  -> Processed {i}/{len(urls)} Pokémon")
@@ -79,8 +82,12 @@ def build_pokemon_mapping(save_to="frontend/public/data/pokemon_mapping.json"):
 
     with open(save_to, "w", encoding="utf-8") as f:
         json.dump(all_mapping, f, indent=2, ensure_ascii=False)
+    clear_checkpoint(CHECKPOINT_PATH)
     print(f"✅ Saved all Pokémon mappings to {save_to}")
 
 
 if __name__ == "__main__":
-    build_pokemon_mapping()
+    try:
+        build_pokemon_mapping()
+    except KeyboardInterrupt:
+        print("\n[INFO] Interrupted by user. Progress kept in checkpoint.")

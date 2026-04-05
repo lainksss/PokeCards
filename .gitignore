@@ -1,5 +1,8 @@
 # Python importations
 .venv/
+*pycache*
+__pycache__/
+
 
 # Logs
 logs
