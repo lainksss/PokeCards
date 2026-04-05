@@ -330,12 +330,18 @@ const Team = () => {
     for (let i = 0; i < teamEntries.length && i < 6; i++) {
       const entry = teamEntries[i];
 
+      // Remove gender suffix from Showdown format (e.g., "Basculegion (M)" -> "Basculegion")
+      let pokemonSearchName = entry.pokemonName.replace(/\s*\([MF]\)\s*$/i, '').trim();
+
       // Find Pokemon by name
       const pokemon = pokemons.find(p => {
-        const name = p.names?.en || p.name_en || '';
+        const name = p.names?.en || '';
         const nameFr = p.names?.fr || '';
-        return name.toLowerCase() === entry.pokemonName.toLowerCase() || 
-               nameFr.toLowerCase() === entry.pokemonName.toLowerCase();
+        const nameEn = p.name_en || '';
+        const searchLower = pokemonSearchName.toLowerCase();
+        return name.toLowerCase() === searchLower || 
+               nameFr.toLowerCase() === searchLower ||
+               nameEn.toLowerCase() === searchLower;
       });
 
       if (!pokemon) {
