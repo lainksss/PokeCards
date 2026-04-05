@@ -351,17 +351,13 @@ const Team = () => {
 
       newTeamPokemon[i] = pokemon;
 
-      // Find Ability
+      // Find Ability (do not restrict by pokemon_mapping during import)
       let ability = null;
       if (entry.abilityName) {
-        const pokemonMapData = pokemonMapping[String(pokemon.id)];
-        if (pokemonMapData?.abilities) {
-          const abilitySlugs = new Set(pokemonMapData.abilities);
-          ability = allAbilities.find(a => {
-            const aName = a.names?.en || '';
-            return aName.toLowerCase() === entry.abilityName.toLowerCase() && abilitySlugs.has(getAbilitySlug(a));
-          });
-        }
+        ability = allAbilities.find(a => {
+          const aName = a.names?.en || '';
+          return aName.toLowerCase() === entry.abilityName.toLowerCase();
+        });
       }
 
       // Find Item
@@ -382,20 +378,16 @@ const Team = () => {
         });
       }
 
-      // Find Moves
+      // Find Moves (do not restrict by pokemon_mapping during import)
       const moves = [null, null, null, null];
-      const pokemonMapData = pokemonMapping[String(pokemon.id)];
-      if (pokemonMapData?.moves) {
-        const moveSlugs = new Set(pokemonMapData.moves);
-        for (let j = 0; j < entry.moves.length && j < 4; j++) {
-          const moveName = entry.moves[j];
-          const move = allMoves.find(m => {
-            const mName = m.names?.en || '';
-            return mName.toLowerCase() === moveName.toLowerCase() && moveSlugs.has(getMoveSlug(m));
-          });
-          if (move) {
-            moves[j] = move;
-          }
+      for (let j = 0; j < entry.moves.length && j < 4; j++) {
+        const moveName = entry.moves[j];
+        const move = allMoves.find(m => {
+          const mName = m.names?.en || '';
+          return mName.toLowerCase() === moveName.toLowerCase();
+        });
+        if (move) {
+          moves[j] = move;
         }
       }
 
