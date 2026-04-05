@@ -21,6 +21,7 @@
   "customizer_border_color": "Couleur des bordures",
   "customizer_type_sprite_generation": "Génération du sprite de type",
   "team_cards_style": "Style des cartes",
+  "team_show_nature": "Afficher la nature",
   "team_outer_box_style": "Style de la bordure extérieure"
 }
 

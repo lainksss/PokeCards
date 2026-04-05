@@ -45,6 +45,7 @@ const Team = () => {
   const [selectedSpriteType, setSelectedSpriteType] = useState('official_artwork');
   const [selectedSpriteVariant, setSelectedSpriteVariant] = useState('normal');
   const [selectedTypeGeneration, setSelectedTypeGeneration] = useState('gen9_scarlet_violet');
+  const [showNature, setShowNature] = useState(true);
   
   // Outer Box Customization states
   const [outerBackground, setOuterBackground] = useState('transparent');
@@ -247,7 +248,7 @@ const Team = () => {
       'pokemonTypes': pokemonTypes,
       'itemSprite': itemSprite,
       'ability': slotData?.ability ? (slotData.ability.names?.[cardLanguage] || slotData.ability.names?.en) : 'N/A',
-      'nature': natureText,
+      'nature': showNature ? natureText : null,
       'item': slotData?.item ? (slotData.item.names?.[cardLanguage] || slotData.item.names?.en) : 'N/A',
       'moves': (slotData?.moves || [])
         .filter(move => move && move.type)
@@ -800,6 +801,15 @@ const Team = () => {
               <div className="customizer-content">
                 <div className="customizer-section-title">
                   <h4>{t('team_cards_style') || 'Cards Style'}</h4>
+                </div>
+                <div className="team-toggle-option">
+                  <label htmlFor="team-show-nature-toggle">{t('team_show_nature') || 'Afficher la nature'}</label>
+                  <input
+                    id="team-show-nature-toggle"
+                    type="checkbox"
+                    checked={showNature}
+                    onChange={(e) => setShowNature(e.target.checked)}
+                  />
                 </div>
                 <CardCustomizer
                   onBackgroundChange={setBackground}
