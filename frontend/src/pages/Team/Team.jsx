@@ -4,7 +4,7 @@ import BaseFlashcard from '../../components/BaseFlashcard/BaseFlashcard';
 import CardCustomizer from '../../components/CardCustomizer/CardCustomizer';
 import SearchableSelector from '../../components/SearchableSelector/SearchableSelector';
 import { getTypeColor } from '../../utils/typeColors';
-import { toPng } from 'html-to-image';
+import html2canvas from 'html2canvas';
 import './Team.css';
 
 const Team = () => {
@@ -20,7 +20,6 @@ const Team = () => {
   const [types, setTypes] = useState([]);
   const [pokemonMapping, setPokemonMapping] = useState({});
   
-  // Pokemon per slot states: each slot has its own ability, nature, item, moves
   const [teamData, setTeamData] = useState(Array(6).fill(null).map(() => ({
     ability: null,
     nature: null,
@@ -28,7 +27,6 @@ const Team = () => {
     moves: [null, null, null, null]
   })));
 
-  // Customization states (shared for all team)
   const [background, setBackground] = useState('transparent');
   const [bgColor, setBgColor] = useState('#ffffff');
   const [gradColor2, setGradColor2] = useState('#3b4cca');
@@ -46,8 +44,8 @@ const Team = () => {
   const [selectedSpriteVariant, setSelectedSpriteVariant] = useState('normal');
   const [selectedTypeGeneration, setSelectedTypeGeneration] = useState('gen9_scarlet_violet');
   const [showNature, setShowNature] = useState(true);
+  const [isExporting, setIsExporting] = useState(false);
   
-  // Outer Box Customization states
   const [outerBackground, setOuterBackground] = useState('transparent');
   const [outerBgColor, setOuterBgColor] = useState('#ffffff');
   const [outerGradColor2, setOuterGradColor2] = useState('#3b4cca');
@@ -61,7 +59,7 @@ const Team = () => {
   const [importText, setImportText] = useState('');
   const [importError, setImportError] = useState('');
   const [loading, setLoading] = useState(true);
-  const [rightPanelMode, setRightPanelMode] = useState('controls'); // 'controls' or 'customizer'
+  const [rightPanelMode, setRightPanelMode] = useState('controls');
 
   const slugify = (text) => {
     if (!text) return '';
@@ -75,15 +73,8 @@ const Team = () => {
       .toLowerCase();
   };
 
-  const getAbilitySlug = (ability) => {
-    const name = ability?.names?.en;
-    return slugify(name);
-  };
-
-  const getMoveSlug = (move) => {
-    const name = move?.names?.en;
-    return slugify(name);
-  };
+  const getAbilitySlug = (ability) => slugify(ability?.names?.en);
+  const getMoveSlug = (move) => slugify(move?.names?.en);
 
   useEffect(() => {
     loadPageTranslations('team');
@@ -107,22 +98,13 @@ const Team = () => {
           fetch('/PokeCards/data/pokemon_mapping.json')
         ]);
 
-      const pokemonData = await pokemonRes.json();
-      const movesData = await movesRes.json();
-      const abilitiesData = await abilitiesRes.json();
-      const naturesData = await naturesRes.json();
-      const itemsData = await itemsRes.json();
-      const typesData = await typesRes.json();
-      const mappingData = await mappingRes.json();
-
-      setPokemons(pokemonData);
-      setAllMoves(movesData);
-      setAllAbilities(abilitiesData);
-      setAllNatures(naturesData);
-      setAllItems(itemsData);
-      setTypes(typesData);
-      setPokemonMapping(mappingData);
-
+      setPokemons(await pokemonRes.json());
+      setAllMoves(await movesRes.json());
+      setAllAbilities(await abilitiesRes.json());
+      setAllNatures(await naturesRes.json());
+      setAllItems(await itemsRes.json());
+      setTypes(await typesRes.json());
+      setPokemonMapping(await mappingRes.json());
       setLoading(false);
     } catch (error) {
       console.error('Failed to load data:', error);
@@ -135,16 +117,10 @@ const Team = () => {
     newTeamPokemon[selectedSlot] = pokemon;
     setTeamPokemon(newTeamPokemon);
 
-    // Initialize default ability and moves for this slot
     const pokemonId = String(pokemon.id);
     const pokemonData = pokemonMapping[pokemonId];
     const newTeamData = [...teamData];
-    newTeamData[selectedSlot] = {
-      ability: null,
-      nature: null,
-      item: null,
-      moves: [null, null, null, null]
-    };
+    newTeamData[selectedSlot] = { ability: null, nature: null, item: null, moves: [null, null, null, null] };
 
     if (pokemonData?.abilities?.length > 0) {
       const abilitySlug = pokemonData.abilities[0];
@@ -161,22 +137,15 @@ const Team = () => {
     setTeamPokemon(newTeamPokemon);
 
     const newTeamData = [...teamData];
-    newTeamData[slotIndex] = {
-      ability: null,
-      nature: null,
-      item: null,
-      moves: [null, null, null, null]
-    };
+    newTeamData[slotIndex] = { ability: null, nature: null, item: null, moves: [null, null, null, null] };
     setTeamData(newTeamData);
   };
 
   const movePokemon = (fromSlot, toSlot) => {
     const newTeamPokemon = [...teamPokemon];
     const newTeamData = [...teamData];
-
     [newTeamPokemon[fromSlot], newTeamPokemon[toSlot]] = [newTeamPokemon[toSlot], newTeamPokemon[fromSlot]];
     [newTeamData[fromSlot], newTeamData[toSlot]] = [newTeamData[toSlot], newTeamData[fromSlot]];
-
     setTeamPokemon(newTeamPokemon);
     setTeamData(newTeamData);
   };
@@ -185,7 +154,6 @@ const Team = () => {
     if (!pokemonData || !pokemonMapping[String(pokemonData.id)]) return [];
     const pokemonMapData = pokemonMapping[String(pokemonData.id)];
     if (!pokemonMapData.abilities) return [];
-
     const abilitySlugs = new Set(pokemonMapData.abilities);
     return allAbilities.filter((ability) => abilitySlugs.has(getAbilitySlug(ability)));
   };
@@ -194,7 +162,6 @@ const Team = () => {
     if (!pokemonData || !pokemonMapping[String(pokemonData.id)]) return [];
     const pokemonMapData = pokemonMapping[String(pokemonData.id)];
     if (!pokemonMapData.moves) return [];
-
     const moveSlugs = new Set(pokemonMapData.moves);
     return allMoves.filter((move) => moveSlugs.has(getMoveSlug(move)));
   };
@@ -237,7 +204,6 @@ const Team = () => {
     }) || [];
 
     const itemSprite = slotData?.item?.sprite || null;
-    
     const isNeutralNature = slotData?.nature && !slotData.nature.increased_stat && !slotData.nature.decreased_stat;
     const natureText = slotData?.nature && !isNeutralNature
       ? (slotData.nature.names?.[cardLanguage] || slotData.nature.names?.en)
@@ -265,7 +231,6 @@ const Team = () => {
     };
   };
 
-  // Parse team import text
   const parseTeamText = (text) => {
     setImportError('');
     const lines = text.trim().split('\n').filter(line => line.trim());
@@ -274,75 +239,37 @@ const Team = () => {
 
     for (const line of lines) {
       const trimmedLine = line.trim();
+      if (trimmedLine.startsWith('EVs:') || trimmedLine.startsWith('Tera Type:') ||
+          trimmedLine.startsWith('IVs:') || trimmedLine.startsWith('Shiny:') ||
+          trimmedLine.startsWith('Level:') || trimmedLine.startsWith('Happiness:')) continue;
       
-      // Ignore metadata lines (EVs, IVs, Tera Type, Shiny, Level, Happiness, etc.)
-      if (trimmedLine.startsWith('EVs:') || 
-          trimmedLine.startsWith('Tera Type:') ||
-          trimmedLine.startsWith('IVs:') ||
-          trimmedLine.startsWith('Shiny:') ||
-          trimmedLine.startsWith('Level:') ||
-          trimmedLine.startsWith('Happiness:')) {
-        continue;
-      }
-      
-      // Move line
       if (trimmedLine.startsWith('-')) {
-        if (currentEntry) {
-          currentEntry.moves.push(trimmedLine.replace('-', '').trim());
-        }
-      }
-      // Ability line
-      else if (trimmedLine.startsWith('Ability:')) {
-        if (currentEntry) {
-          currentEntry.abilityName = trimmedLine.replace('Ability:', '').trim();
-        }
-      }
-      // Nature line
-      else if (trimmedLine.includes('Nature')) {
-        if (currentEntry) {
-          const naturePart = trimmedLine.split('Nature')[0].trim();
-          currentEntry.natureName = naturePart || null;
-        }
-      }
-      // Pokemon line: "Name @ Item" or just "Name"
-      else {
-        if (currentEntry) {
-          teamEntries.push(currentEntry);
-        }
+        if (currentEntry) currentEntry.moves.push(trimmedLine.replace('-', '').trim());
+      } else if (trimmedLine.startsWith('Ability:')) {
+        if (currentEntry) currentEntry.abilityName = trimmedLine.replace('Ability:', '').trim();
+      } else if (trimmedLine.includes('Nature')) {
+        if (currentEntry) currentEntry.natureName = trimmedLine.split('Nature')[0].trim() || null;
+      } else {
+        if (currentEntry) teamEntries.push(currentEntry);
         const [pokemonName, itemName] = trimmedLine.split('@').map(s => s.trim());
-        currentEntry = {
-          pokemonName: pokemonName || '',
-          itemName: itemName || null,
-          abilityName: null,
-          natureName: null,
-          moves: []
-        };
+        currentEntry = { pokemonName: pokemonName || '', itemName: itemName || null, abilityName: null, natureName: null, moves: [] };
       }
     }
 
-    if (currentEntry) {
-      teamEntries.push(currentEntry);
-    }
+    if (currentEntry) teamEntries.push(currentEntry);
 
-    // Map to actual pokemon/items/abilities/moves
     const newTeamPokemon = [...teamPokemon];
     const newTeamData = [...teamData];
 
     for (let i = 0; i < teamEntries.length && i < 6; i++) {
       const entry = teamEntries[i];
-
-      // Remove gender suffix from Showdown format (e.g., "Basculegion (M)" -> "Basculegion")
       let pokemonSearchName = entry.pokemonName.replace(/\s*\([MF]\)\s*$/i, '').trim();
 
-      // Find Pokemon by name
       const pokemon = pokemons.find(p => {
-        const name = p.names?.en || '';
-        const nameFr = p.names?.fr || '';
-        const nameEn = p.name_en || '';
         const searchLower = pokemonSearchName.toLowerCase();
-        return name.toLowerCase() === searchLower || 
-               nameFr.toLowerCase() === searchLower ||
-               nameEn.toLowerCase() === searchLower;
+        return (p.names?.en || '').toLowerCase() === searchLower || 
+               (p.names?.fr || '').toLowerCase() === searchLower ||
+               (p.name_en || '').toLowerCase() === searchLower;
       });
 
       if (!pokemon) {
@@ -352,52 +279,25 @@ const Team = () => {
 
       newTeamPokemon[i] = pokemon;
 
-      // Find Ability (do not restrict by pokemon_mapping during import)
-      let ability = null;
-      if (entry.abilityName) {
-        ability = allAbilities.find(a => {
-          const aName = a.names?.en || '';
-          return aName.toLowerCase() === entry.abilityName.toLowerCase();
-        });
-      }
+      const ability = entry.abilityName
+        ? allAbilities.find(a => (a.names?.en || '').toLowerCase() === entry.abilityName.toLowerCase())
+        : null;
 
-      // Find Item
-      let item = null;
-      if (entry.itemName) {
-        item = allItems.find(it => {
-          const itName = it.names?.en || '';
-          return itName.toLowerCase() === entry.itemName.toLowerCase();
-        });
-      }
+      const item = entry.itemName
+        ? allItems.find(it => (it.names?.en || '').toLowerCase() === entry.itemName.toLowerCase())
+        : null;
 
-      // Find Nature
-      let nature = null;
-      if (entry.natureName) {
-        nature = allNatures.find(n => {
-          const nName = n.names?.en || '';
-          return nName.toLowerCase() === entry.natureName.toLowerCase();
-        });
-      }
+      const nature = entry.natureName
+        ? allNatures.find(n => (n.names?.en || '').toLowerCase() === entry.natureName.toLowerCase())
+        : null;
 
-      // Find Moves (do not restrict by pokemon_mapping during import)
       const moves = [null, null, null, null];
       for (let j = 0; j < entry.moves.length && j < 4; j++) {
-        const moveName = entry.moves[j];
-        const move = allMoves.find(m => {
-          const mName = m.names?.en || '';
-          return mName.toLowerCase() === moveName.toLowerCase();
-        });
-        if (move) {
-          moves[j] = move;
-        }
+        const move = allMoves.find(m => (m.names?.en || '').toLowerCase() === entry.moves[j].toLowerCase());
+        if (move) moves[j] = move;
       }
 
-      newTeamData[i] = {
-        ability: ability || null,
-        nature: nature || null,
-        item: item || null,
-        moves: moves
-      };
+      newTeamData[i] = { ability: ability || null, nature: nature || null, item: item || null, moves };
     }
 
     setTeamPokemon(newTeamPokemon);
@@ -406,51 +306,103 @@ const Team = () => {
   };
 
   const exportTeamImage = async () => {
-    const teamGrid = document.querySelector('.team-grid');
-    if (!teamGrid) return;
+    setIsExporting(true);
+
+    // Determine grid columns based on layout
+    const colsMap = {
+      '2x1': 2, '1x2': 1, '1x3': 1, '3x1': 3,
+      '2x2': 2, '1x4': 1, '4x1': 4, '1x5': 1,
+      '5x1': 5, '6x1': 6, '1x6': 1, '2x3': 2, '3x2': 3
+    };
+    const cols = colsMap[layout] || 3;
+
+    // Card dimensions (full size, matching BaseFlashcard.css .flashcard-pokemon)
+    const CARD_W = 300;
+    const CARD_GAP = 16;
+    const PADDING = 20;
+    const BORDER = outerBorderSize || 4;
+
+    // Build a temporary off-screen container
+    const container = document.createElement('div');
+    container.style.cssText = `
+      position: fixed;
+      top: -99999px;
+      left: -99999px;
+      display: grid;
+      grid-template-columns: repeat(${cols}, ${CARD_W}px);
+      gap: ${CARD_GAP}px;
+      padding: ${PADDING}px;
+      background: ${getOuterBackgroundStyle().background || 'white'};
+      border: ${BORDER}px solid ${outerBorderColor};
+      border-radius: ${outerBorderRadius ? '12px' : '0px'};
+      width: fit-content;
+      z-index: -1;
+    `;
+    document.body.appendChild(container);
+
+    // Clone visible cards into the container at full size
+    const visibleCards = document.querySelectorAll('.team-grid .team-slot-card');
+    visibleCards.forEach(card => {
+      const clone = card.cloneNode(true);
+      // Reset any scale transforms from the preview
+      clone.style.transform = 'none';
+      clone.style.transformOrigin = 'unset';
+      // Make sure the flashcard inside is full size
+      const flashcard = clone.querySelector('.flashcard-pokemon');
+      if (flashcard) {
+        flashcard.style.width = CARD_W + 'px';
+      }
+      container.appendChild(clone);
+    });
+
+    // Wait for images to load
+    const imgs = container.querySelectorAll('img');
+    await Promise.all(Array.from(imgs).map(img =>
+      img.complete ? Promise.resolve() : new Promise(resolve => {
+        img.onload = resolve;
+        img.onerror = resolve;
+      })
+    ));
+
+    // Small delay for rendering
+    await new Promise(resolve => setTimeout(resolve, 300));
 
     try {
-      const image = await toPng(teamGrid, {
-        cacheBust: true,
-        pixelRatio: 2,
+      const canvas = await html2canvas(container, {
+        scale: 3,
+        useCORS: true,
+        allowTaint: true,
+        logging: false,
+        backgroundColor: null,
       });
-      
+
       const link = document.createElement('a');
-      link.href = image;
       link.download = `team_${new Date().getTime()}.png`;
+      link.href = canvas.toDataURL('image/png');
       link.click();
     } catch (err) {
       console.error('Export failed:', err);
+    } finally {
+      document.body.removeChild(container);
+      setIsExporting(false);
     }
   };
 
   const getAvailableLayouts = () => {
     const count = getActivePokemonCount();
     const layoutsByCount = {
-      2: ['2x1', '1x2'],
-      3: ['1x3', '3x1'],
-      4: ['2x2', '1x4', '4x1'],
-      5: ['1x5', '5x1'],
-      6: ['1x6', '6x1', '3x2', '2x3']
+      2: ['2x1', '1x2'], 3: ['1x3', '3x1'], 4: ['2x2', '1x4', '4x1'],
+      5: ['1x5', '5x1'], 6: ['1x6', '6x1', '3x2', '2x3']
     };
     return layoutsByCount[count] || [];
   };
 
   const getLayoutGridClass = () => {
     const layoutMap = {
-      '2x1': 'layout-2x1',
-      '1x2': 'layout-1x2',
-      '1x3': 'layout-1x3',
-      '3x1': 'layout-3x1',
-      '2x2': 'layout-2x2',
-      '1x4': 'layout-1x4',
-      '4x1': 'layout-4x1',
-      '1x5': 'layout-1x5',
-      '5x1': 'layout-5x1',
-      '6x1': 'layout-6x1',
-      '1x6': 'layout-1x6',
-      '2x3': 'layout-2x3',
-      '3x2': 'layout-3x2'
+      '2x1': 'layout-2x1', '1x2': 'layout-1x2', '1x3': 'layout-1x3',
+      '3x1': 'layout-3x1', '2x2': 'layout-2x2', '1x4': 'layout-1x4',
+      '4x1': 'layout-4x1', '1x5': 'layout-1x5', '5x1': 'layout-5x1',
+      '6x1': 'layout-6x1', '1x6': 'layout-1x6', '2x3': 'layout-2x3', '3x2': 'layout-3x2'
     };
     return layoutMap[layout] || '';
   };
@@ -458,10 +410,8 @@ const Team = () => {
   const getOuterBackgroundStyle = () => {
     const opacity = outerBackgroundOpacity;
     if (outerBackground === 'transparent') return { background: 'transparent' };
-    
     if (outerBackground === 'solid') {
       const color = outerBgColor;
-      // Handle hex to rgba with opacity
       if (color.startsWith('#')) {
         const r = parseInt(color.slice(1, 3), 16);
         const g = parseInt(color.slice(3, 5), 16);
@@ -470,60 +420,33 @@ const Team = () => {
       }
       return { background: color };
     }
-    
     if (outerBackground === 'gradient') {
-      const c1 = outerBgColor;
-      const c2 = outerGradColor2;
-      let r1 = 255, g1 = 255, b1 = 255, r2 = 59, g2 = 76, b2 = 202;
-      
-      if (c1.startsWith('#')) {
-        r1 = parseInt(c1.slice(1, 3), 16);
-        g1 = parseInt(c1.slice(3, 5), 16);
-        b1 = parseInt(c1.slice(5, 7), 16);
-      }
-      if (c2.startsWith('#')) {
-        r2 = parseInt(c2.slice(1, 3), 16);
-        g2 = parseInt(c2.slice(3, 5), 16);
-        b2 = parseInt(c2.slice(5, 7), 16);
-      }
-      
-      return { background: `linear-gradient(135deg, rgba(${r1}, ${g1}, ${b1}, ${opacity}), rgba(${r2}, ${g2}, ${b2}, ${opacity}))` };
+      const c1 = outerBgColor, c2 = outerGradColor2;
+      let r1=255,g1=255,b1=255,r2=59,g2=76,b2=202;
+      if (c1.startsWith('#')) { r1=parseInt(c1.slice(1,3),16); g1=parseInt(c1.slice(3,5),16); b1=parseInt(c1.slice(5,7),16); }
+      if (c2.startsWith('#')) { r2=parseInt(c2.slice(1,3),16); g2=parseInt(c2.slice(3,5),16); b2=parseInt(c2.slice(5,7),16); }
+      return { background: `linear-gradient(135deg, rgba(${r1},${g1},${b1},${opacity}), rgba(${r2},${g2},${b2},${opacity}))` };
     }
-    
     if (outerBackground === 'image' && outerBackgroundImage) {
-      return { 
-        backgroundImage: `url(${outerBackgroundImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        opacity: opacity
-      };
+      return { backgroundImage: `url(${outerBackgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center', opacity };
     }
-    
     return { background: 'transparent' };
   };
 
   const getOuterBorderStyle = () => {
     const color = outerBorderColor;
     let borderColorWithOpacity = color;
-    
     if (color.startsWith('#')) {
       const r = parseInt(color.slice(1, 3), 16);
       const g = parseInt(color.slice(3, 5), 16);
       const b = parseInt(color.slice(5, 7), 16);
       borderColorWithOpacity = `rgba(${r}, ${g}, ${b}, ${outerBorderOpacity})`;
     }
-
-    return {
-      border: `${outerBorderSize}px solid ${borderColorWithOpacity}`,
-      borderRadius: outerBorderRadius ? '12px' : '0px'
-    };
+    return { border: `${outerBorderSize}px solid ${borderColorWithOpacity}`, borderRadius: outerBorderRadius ? '12px' : '0px' };
   };
 
-  const getActivePokemonCount = () => {
-    return teamPokemon.filter(p => p !== null).length;
-  };
+  const getActivePokemonCount = () => teamPokemon.filter(p => p !== null).length;
 
-  // Update layout if current layout is no longer valid
   useEffect(() => {
     const availableLayouts = getAvailableLayouts();
     if (availableLayouts.length > 0 && !availableLayouts.includes(layout)) {
@@ -532,21 +455,14 @@ const Team = () => {
   }, [getActivePokemonCount()]);
 
   const availableLanguages = [
-    { code: 'fr', label: 'lang_french' },
-    { code: 'en', label: 'lang_english' },
-    { code: 'de', label: 'lang_german' },
-    { code: 'es', label: 'lang_spanish' },
-    { code: 'it', label: 'lang_italian' },
-    { code: 'ja', label: 'lang_japanese' },
-    { code: 'ko', label: 'lang_korean' },
-    { code: 'zh-hans', label: 'lang_chinese_simp' },
-    { code: 'zh-hant', label: 'lang_chinese_trad' },
-    { code: 'ja-hrkt', label: 'lang_japanese' }
+    { code: 'fr', label: 'lang_french' }, { code: 'en', label: 'lang_english' },
+    { code: 'de', label: 'lang_german' }, { code: 'es', label: 'lang_spanish' },
+    { code: 'it', label: 'lang_italian' }, { code: 'ja', label: 'lang_japanese' },
+    { code: 'ko', label: 'lang_korean' }, { code: 'zh-hans', label: 'lang_chinese_simp' },
+    { code: 'zh-hant', label: 'lang_chinese_trad' }, { code: 'ja-hrkt', label: 'lang_japanese' }
   ];
 
-  if (loading) {
-    return <div className="team-container"><p>{t('loading')}</p></div>;
-  }
+  if (loading) return <div className="team-container"><p>{t('loading')}</p></div>;
 
   return (
     <div className="team-container">
@@ -554,34 +470,20 @@ const Team = () => {
         <h1 className="page-title">{t('team_title') || 'Team'}</h1>
         <div className="language-group">
           <label>{t('card_language') || 'Langue de la carte'}</label>
-          <select 
-            value={cardLanguage}
-            onChange={(e) => setCardLanguage(e.target.value)}
-            className="language-select"
-          >
+          <select value={cardLanguage} onChange={(e) => setCardLanguage(e.target.value)} className="language-select">
             {availableLanguages.map(lang => (
-              <option key={lang.code} value={lang.code}>
-                {t(lang.label) || lang.code}
-              </option>
+              <option key={lang.code} value={lang.code}>{t(lang.label) || lang.code}</option>
             ))}
           </select>
         </div>
       </div>
 
       <div className="team-layout">
-        {/* Left box: Team preview only */}
         <div className="team-preview-box">
           <div className={`team-grid-container ${getLayoutGridClass()}`}>
-            <div 
-              className="team-grid"
-              style={{
-                ...getOuterBackgroundStyle(),
-                ...getOuterBorderStyle()
-              }}
-            >
+            <div className="team-grid" style={{ ...getOuterBackgroundStyle(), ...getOuterBorderStyle() }}>
               {teamPokemon.map((pokemon, index) => {
                 if (!pokemon) return null;
-                
                 return (
                   <div key={index} className="team-slot-card">
                     <BaseFlashcard
@@ -617,50 +519,31 @@ const Team = () => {
           </div>
         </div>
 
-        {/* Right box: Controls or Customizer */}
         <div className="team-control-box">
-          {/* Mode switch buttons */}
           <div className="mode-switch">
-            <button
-              className={`mode-btn ${rightPanelMode === 'controls' ? 'active' : ''}`}
-              onClick={() => setRightPanelMode('controls')}
-            >
+            <button className={`mode-btn ${rightPanelMode === 'controls' ? 'active' : ''}`} onClick={() => setRightPanelMode('controls')}>
               Configuration
             </button>
-            <button
-              className={`mode-btn ${rightPanelMode === 'customizer' ? 'active' : ''}`}
-              onClick={() => setRightPanelMode('customizer')}
-            >
+            <button className={`mode-btn ${rightPanelMode === 'customizer' ? 'active' : ''}`} onClick={() => setRightPanelMode('customizer')}>
               Style & Export
             </button>
           </div>
 
-          {/* Controls panel */}
           {rightPanelMode === 'controls' && (
             <div className="team-control-panel">
-              {/* Layout selector */}
               <div className="layout-selector-group">
                 <label>{t('team_layout') || 'Layout'}</label>
                 <div className="layout-buttons">
                   {getAvailableLayouts().length > 0 ? (
                     getAvailableLayouts().map(l => (
-                      <button
-                        key={l}
-                        className={`layout-btn ${layout === l ? 'active' : ''}`}
-                        onClick={() => setLayout(l)}
-                      >
-                        {l}
-                      </button>
+                      <button key={l} className={`layout-btn ${layout === l ? 'active' : ''}`} onClick={() => setLayout(l)}>{l}</button>
                     ))
                   ) : (
-                    <p style={{ color: '#999', fontSize: '0.9rem', margin: 0 }}>
-                      {t('team_empty_slot') || 'Add Pokémon to enable layouts'}
-                    </p>
+                    <p style={{ color: '#999', fontSize: '0.9rem', margin: 0 }}>{t('team_empty_slot') || 'Add Pokémon to enable layouts'}</p>
                   )}
                 </div>
               </div>
 
-              {/* Slot selector */}
               <div className="slots-selector-group">
                 <label>{t('team_slots') || 'Slots'} ({getActivePokemonCount()}/6)</label>
                 <div className="slots-grid">
@@ -678,7 +561,6 @@ const Team = () => {
                 </div>
               </div>
 
-              {/* Pokemon search and selection */}
               {teamPokemon[selectedSlot] === null ? (
                 <div className="pokemon-selection">
                   <label>{t('team_search_pokemon') || 'Search Pokémon'}</label>
@@ -690,19 +572,15 @@ const Team = () => {
                       const name = pokemon.names?.en || pokemon.name_en || '';
                       const pokemonTypes = pokemon.types || [];
                       if (pokemonTypes.length === 0) return name;
-
                       const typeNames = pokemonTypes.map((typeName) => {
                         const typeData = types.find((t) => t.name_en === typeName);
                         return typeData?.names?.[cardLanguage] || typeData?.names?.en || typeName;
                       });
-
                       return `${name} [${typeNames.join(', ')}]`;
                     }}
                     getSearchStrings={(pokemon) => {
                       const searchStrings = [...Object.values(pokemon.names || {}).filter(Boolean)];
-                      if (pokemon.name_en) {
-                        searchStrings.push(pokemon.name_en);
-                      }
+                      if (pokemon.name_en) searchStrings.push(pokemon.name_en);
                       return searchStrings;
                     }}
                     placeholder={t('search_placeholder') || 'Search...'}
@@ -712,12 +590,7 @@ const Team = () => {
                 <div className="pokemon-customization">
                   <div className="pokemon-header">
                     <h3>{teamPokemon[selectedSlot]?.names?.en || teamPokemon[selectedSlot]?.name_en}</h3>
-                    <button 
-                      className="remove-btn"
-                      onClick={() => removePokemonFromTeam(selectedSlot)}
-                    >
-                      ✕
-                    </button>
+                    <button className="remove-btn" onClick={() => removePokemonFromTeam(selectedSlot)}>✕</button>
                   </div>
 
                   <div className="selector-group">
@@ -774,7 +647,6 @@ const Team = () => {
                 </div>
               )}
 
-              {/* Import section */}
               <div className="import-section">
                 <label>{t('team_import') || 'Import Team'}</label>
                 <textarea
@@ -784,18 +656,13 @@ const Team = () => {
                   className="import-textarea"
                 />
                 {importError && <div className="import-error">{importError}</div>}
-                <button 
-                  className="import-btn"
-                  onClick={() => parseTeamText(importText)}
-                  disabled={!importText.trim()}
-                >
+                <button className="import-btn" onClick={() => parseTeamText(importText)} disabled={!importText.trim()}>
                   {t('team_import_btn') || 'Import'}
                 </button>
               </div>
             </div>
           )}
 
-          {/* Customizer panel */}
           {rightPanelMode === 'customizer' && (
             <div className="team-customizer-panel">
               <div className="customizer-content">
@@ -804,21 +671,13 @@ const Team = () => {
                 </div>
                 <div className="team-toggle-option">
                   <label htmlFor="team-show-nature-toggle">{t('team_show_nature') || 'Afficher la nature'}</label>
-                  <input
-                    id="team-show-nature-toggle"
-                    type="checkbox"
-                    checked={showNature}
-                    onChange={(e) => setShowNature(e.target.checked)}
-                  />
+                  <input id="team-show-nature-toggle" type="checkbox" checked={showNature} onChange={(e) => setShowNature(e.target.checked)} />
                 </div>
                 <CardCustomizer
                   onBackgroundChange={setBackground}
                   onBorderRadiusChange={setBorderRadius}
                   onFontChange={setSelectedFont}
-                  onCustomFontChange={(file, name) => {
-                    setCustomFontFile(file);
-                    setCustomFontName(name);
-                  }}
+                  onCustomFontChange={(file, name) => { setCustomFontFile(file); setCustomFontName(name); }}
                   backgroundColor={bgColor}
                   onBackgroundColorChange={setBgColor}
                   backgroundOpacity={backgroundOpacity}
@@ -837,9 +696,7 @@ const Team = () => {
                   selectedTypeGeneration={selectedTypeGeneration}
                   onTypeGenerationChange={setSelectedTypeGeneration}
                 />
-
                 <div className="customizer-divider"></div>
-
                 <div className="customizer-section-title">
                   <h4>{t('team_outer_box_style') || 'Outer Box Style'}</h4>
                 </div>
@@ -855,7 +712,7 @@ const Team = () => {
                   gradientColor2={outerGradColor2}
                   onGradientColor2Change={setOuterGradColor2}
                   onBackgroundImageChange={setOuterBackgroundImage}
-                  fontColor={''} // Hidden
+                  fontColor={''}
                   onFontColorChange={() => {}}
                   borderColor={outerBorderColor}
                   onBorderColorChange={setOuterBorderColor}
@@ -867,8 +724,8 @@ const Team = () => {
                   isTeamBorderLayout={true}
                 />
               </div>
-              <button className="export-btn" onClick={exportTeamImage}>
-                {t('team_export') || 'Export as PNG'}
+              <button className="export-btn" onClick={exportTeamImage} disabled={isExporting}>
+                {isExporting ? 'Export en cours...' : (t('team_export') || 'Export as PNG')}
               </button>
             </div>
           )}

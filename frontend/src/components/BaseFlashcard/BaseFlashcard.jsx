@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { toPng } from 'html-to-image';
+import html2canvas from 'html2canvas';
 import { useLanguage } from '../../context/LanguageContext';
 import './BaseFlashcard.css';
 
@@ -113,18 +113,19 @@ const BaseFlashcard = ({
 
   const handleExportPNG = async () => {
     if (!cardRef.current) return;
-    
     setIsExporting(true);
     try {
-      const dataUrl = await toPng(cardRef.current, {
-        backgroundColor: background === 'transparent' ? 'rgba(0,0,0,0)' : undefined,
-        pixelRatio: 2,
+      const canvas = await html2canvas(cardRef.current, {
+        scale: 4,
+        useCORS: true,
+        allowTaint: true,
+        backgroundColor: background === 'transparent' ? null : undefined,
+        logging: false,
       });
       const link = document.createElement('a');
-      link.href = dataUrl;
+      link.href = canvas.toDataURL('image/png');
       link.download = `flashcard-${Date.now()}.png`;
       link.click();
-      
       if (onExport) onExport('PNG');
     } catch (error) {
       console.error('Export error:', error);
